@@ -888,7 +888,7 @@ function Landing() {
               </div>
               <p className="mt-1 max-w-sm text-sm text-slate-400">
                 Система роста для медицинских центров в Казахстане. Юрий
-                Запоинов, основатель.
+                Запойнов, основатель.
               </p>
               <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
                 <img src={astanaHubImg} alt="Astana Hub" width={80} height={20} className="h-5 w-auto invert" />
