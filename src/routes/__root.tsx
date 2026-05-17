@@ -72,18 +72,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "MedCenter Growth System offers a VSL landing page solution for medical centers to increase revenue." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "MedCenter Growth System offers a VSL landing page solution for medical centers to increase revenue." },
+      { title: "MarkVision AI — поток пациентов на платную диагностику" },
+      {
+        name: "description",
+        content:
+          "Система роста для медицинских клиник в Казахстане: +13 млн ₸/мес без роста бюджета, 70% доходимости, без скидок. Часовой разбор клиники с гарантией возврата.",
+      },
+      { name: "author", content: "MarkVision AI" },
+      {
+        property: "og:title",
+        content: "MarkVision AI — +100 пациентов на платную диагностику",
+      },
+      {
+        property: "og:description",
+        content:
+          "Адресное предложение, поток на дорогие услуги и удержание. Часовой разбор за 4 990 ₸ с гарантией возврата.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "MedCenter Growth System offers a VSL landing page solution for medical centers to increase revenue." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/64428c0f-f16b-4fe4-bb4f-20187116c386/id-preview-19fc8c90--11329108-a589-4b54-bcc9-a26f5daaaeba.lovable.app-1779010107536.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/64428c0f-f16b-4fe4-bb4f-20187116c386/id-preview-19fc8c90--11329108-a589-4b54-bcc9-a26f5daaaeba.lovable.app-1779010107536.png" },
+      { property: "og:locale", content: "ru_KZ" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MarkVision AI — рост медцентра" },
+      {
+        name: "twitter:description",
+        content:
+          "+13 млн ₸/мес, 70% доходимости, 20+ клиник в РК. Разбор клиники за 4 990 ₸.",
+      },
     ],
     links: [
       {

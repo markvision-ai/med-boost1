@@ -23,7 +23,6 @@ import {
   Receipt,
   Wallet,
 } from "lucide-react";
-import heroImg from "../assets/hero.jpg";
 import ownerImg from "../assets/clinic-owner.jpg";
 import expertImg from "../assets/expert.jpg";
 import astanaHubImg from "../assets/astana-hub.png";
@@ -161,20 +160,20 @@ function Bullet({ children }: { children: React.ReactNode }) {
 
 function TrustBar() {
   const items = [
-    { icon: Stethoscope, label: "20+ клиник в РК" },
-    { icon: TrendingUp, label: "85% доходимости" },
-    { icon: ShieldCheck, label: "Возврат 100%" },
+    { icon: ShieldCheck, label: "Возврат 100%, если не зашло" },
+    { icon: HeartPulse, label: "Только медицинские клиники" },
+    { icon: Star, label: "5+ лет в медмаркетинге" },
     { icon: Clock, label: "Разбор 60 минут" },
   ];
   return (
-    <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+    <div className="mt-12 grid grid-cols-2 gap-2.5 sm:mt-14 sm:grid-cols-4 sm:gap-3 lg:mt-16">
       {items.map(({ icon: Icon, label }) => (
         <div
           key={label}
-          className="flex items-center gap-2 rounded-2xl border border-[var(--border)] bg-white px-3 py-2.5"
+          className="flex items-center gap-2.5 rounded-2xl border border-[var(--border)] bg-white px-3.5 py-3 shadow-sm shadow-slate-900/[0.02] transition hover:border-[var(--primary)]/30"
         >
-          <Icon className="h-4 w-4 shrink-0 text-[var(--primary)]" />
-          <span className="text-xs font-medium text-[var(--muted-foreground)] sm:text-sm">
+          <Icon className="h-4 w-4 shrink-0 text-[var(--primary)]" strokeWidth={2.2} />
+          <span className="text-[12px] font-medium leading-tight text-[var(--muted-foreground)] sm:text-[13px]">
             {label}
           </span>
         </div>
@@ -185,89 +184,122 @@ function TrustBar() {
 
 /* ============ page ============ */
 
+function StickyHeader() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-[var(--border)]/60 bg-white/85 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-5 py-3 sm:py-3.5">
+        <a href="#" className="flex items-center gap-2.5" aria-label="MarkVision AI — на главную">
+          <span
+            className="flex h-8 w-8 items-center justify-center rounded-xl bg-[var(--primary)] text-white shadow-sm"
+            aria-hidden
+          >
+            <HeartPulse className="h-4 w-4" strokeWidth={2.5} />
+          </span>
+          <span className="font-display text-base font-extrabold tracking-tight text-[var(--foreground)] sm:text-lg">
+            MarkVision <span className="text-[var(--primary)]">AI</span>
+          </span>
+        </a>
+
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--muted-foreground)] md:flex">
+          <a href="#how" className="transition hover:text-[var(--foreground)]">Метод</a>
+          <a href="#cta" className="transition hover:text-[var(--foreground)]">Стоимость</a>
+          <a href="#faq" className="transition hover:text-[var(--foreground)]">Вопросы</a>
+        </nav>
+
+        <a
+          href={WA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-event="cta_sticky_whatsapp"
+          className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#1ebe5b] active:scale-[0.98] sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm"
+        >
+          <MessageCircle className="h-4 w-4" />
+          <span className="hidden sm:inline">Написать</span>
+          <span className="sm:hidden">WhatsApp</span>
+        </a>
+      </div>
+    </header>
+  );
+}
+
 function Landing() {
   useReveal();
 
   return (
     <main className="min-h-screen bg-white text-[var(--foreground)] antialiased">
+      <StickyHeader />
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[var(--secondary)] to-white">
         <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-70 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute bottom-0 -left-32 h-72 w-72 rounded-full bg-rose-100/50 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-25" />
 
-        <div className="relative mx-auto max-w-7xl px-5 pt-10 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="relative mx-auto max-w-4xl px-5 pt-12 pb-16 text-center sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28">
+          <div>
             {/* === Content === */}
-            <div className="reveal space-y-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/15 bg-white/80 px-3 py-1.5 shadow-sm shadow-slate-900/5 backdrop-blur">
+            <div className="reveal mx-auto flex flex-col items-center space-y-6 lg:space-y-7">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/15 bg-white/80 px-3.5 py-1.5 shadow-sm shadow-slate-900/5 backdrop-blur">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--primary)] opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
-                  Проверенная методика для медицинских клиник в Казахстане
+                <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--primary)]">
+                  Для медицинских клиник в Казахстане
                 </span>
               </div>
 
-              <h1 className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)] text-center">
-                Как медицинской клинике получить + 100 пациентов
-                <br /><br />
-                на платную диагностику
+              <h1 className="max-w-4xl font-display text-[34px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[var(--foreground)] sm:text-5xl md:text-[56px] lg:text-[64px]">
+                +100 пациентов на{" "}
+                <span className="relative inline-block">
+                  <span className="relative z-10 text-[var(--primary)]">платную диагностику</span>
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-0 bottom-0.5 -z-0 h-2.5 bg-[var(--primary-soft)] sm:bottom-1 sm:h-3.5"
+                  />
+                </span>{" "}
+                каждый месяц
               </h1>
 
-              <div className="max-w-xl space-y-4">
-                <p className="text-base leading-[1.55] text-slate-700 sm:text-lg">
-                  Для владельцев медицинских клиник, которые хотят обойти конкурентов в 2026 году и увеличить выручку{" "}
-                  <span className="whitespace-nowrap rounded-md bg-[var(--primary-soft)] px-1.5 py-0.5 font-bold text-[var(--primary)]">
-                    в 2–3 раза
-                  </span>{" "}
-                  — без раздувания рекламных бюджетов.
-                </p>
-                <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-slate-500">
-                  <span className="h-px w-8 bg-slate-300" />
-                  Метод проверен на 20+ клиниках в РК
-                </div>
-              </div>
+              <p className="max-w-2xl text-base leading-[1.6] text-slate-700 sm:text-lg">
+                Для владельцев медклиник, которые хотят обойти конкурентов в 2026 году и увеличить выручку{" "}
+                <span className="whitespace-nowrap rounded-md bg-[var(--primary-soft)] px-1.5 py-0.5 font-bold text-[var(--primary)]">
+                  в 2–3 раза
+                </span>{" "}
+                — без раздувания рекламных бюджетов.
+              </p>
 
-              {/* Stat grid */}
-              <div className="grid gap-3">
-                <div className="flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--primary-soft)] font-display text-lg font-extrabold text-[var(--primary)]">
-                    70%
-                  </div>
-                  <p className="text-sm font-semibold text-slate-700 sm:text-base">
-                    Доходимости на платную диагностику
-                  </p>
-                </div>
-
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
-                      <Check className="h-5 w-5" strokeWidth={3} />
+              {/* KPI row — 3 cards */}
+              <div className="grid w-full max-w-xl grid-cols-3 gap-2.5 sm:gap-3">
+                {[
+                  { value: "70%", label: "доходимости на платный приём" },
+                  { value: "+13 млн ₸", label: "выручки в месяц" },
+                  { value: "20+", label: "клиник в РК внедрили" },
+                ].map((s) => (
+                  <div
+                    key={s.label}
+                    className="rounded-2xl border border-[var(--border)] bg-white p-3.5 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md sm:p-4"
+                  >
+                    <div className="whitespace-nowrap font-display text-[18px] font-extrabold leading-none tracking-tight text-[var(--primary)] sm:text-[24px] md:text-[28px]">
+                      {s.value}
                     </div>
-                    <p className="text-sm font-semibold text-slate-700">ДЛЯ ВЛАДЕЛЬЦЕВ МЕДИЦИНСКИХ КЛИНИК</p>
-                  </div>
-                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
-                      <TrendingUp className="h-5 w-5" strokeWidth={2.5} />
+                    <div className="mt-2 text-[11px] leading-tight text-slate-600 sm:text-[12.5px]">
+                      {s.label}
                     </div>
-                    <p className="text-sm font-semibold text-slate-700">Поток на дорогие услуги</p>
                   </div>
-                </div>
+                ))}
               </div>
 
               {/* CTA */}
-              <div className="flex flex-col gap-5 pt-2 sm:flex-row sm:items-center">
-                <WaButton variant="primary">Записаться на диагностику</WaButton>
+              <div className="flex flex-col items-center gap-4 pt-1 sm:flex-row sm:justify-center">
+                <WaButton variant="primary">Получить разбор клиники</WaButton>
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
                     <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-[var(--primary-soft)] text-[10px] font-bold text-[var(--primary)]">+50</div>
                     <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-slate-100 text-[10px] font-bold text-slate-600">KZ</div>
                     <div className="h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-[var(--primary)] to-emerald-400" />
                   </div>
-                  <p className="text-xs font-medium leading-tight text-slate-500">
-                    Доверяют 20+ <br />клиник в РК
+                  <p className="whitespace-nowrap text-left text-xs font-medium leading-tight text-slate-500">
+                    Доверяют 20+<br />клиник в РК
                   </p>
                 </div>
               </div>
@@ -276,7 +308,7 @@ function Landing() {
                 href="https://astanahub.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-2.5 backdrop-blur transition hover:border-[var(--primary)]"
+                className="inline-flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-2.5 backdrop-blur transition hover:border-[var(--primary)] hover:shadow-sm"
                 aria-label="Резидент Astana Hub"
               >
                 <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
@@ -286,26 +318,6 @@ function Landing() {
               </a>
             </div>
 
-            {/* === Visual === */}
-            <div className="reveal relative">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] opacity-60 blur-3xl"
-                style={{
-                  background:
-                    "radial-gradient(circle, color-mix(in oklab, var(--primary) 30%, transparent), transparent 70%)",
-                }}
-              />
-              <div className="relative overflow-hidden rounded-[32px] border border-white/60 bg-white shadow-2xl shadow-teal-900/10 ring-1 ring-[var(--primary)]/10">
-                <img
-                  src={heroImg}
-                  alt="Современный медицинский центр"
-                  width={1280}
-                  height={896}
-                  className="aspect-[4/5] h-auto w-full object-cover"
-                />
-              </div>
-            </div>
           </div>
 
           <TrustBar />
@@ -318,7 +330,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="relative mx-auto max-w-4xl px-5">
-          <Chapter n="01" label="Кейс клиники" />
+          <Chapter n="02" label="Кейс клиники" />
           <SectionTitle eyebrow="Реальный результат">
             Медцентр в Алматы: +13 млн ₸/мес без роста бюджета
           </SectionTitle>
@@ -606,6 +618,29 @@ function Landing() {
         </div>
       </section>
 
+      {/* ===== METHOD INTRO ===== */}
+      <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-24">
+        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
+        <div className="relative mx-auto max-w-3xl px-5 text-center">
+          <div className="reveal mb-4 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--primary)]">
+            <Sparkles className="h-3.5 w-3.5" /> Метод MarkVision AI
+          </div>
+          <h2 className="reveal font-display text-3xl leading-[1.15] text-[var(--foreground)] sm:text-4xl md:text-[44px]">
+            3 шага, которые превращают клинику <br className="hidden sm:inline" />
+            в систему роста
+          </h2>
+          <p className="reveal mx-auto mt-5 max-w-2xl text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Не «волшебная реклама» — связка из адресного предложения, системы привлечения и удержания. Работает на 20+ клиниках по РК.
+          </p>
+
+          <div className="reveal mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
+            <span className="h-px w-8 bg-[var(--border)]" />
+            Дальше — детали по каждому шагу
+            <span className="h-px w-8 bg-[var(--border)]" />
+          </div>
+        </div>
+      </section>
+
       {/* ===== STEPS ===== */}
       <Step
         number={1}
@@ -662,17 +697,52 @@ function Landing() {
       />
 
       {/* ===== CALL TO BREAKDOWN ===== */}
-      <section className="bg-[var(--secondary)] py-20 sm:py-28">
-        <div className="mx-auto max-w-3xl px-5">
+      <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
+        <div aria-hidden className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-50 blur-3xl" />
+        <div className="relative mx-auto max-w-3xl px-5">
           <Chapter n="05" label="Зачем разбор" />
-          <h2 className="reveal font-display text-2xl leading-tight text-[var(--foreground)] sm:text-3xl md:text-4xl">
-            Система собрана за{" "}
-            <span className="text-[var(--primary)]">3 года</span> на 20+ клиниках.
-          </h2>
-          <p className="reveal mt-5 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
+          <SectionTitle eyebrow="Часовая сессия со мной">
+            Система собрана за <span className="text-[var(--primary)]">3 года</span> на 20+ клиниках
+          </SectionTitle>
+          <p className="reveal mt-6 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
             Часовой разбор — и у вас план на{" "}
-            <span className="font-semibold text-[var(--emerald)]">+30 млн ₸ в год</span>.
+            <span className="font-semibold text-[var(--emerald)]">+30 млн ₸ в год</span>. Без воды, без шаблонов — конкретные шаги под вашу клинику.
           </p>
+
+          <div className="reveal mt-8 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                Icon: Stethoscope,
+                title: "Аудит клиники",
+                desc: "Смотрим, где утекают пациенты — реклама, скрипты, администраторы, приём.",
+              },
+              {
+                Icon: Sparkles,
+                title: "Адресное предложение",
+                desc: "Собираем оффер под вашу нишу, который не зависит от скидок.",
+              },
+              {
+                Icon: TrendingUp,
+                title: "План на 30 дней",
+                desc: "Конкретные действия с приоритетами — что внедрить в первую очередь.",
+              },
+            ].map(({ Icon, title, desc }) => (
+              <article
+                key={title}
+                className="card-lift rounded-2xl border border-[var(--border)] bg-white p-5"
+              >
+                <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
+                  <Icon className="h-4 w-4" />
+                </div>
+                <h3 className="font-display text-base font-bold text-[var(--foreground)]">
+                  {title}
+                </h3>
+                <p className="mt-1.5 text-[13px] leading-relaxed text-[var(--muted-foreground)] sm:text-sm">
+                  {desc}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -876,7 +946,7 @@ function Landing() {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="bg-[var(--secondary)] py-20 sm:py-28">
+      <section id="faq" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="11" label="Вопросы и ответы" />
           <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
@@ -954,7 +1024,7 @@ function Landing() {
             </div>
             <div className="flex flex-col gap-2 text-sm sm:text-right">
               <a
-                href="https://wa.me/77089027071"
+                href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white hover:text-[#25D366]"
@@ -1015,10 +1085,11 @@ function FamiliarSituation() {
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
       <div aria-hidden className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-rose-100/60 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-5">
+        <Chapter n="01" label="Знакомая ситуация" />
         <div className="reveal mb-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">
-          <AlertTriangle className="h-3.5 w-3.5" /> Знакомая ситуация?
+          <AlertTriangle className="h-3.5 w-3.5" /> Если узнаёте себя — читайте дальше
         </div>
-        <h2 className="reveal font-display text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
+        <h2 className="reveal font-display text-3xl font-bold leading-[1.15] tracking-tight text-[var(--foreground)] sm:text-4xl md:text-[44px]">
           Узнаёте себя?
         </h2>
 
