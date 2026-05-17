@@ -165,31 +165,18 @@ function Bullet({ children }: { children: React.ReactNode }) {
 function StickyHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)]/60 bg-white/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-5 py-3 sm:py-3.5">
-        <a href="#" className="flex items-center gap-2.5" aria-label="MarkVision AI — на главную">
-          <span
-            className="flex h-8 w-8 items-center justify-center rounded-xl bg-[var(--primary)] text-white shadow-sm"
-            aria-hidden
-          >
-            <Activity className="h-4 w-4" strokeWidth={2.5} />
-          </span>
-          <span className="font-display text-base font-extrabold tracking-tight text-[var(--foreground)] sm:text-lg">
-            MarkVision <span className="text-[var(--primary)]">AI</span>
-          </span>
-        </a>
-
-        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--muted-foreground)] md:flex" />
-
+      <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-5 py-3 sm:py-3.5">
         <a
-          href={WA_URL}
+          href="https://astanahub.com"
           target="_blank"
           rel="noopener noreferrer"
-          data-event="cta_sticky_whatsapp"
-          className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#1ebe5b] active:scale-[0.98] sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm"
+          className="inline-flex items-center gap-3 rounded-2xl px-3 py-1.5 transition hover:opacity-80"
+          aria-label="Резидент Astana Hub"
         >
-          <MessageCircle className="h-4 w-4" />
-          <span className="hidden sm:inline">Написать</span>
-          <span className="sm:hidden">WhatsApp</span>
+          <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)] sm:text-[11px]">
+            ОФИЦИАЛЬНЫЙ УЧАСТНИК
+          </span>
         </a>
       </div>
     </header>
