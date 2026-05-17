@@ -340,13 +340,8 @@ function Landing() {
                 Клиника-партнёр MarkVision AI
               </div>
               <p className="text-base text-[var(--muted-foreground)] sm:text-lg">
-                Знакомьтесь, <strong className="text-[var(--foreground)]">Бакыт</strong> -
-                владелец многопрофильного медцентра.
-              </p>
-              <p className="mt-2 text-base text-[var(--muted-foreground)] sm:text-lg">
-                Его клиника вышла на стабильные{" "}
-                <span className="font-bold text-[var(--emerald)]">13 млн ₸</span>{" "}
-                после двух лет застоя.
+                <strong className="text-[var(--foreground)]">Бакыт</strong> — владелец медцентра. Вышел на{" "}
+                <span className="font-bold text-[var(--emerald)]">+13 млн ₸/мес</span>.
               </p>
             </div>
             {/* Mini-ops overlay */}
