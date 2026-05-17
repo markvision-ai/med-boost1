@@ -192,129 +192,158 @@ function Landing() {
     <main className="min-h-screen bg-white text-[var(--foreground)] antialiased">
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[var(--secondary)] to-white">
-        <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[var(--primary-soft)] opacity-70 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute top-1/2 -left-32 h-64 w-64 rounded-full bg-rose-100/60 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-30" />
-        <div className="relative mx-auto max-w-3xl px-5 pt-12 pb-14 sm:pt-20 sm:pb-20">
-          <div className="reveal">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-[var(--muted-foreground)] shadow-sm shadow-slate-900/5 backdrop-blur">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--primary)] opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
-              </span>
-              Проверенная методика для медцентров
-            </div>
-            <h1 className="font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
-              Как мед центру в Казахстане получать{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-[var(--primary)]">100+ пациентов</span>
-                <span
-                  aria-hidden
-                  className="absolute bottom-1 left-0 right-0 -z-0 h-3 rounded-sm bg-[var(--primary-soft)] sm:h-4"
-                />
-              </span>{" "}
-              на платную диагностику
-            </h1>
-            <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-slate-600 sm:text-lg">
-              Для владельцев центров реабилитации, которые хотят обойти конкурентов в 2026 году и увеличить выручку в 2–3 раза без увеличения расходов на рекламу.
-            </p>
-          </div>
+        <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-70 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute bottom-0 -left-32 h-72 w-72 rounded-full bg-rose-100/50 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-25" />
 
-          <ul className="reveal mt-8 space-y-3">
-            {[
-              "До 70% доходимости на платную диагностику",
-              "Без скидок и демпинга",
-              "Поток на дорогие услуги",
-            ].map((t, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-4 rounded-2xl border border-[var(--border)]/70 bg-white/60 p-3.5 backdrop-blur-sm"
+        <div className="relative mx-auto max-w-7xl px-5 pt-10 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* === Content === */}
+            <div className="reveal space-y-7">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/15 bg-white/80 px-3 py-1.5 shadow-sm shadow-slate-900/5 backdrop-blur">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--primary)] opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
+                  Проверенная методика для медцентров
+                </span>
+              </div>
+
+              <h1 className="font-display text-[34px] font-extrabold leading-[1.05] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl lg:text-[60px]">
+                Как медцентру в Казахстане получать{" "}
+                <span className="relative whitespace-nowrap">
+                  <span className="relative z-10 text-[var(--primary)]">100+ пациентов</span>
+                  <svg
+                    aria-hidden
+                    className="absolute -bottom-1 left-0 -z-0 h-3 w-full text-[var(--primary-soft)]"
+                    viewBox="0 0 100 10"
+                    preserveAspectRatio="none"
+                  >
+                    <path d="M0 5 Q 25 0 50 5 T 100 5" stroke="currentColor" strokeWidth="8" fill="none" strokeLinecap="round" />
+                  </svg>
+                </span>{" "}
+                на платную диагностику
+              </h1>
+
+              <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+                Для владельцев центров реабилитации, которые хотят обойти конкурентов в 2026 году и{" "}
+                <span className="font-semibold italic text-[var(--foreground)]">
+                  увеличить выручку в 2–3 раза
+                </span>{" "}
+                без раздувания рекламных бюджетов.
+              </p>
+
+              {/* Stat grid */}
+              <div className="grid gap-3">
+                <div className="flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--primary-soft)] font-display text-lg font-extrabold text-[var(--primary)]">
+                    70%
+                  </div>
+                  <p className="text-sm font-semibold text-slate-700 sm:text-base">
+                    Доходимости на платную диагностику
+                  </p>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
+                      <Check className="h-5 w-5" strokeWidth={3} />
+                    </div>
+                    <p className="text-sm font-semibold text-slate-700">Без скидок и демпинга</p>
+                  </div>
+                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
+                      <TrendingUp className="h-5 w-5" strokeWidth={2.5} />
+                    </div>
+                    <p className="text-sm font-semibold text-slate-700">Поток на дорогие услуги</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="flex flex-col gap-5 pt-2 sm:flex-row sm:items-center">
+                <WaButton variant="primary">Записаться на диагностику</WaButton>
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-[var(--primary-soft)] text-[10px] font-bold text-[var(--primary)]">+50</div>
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-slate-100 text-[10px] font-bold text-slate-600">KZ</div>
+                    <div className="h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-[var(--primary)] to-emerald-400" />
+                  </div>
+                  <p className="text-xs font-medium leading-tight text-slate-500">
+                    Доверяют 20+ <br />клиник в РК
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="https://astanahub.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-2.5 backdrop-blur transition hover:border-[var(--primary)]"
+                aria-label="Резидент Astana Hub"
               >
-                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-sm shadow-teal-900/20">
-                  <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
+                  Официальный участник
                 </span>
-                <span className="text-[14px] font-semibold text-slate-700 sm:text-base">
-                  {t}
-                </span>
-              </li>
-            ))}
-          </ul>
+              </a>
+            </div>
 
-          <div className="reveal mt-8 flex flex-col gap-3 sm:flex-row">
-            <WaButton variant="primary">Записаться на диагностику</WaButton>
-            <a
-              href="#how"
-              className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-[var(--border)] bg-white px-6 py-4 text-base font-bold text-[var(--foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)] hover:shadow-md hover:shadow-teal-900/5"
-            >
-              Как это работает
-              <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-0.5 group-hover:text-[var(--primary)]" />
-            </a>
+            {/* === Visual === */}
+            <div className="reveal relative">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] opacity-60 blur-3xl"
+                style={{
+                  background:
+                    "radial-gradient(circle, color-mix(in oklab, var(--primary) 30%, transparent), transparent 70%)",
+                }}
+              />
+              <div className="relative overflow-hidden rounded-[32px] border border-white/60 bg-white shadow-2xl shadow-teal-900/10 ring-1 ring-[var(--primary)]/10">
+                <img
+                  src={heroImg}
+                  alt="Современный медицинский центр"
+                  width={1280}
+                  height={896}
+                  className="aspect-[4/5] h-auto w-full object-cover"
+                />
+
+                {/* Floating top chips */}
+                <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 p-4 sm:p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="float-a">
+                      <div className="chip-3d">
+                        <TrendingUp className="h-3.5 w-3.5 text-[var(--emerald)]" />
+                        +30 млн ₸ / 30 дней
+                      </div>
+                    </div>
+                    <div className="float-b">
+                      <div className="chip-3d">
+                        <span className="dot" />
+                        70% доходимости
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating case card */}
+                <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/60 bg-white/90 p-5 shadow-lg shadow-teal-900/10 backdrop-blur-md sm:inset-x-6 sm:bottom-6 sm:p-6">
+                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
+                    Кейс: МедЦентр Алматы
+                  </p>
+                  <h4 className="font-display text-2xl font-extrabold text-[var(--foreground)] sm:text-3xl">
+                    ×2.4 выручка
+                  </h4>
+                  <p className="mt-1 text-xs text-slate-500 sm:text-sm">
+                    за 4 месяца работы по методологии
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <TrustBar />
-
-          <a
-            href="https://astanahub.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="reveal mt-5 inline-flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white px-4 py-2.5 transition hover:border-[var(--primary)]"
-            aria-label="Резидент Astana Hub"
-          >
-            <img
-              src={astanaHubImg}
-              alt="Astana Hub"
-              width={120}
-              height={32}
-              className="h-7 w-auto"
-            />
-            <span className="flex flex-col leading-tight">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
-                Официальный участник
-              </span>
-              <span className="text-sm font-semibold text-[var(--foreground)]">​</span>
-            </span>
-          </a>
-
-          <div className="reveal relative mx-auto mt-12 max-w-2xl">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -inset-6 -z-10 rounded-[36px] opacity-50 blur-2xl"
-              style={{
-                background:
-                  "radial-gradient(circle, color-mix(in oklab, var(--primary) 25%, transparent), transparent 70%)",
-              }}
-            />
-            <div className="relative overflow-hidden rounded-[28px] border border-white/60 shadow-2xl shadow-teal-900/10 ring-1 ring-[var(--primary)]/10">
-            <img
-              src={heroImg}
-              alt="Современный медицинский центр"
-              width={1280}
-              height={896}
-              className="h-auto w-full"
-            />
-            {/* Floating decor over hero image */}
-            <div aria-hidden className="pointer-events-none absolute inset-0">
-              <div className="absolute left-3 top-3 float-a sm:left-5 sm:top-5">
-                <div className="chip-3d">
-                  <TrendingUp className="h-3.5 w-3.5 text-[var(--emerald)]" />
-                  +30 млн ₸ / 30 дней
-                </div>
-              </div>
-              <div className="absolute right-3 top-10 float-b sm:right-5">
-                <div className="chip-3d">
-                  <span className="dot" />
-                  70% на платную диагностику
-                </div>
-              </div>
-              <div className="absolute bottom-3 left-3 float-c sm:bottom-5 sm:left-5">
-                <div className="chip-3d">
-                  <CalendarCheck className="h-3.5 w-3.5 text-[var(--primary)]" />
-                  Новая запись · Имплантация
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
         </div>
       </section>
 
