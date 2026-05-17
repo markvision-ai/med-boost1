@@ -430,7 +430,7 @@ function Landing() {
             </div>
 
             <p className="relative mt-5 text-center text-sm text-white/80 sm:text-base">
-              Тот же бюджет на рекламу — в 3 раза больше реально пришедших и оплативших пациентов.
+              Тот же бюджет на рекламу — в 3 раза больше реально пришедших пациентов.
             </p>
           </div>
         </div>
