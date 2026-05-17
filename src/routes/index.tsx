@@ -677,8 +677,11 @@ function Landing() {
             ].map((b) => (
               <article
                 key={b.n}
-                className="reveal flex flex-col rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6"
+                className="reveal card-lift relative flex flex-col rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6"
               >
+                <div aria-hidden className="absolute -right-2 -top-2 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-lg shadow-teal-900/20 float-c">
+                  <Gift className="h-5 w-5" />
+                </div>
                 <div className="mb-3 flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
                     Бонус №{b.n}
