@@ -231,6 +231,30 @@ function Landing() {
 
           <TrustBar />
 
+          <a
+            href="https://astanahub.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="reveal mt-5 inline-flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white px-4 py-2.5 transition hover:border-[var(--primary)]"
+            aria-label="Резидент Astana Hub"
+          >
+            <img
+              src={astanaHubImg}
+              alt="Astana Hub"
+              width={120}
+              height={32}
+              className="h-7 w-auto"
+            />
+            <span className="flex flex-col leading-tight">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
+                Официальный участник
+              </span>
+              <span className="text-sm font-semibold text-[var(--foreground)]">
+                Astana Hub
+              </span>
+            </span>
+          </a>
+
           <div className="reveal relative mx-auto mt-12 max-w-2xl overflow-hidden rounded-3xl border border-[var(--border)] shadow-xl shadow-slate-900/5">
             <img
               src={heroImg}
