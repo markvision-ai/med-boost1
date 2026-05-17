@@ -177,11 +177,7 @@ function StickyHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--muted-foreground)] md:flex">
-          <a href="#how" className="transition hover:text-[var(--foreground)]">Метод</a>
-          <a href="#cta" className="transition hover:text-[var(--foreground)]">Стоимость</a>
-          <a href="#faq" className="transition hover:text-[var(--foreground)]">Вопросы</a>
-        </nav>
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--muted-foreground)] md:flex" />
 
         <a
           href={WA_URL}
@@ -233,16 +229,13 @@ function Landing() {
                     aria-hidden
                     className="absolute inset-x-0 bottom-0.5 -z-0 h-2.5 bg-[var(--primary-soft)] sm:bottom-1 sm:h-3.5"
                   />
-                </span>{" "}
+                </span> <br />
                 каждый месяц
               </h1>
 
               <p className="max-w-2xl text-base leading-[1.6] text-slate-700 sm:text-lg">
                 Для владельцев медклиник, которые хотят обойти конкурентов в 2026 году <br />
-                и увеличить выручку{" "}
-                <span className="whitespace-nowrap rounded-md bg-[var(--primary-soft)] px-1.5 py-0.5 font-bold text-[var(--primary)]">
-                  в 2–3 раза
-                </span>
+                и увеличить выручку в 2–3 раза
               </p>
 
               {/* KPI row — 3 cards */}
@@ -290,7 +283,7 @@ function Landing() {
               >
                 <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
-                  Официальный участник
+                  ОФИЦИАЛЬНЫЙ УЧАСТНИК
                 </span>
               </a>
             </div>
