@@ -988,7 +988,7 @@ function Landing() {
               <div className="font-display text-xl text-white">
                 MarkVision AI
               </div>
-              <p className="mt-1 max-w-sm text-sm text-slate-400">Система роста для медицинских центров в Казахстане.</p>
+              <p className="mt-1 max-w-sm text-sm text-slate-400">Система роста для медицинских центров <br /> в Казахстане.</p>
               <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
                 <img src={astanaHubImg} alt="Astana Hub" width={80} height={20} className="h-5 w-auto invert" />
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-300">Участник ​</span>
