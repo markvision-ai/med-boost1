@@ -250,23 +250,6 @@ function Landing() {
             </a>
           </div>
 
-          {/* Floating ROI badge */}
-          <div className="reveal pointer-events-none mt-8 flex sm:mt-10">
-            <div className="rotate-[-3deg] inline-flex items-center gap-3 rounded-2xl border border-white/60 bg-white/70 p-3 shadow-xl shadow-teal-900/10 backdrop-blur-md">
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--primary-soft)] font-display text-[11px] font-extrabold text-[var(--primary)]">
-                ROI
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                  Средний рост
-                </span>
-                <span className="font-display text-base font-extrabold text-[var(--foreground)]">
-                  +240%
-                </span>
-              </div>
-            </div>
-          </div>
-
           <TrustBar />
 
           <a
