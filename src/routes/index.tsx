@@ -614,7 +614,7 @@ function Landing() {
 
           <div className="reveal mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
             <span className="h-px w-8 bg-[var(--border)]" />
-            Дальше — детали по каждому шагу
+            ДЕТАЛИ ПО КАЖДОМУ ШАГУ
             <span className="h-px w-8 bg-[var(--border)]" />
           </div>
         </div>
