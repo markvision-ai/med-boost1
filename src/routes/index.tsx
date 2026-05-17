@@ -73,18 +73,26 @@ function HeroVideo() {
 
     setMuted(false);
     setStarted(true);
+    if (v.paused) {
+      v.pause();
+    }
+    v.removeAttribute("muted");
     v.muted = false;
     v.defaultMuted = false;
     v.volume = 1;
 
-    const p = v.play();
-    if (p && typeof p.then === "function") {
-      p.then(() => {
+    try {
+      const p = v.play();
+      if (p && typeof p.then === "function") {
+        p.then(() => {
+          setPlaying(true);
+        }).catch(() => {
+          setPlaying(!v.paused);
+        });
+      } else {
         setPlaying(true);
-      }).catch(() => {
-        setPlaying(!v.paused);
-      });
-    } else {
+      }
+    } catch {
       setPlaying(true);
     }
   };
@@ -114,8 +122,15 @@ function HeroVideo() {
           loop
           muted={muted}
           playsInline
+          controls={started}
+          preload="metadata"
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
+          onVolumeChange={() => {
+            const v = ref.current;
+            if (!v) return;
+            setMuted(v.muted || v.volume === 0);
+          }}
           className="block h-auto w-full"
         />
 
@@ -123,6 +138,7 @@ function HeroVideo() {
           <button
             type="button"
             onClick={enableSound}
+            onPointerDown={enableSound}
             className="absolute bottom-3 left-3 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/70 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur transition hover:bg-black/85 sm:bottom-4 sm:left-4 sm:px-4 sm:py-2.5 sm:text-sm"
             aria-label="Включить звук"
           >
