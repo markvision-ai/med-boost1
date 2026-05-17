@@ -71,21 +71,21 @@ function HeroVideo() {
     const v = ref.current;
     if (!v) return;
 
-     setMuted(false);
-     setStarted(true);
+    setMuted(false);
+    setStarted(true);
     v.muted = false;
-     v.defaultMuted = false;
+    v.defaultMuted = false;
     v.volume = 1;
 
     const p = v.play();
     if (p && typeof p.then === "function") {
       p.then(() => {
-        setPlaying(true);
+       setPlaying(true);
       }).catch(() => {
-         setPlaying(!v.paused);
+        setPlaying(!v.paused);
       });
     } else {
-       setPlaying(true);
+      setPlaying(true);
     }
   };
 
