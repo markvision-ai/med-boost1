@@ -349,7 +349,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="relative mx-auto max-w-4xl px-5">
-          <Chapter n="02" label="КЕЙС КЛИНИКИ" />
+          <Chapter label="КЕЙС КЛИНИКИ" />
           <SectionTitle eyebrow="Реальный результат">
             Медцентр в Алматы: <br />
             +13 млн без доп бюджета на рекламу
@@ -481,7 +481,7 @@ function Landing() {
       {/* ===== BEFORE / AFTER ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
-          <Chapter n="03" label="ДО И ПОСЛЕ" align="center" />
+          <Chapter label="ДО И ПОСЛЕ" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
             <br />
           </SectionTitle>
@@ -547,7 +547,7 @@ function Landing() {
       <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="04" label="ЭКСПЕРТ" />
+          <Chapter label="ЭКСПЕРТ" />
 
           {/* Expert intro: photo + name + lead paragraph */}
           <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
@@ -718,7 +718,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-50 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-5">
-          <Chapter n="05" label="ЗАЧЕМ РАЗБОР" />
+          <Chapter label="ЗАЧЕМ РАЗБОР" />
           <SectionTitle eyebrow="Часовая сессия со мной">
             Часовой разбор — и у вас план на <br />
             <span className="text-[var(--primary)]">+100 млн ₸ в год</span>
@@ -767,7 +767,7 @@ function Landing() {
       {/* ===== OUTCOME ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="06" label="РЕЗУЛЬТАТ СЕССИИ" />
+          <Chapter label="РЕЗУЛЬТАТ СЕССИИ" />
           <SectionTitle eyebrow="Результат сессии">
             Что вы получите на консультации
           </SectionTitle>
@@ -797,7 +797,7 @@ function Landing() {
       {/* ===== PRICING ===== */}
       <section id="cta" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5">
-          <Chapter n="07" label="СТОИМОСТЬ" align="center" />
+          <Chapter label="СТОИМОСТЬ" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
@@ -831,7 +831,7 @@ function Landing() {
       {/* ===== BONUSES ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
-          <Chapter n="08" label="БОНУСЫ" />
+          <Chapter label="БОНУСЫ" />
           <SectionTitle eyebrow="Бонусы">
             Первым 10 владельцам - 3 бонуса на 110 000 ₸
           </SectionTitle>
@@ -896,7 +896,7 @@ function Landing() {
       {/* ===== HONEST TALK ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="09" label="ЧЕСТНЫЙ РАЗГОВОР" />
+          <Chapter label="ЧЕСТНЫЙ РАЗГОВОР" />
           <SectionTitle>А теперь честно</SectionTitle>
           <ul className="mt-8 space-y-3">
             {[
@@ -936,7 +936,7 @@ function Landing() {
       {/* ===== GUARANTEE ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="10" label="ГАРАНТИЯ" align="center" />
+          <Chapter label="ГАРАНТИЯ" align="center" />
           <div className="text-center">
           <div
             className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
@@ -966,7 +966,7 @@ function Landing() {
       {/* ===== FAQ ===== */}
       <section id="faq" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="11" label="ВОПРОСЫ И ОТВЕТЫ" />
+          <Chapter label="ВОПРОСЫ И ОТВЕТЫ" />
           <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
           <div className="mt-8 space-y-3">
             {[
@@ -1103,7 +1103,7 @@ function FamiliarSituation() {
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
       <div aria-hidden className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-rose-100/60 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-5">
-        <Chapter n="01" label="ЗНАКОМАЯ СИТУАЦИЯ" />
+        <Chapter label="ЗНАКОМАЯ СИТУАЦИЯ" />
         <div className="reveal mb-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">
           <AlertTriangle className="h-3.5 w-3.5" /> Если узнаёте себя — читайте дальше
         </div>
