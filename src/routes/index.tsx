@@ -721,10 +721,6 @@ function Landing() {
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
-          <p className="reveal mx-auto mt-4 max-w-lg text-center text-base text-[var(--muted-foreground)] sm:text-lg">
-            Положа руку на сердце - решение таких задач стоит минимум 500 000 ₸.
-          </p>
-
           <div className="reveal mt-8 space-y-2.5">
             <PriceRow label="Реальная ценность" value="500 000 ₸" strike />
             <PriceRow label="Обычная цена консультации" value="50 000 ₸" strike />
