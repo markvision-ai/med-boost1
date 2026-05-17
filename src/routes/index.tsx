@@ -227,7 +227,7 @@ function Landing() {
               </h1>
 
               <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                Для владельцев центров реабилитации, которые хотят обойти конкурентов в 2026 году и{" "}
+                Для владельцев медицинских клиник, которые хотят обойти конкурентов в 2026 году и{" "}
                 <span className="font-semibold italic text-[var(--foreground)]">
                   увеличить выручку в 2–3 раза
                 </span>{" "}
