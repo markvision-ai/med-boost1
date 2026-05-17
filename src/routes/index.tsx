@@ -210,19 +210,9 @@ function Landing() {
                 </span>
               </div>
 
-              <h1 className="font-display text-[34px] font-extrabold leading-[1.05] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl lg:text-[60px]">
-                Как медцентру в Казахстане получать{" "}
-                <span className="relative whitespace-nowrap">
-                  <span className="relative z-10 text-[var(--primary)]">100+ пациентов</span>
-                  <svg
-                    aria-hidden
-                    className="absolute -bottom-1 left-0 -z-0 h-3 w-full text-[var(--primary-soft)]"
-                    viewBox="0 0 100 10"
-                    preserveAspectRatio="none"
-                  >
-                    <path d="M0 5 Q 25 0 50 5 T 100 5" stroke="currentColor" strokeWidth="8" fill="none" strokeLinecap="round" />
-                  </svg>
-                </span>{" "}
+              <h1 className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)] text-center">
+                Как медицинской клинике получить + 100 пациентов
+                <br /><br />
                 на платную диагностику
               </h1>
 
