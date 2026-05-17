@@ -871,19 +871,10 @@ function Landing() {
             Вы ничем не рискуете
           </SectionTitle>
           <p className="reveal mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            Если информация на консультации покажется банальной и вы захотите
-            возврат - просто напишите{" "}
-            <span className="font-semibold text-[var(--foreground)]">
-              «Юрий, хочу возврат»
-            </span>
-            .
-          </p>
-          <p className="reveal mx-auto mt-3 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            Скажу больше -{" "}
-            <span className="font-semibold text-[var(--emerald)]">
-              дополнительно скину 4 990 ₸
-            </span>{" "}
-            за потраченное время, если информация не оправдает ваших ожиданий.
+            Не понравится — напишите{" "}
+            <span className="font-semibold text-[var(--foreground)]">«Юрий, хочу возврат»</span>.
+            Верну 4 990 ₸ и{" "}
+            <span className="font-semibold text-[var(--emerald)]">ещё 4 990 ₸ за время</span>.
           </p>
           <p className="reveal mt-4 font-semibold text-[var(--foreground)]">
             Всю ответственность беру на себя.
