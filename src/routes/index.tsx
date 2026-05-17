@@ -901,7 +901,7 @@ function Landing() {
                 className="inline-flex items-center gap-2 text-white hover:text-[#25D366]"
               >
                 <MessageCircle className="h-4 w-4" />
-                WhatsApp: +7 708 902 70 71
+                WhatsApp: +7 747 284 25 95
               </a>
               <span className="text-xs text-slate-500">© 2026 MarkVision AI</span>
             </div>
