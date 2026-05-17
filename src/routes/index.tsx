@@ -333,18 +333,6 @@ function Landing() {
                   </div>
                 </div>
 
-                {/* Floating case card */}
-                <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/60 bg-white/90 p-5 shadow-lg shadow-teal-900/10 backdrop-blur-md sm:inset-x-6 sm:bottom-6 sm:p-6">
-                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
-                    Кейс: МедЦентр Алматы
-                  </p>
-                  <h4 className="font-display text-2xl font-extrabold text-[var(--foreground)] sm:text-3xl">
-                    ×2.4 выручка
-                  </h4>
-                  <p className="mt-1 text-xs text-slate-500 sm:text-sm">
-                    за 4 месяца работы по методологии
-                  </p>
-                </div>
               </div>
             </div>
           </div>
