@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Адресное предложение, СПК и удержание пациентов. Часовой разбор за 4 990 ₸ с гарантией возврата.",
+          "Адресное предложение, поток пациентов на дорогостоящие услуги и их удержание. Часовой разбор за 4 990 ₸ с гарантией возврата.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
