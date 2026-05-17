@@ -314,25 +314,6 @@ function Landing() {
                   height={896}
                   className="aspect-[4/5] h-auto w-full object-cover"
                 />
-
-                {/* Floating top chips */}
-                <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 p-4 sm:p-5">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="float-a">
-                      <div className="chip-3d">
-                        <TrendingUp className="h-3.5 w-3.5 text-[var(--emerald)]" />
-                        +30 млн ₸ / 30 дней
-                      </div>
-                    </div>
-                    <div className="float-b">
-                      <div className="chip-3d">
-                        <span className="dot" />
-                        70% доходимости
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
           </div>
