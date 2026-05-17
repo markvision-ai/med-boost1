@@ -719,6 +719,7 @@ function Landing() {
           <p className="reveal mt-4 font-semibold text-[var(--foreground)]">
             Всю ответственность беру на себя.
           </p>
+          </div>
         </div>
       </section>
 
