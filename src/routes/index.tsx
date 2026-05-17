@@ -1167,7 +1167,7 @@ function Step({
             <span className="relative">{number}</span>
           </span>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
-            Шаг {number} из 3
+            Шаг {number} из 3 года
           </span>
         </div>
         <h2 className="reveal font-display text-3xl leading-tight text-[var(--foreground)] sm:text-4xl">
