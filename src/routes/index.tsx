@@ -550,19 +550,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* ===== TRIGGER ===== */}
-      <section className="bg-[var(--secondary)] py-14">
-        <div className="mx-auto max-w-2xl px-5 text-center">
-          <p className="reveal text-xl leading-relaxed text-[var(--foreground)] sm:text-2xl">
-            Если знакомо - читайте дальше. Расскажу, как за{" "}
-            <span className="rounded-md bg-[var(--primary-soft)] px-2 py-0.5 font-semibold text-[var(--primary)]">
-              3 шага
-            </span>{" "}
-            исправить ситуацию.
-          </p>
-        </div>
-      </section>
-
       {/* ===== EXPERT ===== */}
       <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
