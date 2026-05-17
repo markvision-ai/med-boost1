@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useRef, useState } from "react";
 import {
   Check,
   CheckCircle2,
@@ -23,9 +24,13 @@ import {
   UserPlus,
   Receipt,
   Wallet,
+  Play,
+  Volume2,
+  VolumeX,
+  Pause,
 } from "lucide-react";
 import ownerImg from "../assets/clinic-owner.jpg";
-import expertImg from "../assets/expert.jpg";
+import expertImg from "../assets/yuri-portrait.png";
 import astanaHubImg from "../assets/astana-hub.png";
 import { useReveal } from "../hooks/use-reveal";
 
@@ -55,6 +60,95 @@ const WA_URL =
   "https://api.whatsapp.com/send/?phone=+77472842595&text=%D0%9C%D0%B5%D0%B4%D1%86%D0%B5%D0%BD%D1%82%D1%80";
 
 /* ============ shared building blocks ============ */
+
+function HeroVideo() {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [started, setStarted] = useState(false);
+  const [playing, setPlaying] = useState(true);
+  const [muted, setMuted] = useState(true);
+
+  const enableSound = () => {
+    const v = ref.current;
+    if (!v) return;
+    v.muted = false;
+    v.currentTime = 0;
+    v.play().then(() => {
+      setMuted(false);
+      setPlaying(true);
+      setStarted(true);
+    }).catch(() => setStarted(true));
+  };
+
+  const toggleMute = () => {
+    const v = ref.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setMuted(v.muted);
+  };
+
+  const togglePlay = () => {
+    const v = ref.current;
+    if (!v) return;
+    if (v.paused) { v.play(); setPlaying(true); }
+    else { v.pause(); setPlaying(false); }
+  };
+
+  return (
+    <div className="relative w-full max-w-2xl">
+      <div aria-hidden className="pointer-events-none absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-[var(--primary)]/20 via-transparent to-emerald-300/20 blur-2xl" />
+      <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-black shadow-2xl shadow-slate-900/15">
+        <video
+          ref={ref}
+          src="/hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          onPlay={() => setPlaying(true)}
+          onPause={() => setPlaying(false)}
+          className="block h-auto w-full"
+        />
+
+        {!started && (
+          <button
+            type="button"
+            onClick={enableSound}
+            className="absolute inset-0 flex items-center justify-center bg-black/30 transition hover:bg-black/40"
+            aria-label="Включить звук"
+          >
+            <span className="flex items-center gap-3 rounded-full bg-white/95 px-6 py-3.5 font-semibold text-slate-900 shadow-xl backdrop-blur transition hover:scale-105">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)] text-white">
+                <Play className="h-4 w-4 fill-white" />
+              </span>
+              Включить со звуком
+            </span>
+          </button>
+        )}
+
+        {started && (
+          <div className="absolute bottom-3 right-3 flex items-center gap-2">
+            <button
+              type="button"
+              onClick={togglePlay}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-slate-900 shadow-lg backdrop-blur transition hover:bg-white"
+              aria-label={playing ? "Пауза" : "Воспроизвести"}
+            >
+              {playing ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 fill-current" />}
+            </button>
+            <button
+              type="button"
+              onClick={toggleMute}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-slate-900 shadow-lg backdrop-blur transition hover:bg-white"
+              aria-label={muted ? "Включить звук" : "Выключить звук"}
+            >
+              {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function WaButton({
   children,
@@ -227,16 +321,7 @@ function Landing() {
               </p>
 
               {/* Hero video */}
-              <div className="w-full max-w-2xl overflow-hidden rounded-3xl border border-[var(--border)] bg-black shadow-xl shadow-slate-900/10">
-                <video
-                  src="/hero-video.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="h-auto w-full"
-                />
-              </div>
+              <HeroVideo />
 
               {/* CTA */}
               <div className="flex flex-col items-center gap-4 pt-1 sm:flex-row sm:justify-center">
@@ -469,15 +554,12 @@ function Landing() {
           {/* Expert intro: photo + name + lead paragraph */}
           <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
             <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[var(--primary-soft)] opacity-60 blur-3xl" />
-            <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+            <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-start sm:gap-7">
               <img
                 src={expertImg}
                 alt="Юрий Запойнов, основатель MarkVision AI"
-                width={400}
-                height={400}
                 loading="lazy"
-                className="h-24 w-24 shrink-0 rounded-full object-cover ring-4 ring-white sm:h-32 sm:w-32"
-                style={{ boxShadow: "0 0 0 4px var(--primary-soft)" }}
+                className="w-full shrink-0 rounded-2xl object-cover shadow-lg shadow-slate-900/10 ring-1 ring-[var(--border)] sm:w-56"
               />
               <div>
                 <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-[var(--primary)] ring-1 ring-[var(--primary)]/15">
