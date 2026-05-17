@@ -205,29 +205,25 @@ function Landing() {
               Проверенная методика для медцентров
             </div>
             <h1 className="font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
-              Как мед центру получить{" "}
+              100+ пациентов на{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 text-[var(--primary)]">100+ пациентов</span>
+                <span className="relative z-10 text-[var(--primary)]">платную диагностику</span>
                 <span
                   aria-hidden
                   className="absolute bottom-1 left-0 right-0 -z-0 h-3 rounded-sm bg-[var(--primary-soft)] sm:h-4"
                 />
-              </span>{" "}
-              на платную диагностику
+              </span>
             </h1>
             <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-slate-600 sm:text-lg">
-              Для владельцев центров реабилитации, которые хотят обойти
-              конкурентов в{" "}
-              <span className="font-semibold italic text-rose-600">2026 году</span>{" "}
-              и увеличить выручку в 2–3 раза без увеличения расходов на рекламу.
+              Выручка центра реабилитации ×2–3 без роста бюджета на рекламу.
             </p>
           </div>
 
           <ul className="reveal mt-8 space-y-3">
             {[
-              "Без разорительных акций и скидок",
-              "До 70% доходимости пациентов на платную диагностику",
-              "Стабильный поток на дорогостоящие услуги",
+              "До 70% доходимости на платную диагностику",
+              "Без скидок и демпинга",
+              "Поток на дорогие услуги",
             ].map((t, i) => (
               <li
                 key={i}
