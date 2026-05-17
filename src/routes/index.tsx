@@ -261,11 +261,11 @@ function Landing() {
               </h1>
 
               <p className="max-w-2xl text-base leading-[1.6] text-slate-700 sm:text-lg">
-                Для владельцев медклиник, которые хотят обойти конкурентов в 2026 году и увеличить выручку{" "}
+                Для владельцев медклиник, которые хотят обойти конкурентов в 2026 году <br />
+                и увеличить выручку{" "}
                 <span className="whitespace-nowrap rounded-md bg-[var(--primary-soft)] px-1.5 py-0.5 font-bold text-[var(--primary)]">
                   в 2–3 раза
-                </span>{" "}
-                — без раздувания рекламных бюджетов.
+                </span>
               </p>
 
               {/* KPI row — 3 cards */}
