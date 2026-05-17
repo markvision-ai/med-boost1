@@ -354,6 +354,9 @@ function Landing() {
             Медцентр в Алматы: <br />
             +13 млн без доп бюджета на рекламу
           </SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Если хотя бы одна из этих ситуаций — про вас, вы не одни. Покажу на конкретном примере, как с этим справился владелец клиники в Алматы.
+          </p>
 
           {/* OWNER CARD */}
           <article className="reveal card-lift relative mt-8 flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
@@ -483,8 +486,11 @@ function Landing() {
         <div className="mx-auto max-w-5xl px-5">
           <Chapter label="ДО И ПОСЛЕ" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
-            <br />
+            Как меняется клиника
           </SectionTitle>
+          <p className="reveal mx-auto mt-4 max-w-2xl text-center text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Кейс Бакыта — не исключение. По такой же логике мы перестраиваем работу клиники: от хаоса со скидками и сарафаном — к системе с очередью на дорогие услуги.
+          </p>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {/* BEFORE */}
