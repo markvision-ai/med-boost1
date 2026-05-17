@@ -215,11 +215,9 @@ function SectionTitle({
 }
 
 function Chapter({
-  n,
   label,
   align = "left",
 }: {
-  n: string;
   label: string;
   align?: "left" | "center";
 }) {
@@ -229,13 +227,11 @@ function Chapter({
         align === "center" ? "justify-center" : ""
       }`}
     >
-      <span className="font-display text-sm font-bold tracking-[0.2em] text-[var(--primary)]">
-        {n}
-      </span>
-      <span className="h-px w-10 bg-[var(--primary)]/30" />
+      <span className="h-px w-10 bg-[var(--primary)]/40" />
       <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-foreground)]">
         {label}
       </span>
+      <span className="h-px w-10 bg-[var(--primary)]/40" />
     </div>
   );
 }
@@ -353,11 +349,14 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="relative mx-auto max-w-4xl px-5">
-          <Chapter n="02" label="КЕЙС КЛИНИКИ" />
+          <Chapter label="КЕЙС КЛИНИКИ" />
           <SectionTitle eyebrow="Реальный результат">
             Медцентр в Алматы: <br />
             +13 млн без доп бюджета на рекламу
           </SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Если хотя бы одна из этих ситуаций — про вас, вы не одни. Покажу на конкретном примере, как с этим справился владелец клиники в Алматы.
+          </p>
 
           {/* OWNER CARD */}
           <article className="reveal card-lift relative mt-8 flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
@@ -485,10 +484,13 @@ function Landing() {
       {/* ===== BEFORE / AFTER ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
-          <Chapter n="03" label="ДО И ПОСЛЕ" align="center" />
+          <Chapter label="ДО И ПОСЛЕ" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
-            <br />
+            Как меняется клиника
           </SectionTitle>
+          <p className="reveal mx-auto mt-4 max-w-2xl text-center text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Кейс Бакыта — не исключение. По такой же логике мы перестраиваем работу клиники: от хаоса со скидками и сарафаном — к системе с очередью на дорогие услуги.
+          </p>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {/* BEFORE */}
@@ -551,9 +553,12 @@ function Landing() {
       <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="04" label="ЭКСПЕРТ" />
+          <Chapter label="ЭКСПЕРТ" />
 
           {/* Expert intro: photo + name + lead paragraph */}
+          <p className="reveal mb-6 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Закономерный вопрос — кто стоит за этой системой и почему ей можно доверять.
+          </p>
           <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
             <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[var(--primary-soft)] opacity-60 blur-3xl" />
             <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-start sm:gap-7">
@@ -651,8 +656,7 @@ function Landing() {
             в систему роста
           </h2>
           <p className="reveal mx-auto mt-5 max-w-2xl text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
-            Не «волшебная реклама» — связка из адресного предложения, системы привлечения и удержания. <br />
-            Работает на 20+ клиниках по РК.
+            Теперь — сам метод. Это не «волшебная реклама», а связка из трёх шагов: адресное предложение, система привлечения и механизм удержания. Именно она даёт результаты, которые вы видели выше.
           </p>
 
           <div className="reveal mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
@@ -722,13 +726,13 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-50 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-5">
-          <Chapter n="05" label="ЗАЧЕМ РАЗБОР" />
+          <Chapter label="ЗАЧЕМ РАЗБОР" />
           <SectionTitle eyebrow="Часовая сессия со мной">
             Часовой разбор — и у вас план на <br />
             <span className="text-[var(--primary)]">+100 млн ₸ в год</span>
           </SectionTitle>
-          <p className="reveal mt-6 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
-            Без воды, без шаблонов — конкретные шаги под вашу клинику.
+          <p className="reveal mt-5 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Теория понятна. Чтобы применить эти 3 шага к вашей клинике, нужен час разбора — без воды и шаблонов, только конкретика под ваш случай.
           </p>
 
           <div className="reveal mt-8 grid gap-4 sm:grid-cols-3">
@@ -771,10 +775,13 @@ function Landing() {
       {/* ===== OUTCOME ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="06" label="РЕЗУЛЬТАТ СЕССИИ" />
-          <SectionTitle eyebrow="Результат сессии">
-            Что вы получите на консультации
+          <Chapter label="РЕЗУЛЬТАТ СЕССИИ" />
+          <SectionTitle eyebrow="Что вы заберёте">
+            Что вы получите на разборе
           </SectionTitle>
+          <p className="reveal mt-5 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            После часа со мной у вас на руках — готовый план роста. Конкретно, по пунктам:
+          </p>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {[
               "Адресное предложение под вашу нишу",
@@ -801,10 +808,13 @@ function Landing() {
       {/* ===== PRICING ===== */}
       <section id="cta" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5">
-          <Chapter n="07" label="СТОИМОСТЬ" align="center" />
+          <Chapter label="СТОИМОСТЬ" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
-            Сколько это стоит?
+            Сколько стоит такой разбор?
           </SectionTitle>
+          <p className="reveal mx-auto mt-4 max-w-xl text-center text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            План, который вы получаете, в работе стоит сотни тысяч тенге. Но сейчас — намеренно символическая цена, чтобы вы точно дошли до встречи.
+          </p>
           <div className="reveal mt-8 space-y-2.5">
             <PriceRow label="Реальная ценность" value="500 000 ₸" strike />
             <PriceRow label="Обычная цена консультации" value="50 000 ₸" strike />
@@ -835,10 +845,13 @@ function Landing() {
       {/* ===== BONUSES ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
-          <Chapter n="08" label="БОНУСЫ" />
-          <SectionTitle eyebrow="Бонусы">
-            Первым 10 владельцам - 3 бонуса на 110 000 ₸
+          <Chapter label="БОНУСЫ" />
+          <SectionTitle eyebrow="Подарок к разбору">
+            Первым 10 владельцам — 3 бонуса на 110 000 ₸
           </SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Кроме самого разбора, вы забираете 3 готовых инструмента — чтобы внедрить план сразу, не собирая ничего с нуля.
+          </p>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
               {
@@ -900,8 +913,11 @@ function Landing() {
       {/* ===== HONEST TALK ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="09" label="ЧЕСТНЫЙ РАЗГОВОР" />
-          <SectionTitle>А теперь честно</SectionTitle>
+          <Chapter label="ЧЕСТНЫЙ РАЗГОВОР" />
+          <SectionTitle eyebrow="Подумайте">А теперь честно</SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Прежде чем закрыть страницу — задайте себе всего 4 вопроса.
+          </p>
           <ul className="mt-8 space-y-3">
             {[
               "Сколько денег вы потратили на рекламу, которая не привела пациентов?",
@@ -940,7 +956,7 @@ function Landing() {
       {/* ===== GUARANTEE ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="10" label="ГАРАНТИЯ" align="center" />
+          <Chapter label="ГАРАНТИЯ" align="center" />
           <div className="text-center">
           <div
             className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
@@ -954,7 +970,8 @@ function Landing() {
           <SectionTitle align="center" eyebrow="Гарантия">
             Вы ничем не рискуете
           </SectionTitle>
-          <p className="reveal mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
+          <p className="reveal mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
+            Чтобы вам было ещё проще решиться — беру весь риск на себя.<br />
             Не понравится — напишите{" "}
             <span className="font-semibold text-[var(--foreground)]">«Юрий, хочу возврат»</span>.
             Верну 4 990 ₸ и{" "}
@@ -970,8 +987,11 @@ function Landing() {
       {/* ===== FAQ ===== */}
       <section id="faq" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="11" label="ВОПРОСЫ И ОТВЕТЫ" />
-          <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
+          <Chapter label="ВОПРОСЫ И ОТВЕТЫ" />
+          <SectionTitle eyebrow="FAQ">Остались вопросы?</SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Самое частое, что спрашивают перед записью на разбор.
+          </p>
           <div className="mt-8 space-y-3">
             {[
               {
@@ -1107,13 +1127,16 @@ function FamiliarSituation() {
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
       <div aria-hidden className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-rose-100/60 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-5">
-        <Chapter n="01" label="ЗНАКОМАЯ СИТУАЦИЯ" />
+        <Chapter label="ЗНАКОМАЯ СИТУАЦИЯ" />
         <div className="reveal mb-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">
           <AlertTriangle className="h-3.5 w-3.5" /> Если узнаёте себя — читайте дальше
         </div>
         <h2 className="reveal font-display text-3xl font-bold leading-[1.15] tracking-tight text-[var(--foreground)] sm:text-4xl md:text-[44px]">
-          <br />
+          Узнаёте себя?
         </h2>
+        <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+          Прежде чем показать решение — давайте честно. Вот 4 ситуации, в которых оказывается почти каждый владелец медцентра.
+        </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {items.map((it, i) => (
