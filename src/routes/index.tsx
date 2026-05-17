@@ -70,21 +70,30 @@ function HeroVideo() {
   const enableSound = () => {
     const v = ref.current;
     if (!v) return;
+
+    setMuted(false);
+    setStarted(true);
+    if (v.paused) {
+      v.pause();
+    }
+    v.removeAttribute("muted");
     v.muted = false;
+    v.defaultMuted = false;
     v.volume = 1;
-    const p = v.play();
-    if (p && typeof p.then === "function") {
-      p.then(() => {
-        setMuted(false);
+
+    try {
+      const p = v.play();
+      if (p && typeof p.then === "function") {
+        p.then(() => {
+          setPlaying(true);
+        }).catch(() => {
+          setPlaying(!v.paused);
+        });
+      } else {
         setPlaying(true);
-        setStarted(true);
-      }).catch(() => {
-        setMuted(false);
-        setStarted(true);
-      });
-    } else {
-      setMuted(false);
-      setStarted(true);
+      }
+    } catch {
+      setPlaying(true);
     }
   };
 
@@ -111,10 +120,17 @@ function HeroVideo() {
           src="/hero-video.mp4"
           autoPlay
           loop
-          muted
+          muted={muted}
           playsInline
+          controls={started}
+          preload="metadata"
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
+          onVolumeChange={() => {
+            const v = ref.current;
+            if (!v) return;
+            setMuted(v.muted || v.volume === 0);
+          }}
           className="block h-auto w-full"
         />
 
@@ -122,15 +138,14 @@ function HeroVideo() {
           <button
             type="button"
             onClick={enableSound}
-            className="absolute inset-0 flex items-center justify-center bg-black/25 transition hover:bg-black/35"
+            onPointerDown={enableSound}
+            className="absolute bottom-3 left-3 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/70 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur transition hover:bg-black/85 sm:bottom-4 sm:left-4 sm:px-4 sm:py-2.5 sm:text-sm"
             aria-label="Включить звук"
           >
-            <span className="flex items-center gap-2 rounded-full bg-white/95 px-3.5 py-2 text-xs font-semibold text-slate-900 shadow-xl backdrop-blur transition hover:scale-105 sm:px-4 sm:py-2.5 sm:text-sm">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--primary)] text-white sm:h-7 sm:w-7">
-                <Play className="h-3 w-3 fill-white sm:h-3.5 sm:w-3.5" />
-              </span>
-              Включить звук
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--primary)] text-white sm:h-7 sm:w-7">
+              <Volume2 className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             </span>
+            Включить звук
           </button>
         )}
 
