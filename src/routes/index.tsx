@@ -554,7 +554,7 @@ function Landing() {
       <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="03" label="Эксперт" />
+          <Chapter n="04" label="Эксперт" />
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
@@ -703,7 +703,7 @@ function Landing() {
       {/* ===== CALL TO BREAKDOWN ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="07" label="Зачем разбор" />
+          <Chapter n="05" label="Зачем разбор" />
           <h2 className="reveal font-display text-2xl leading-tight text-[var(--foreground)] sm:text-3xl md:text-4xl">
             На первый взгляд всё просто. Но у меня ушло{" "}
             <span className="text-[var(--primary)]">3 года</span>, чтобы
@@ -724,7 +724,7 @@ function Landing() {
       {/* ===== OUTCOME ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="08" label="Результат сессии" />
+          <Chapter n="06" label="Результат сессии" />
           <SectionTitle eyebrow="Результат сессии">
             Что вы получите на консультации
           </SectionTitle>
@@ -754,7 +754,7 @@ function Landing() {
       {/* ===== PRICING ===== */}
       <section id="cta" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5">
-          <Chapter n="09" label="Стоимость" align="center" />
+          <Chapter n="07" label="Стоимость" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
@@ -792,7 +792,7 @@ function Landing() {
       {/* ===== BONUSES ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
-          <Chapter n="10" label="Бонусы" />
+          <Chapter n="08" label="Бонусы" />
           <SectionTitle eyebrow="Бонусы">
             Первым 10 владельцам - 3 бонуса на 110 000 ₸
           </SectionTitle>
@@ -857,7 +857,7 @@ function Landing() {
       {/* ===== HONEST TALK ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="11" label="Честный разговор" />
+          <Chapter n="09" label="Честный разговор" />
           <SectionTitle>А теперь честно</SectionTitle>
           <ul className="mt-8 space-y-3">
             {[
@@ -897,7 +897,7 @@ function Landing() {
       {/* ===== GUARANTEE ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="12" label="Гарантия" align="center" />
+          <Chapter n="10" label="Гарантия" align="center" />
           <div className="text-center">
           <div
             className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
@@ -936,7 +936,7 @@ function Landing() {
       {/* ===== FAQ ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="13" label="Вопросы и ответы" />
+          <Chapter n="11" label="Вопросы и ответы" />
           <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
           <div className="mt-8 space-y-3">
             {[
