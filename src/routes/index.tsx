@@ -192,6 +192,7 @@ function Landing() {
     <main className="min-h-screen bg-white text-[var(--foreground)] antialiased">
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[var(--secondary)] to-white">
+        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
         <div
           aria-hidden
           className="pointer-events-none absolute -top-40 left-1/2 h-[480px] w-[720px] -translate-x-1/2 rounded-full opacity-60 blur-3xl"
@@ -202,35 +203,52 @@ function Landing() {
         />
         <div className="relative mx-auto max-w-3xl px-5 pt-12 pb-14 sm:pt-20 sm:pb-20">
           <div className="reveal">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--muted-foreground)]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--muted-foreground)] shadow-sm shadow-slate-900/5">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--primary)] opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
+              </span>
               <HeartPulse className="h-3.5 w-3.5 text-[var(--primary)]" />
               Для владельцев медицинских центров
             </div>
-            <h1 className="font-display text-[34px] leading-[1.1] tracking-tight text-[var(--foreground)] sm:text-5xl md:text-[56px]">
+            <h1 className="font-display text-[34px] leading-[1.05] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
               Как медцентру вырасти на{" "}
-              <span className="text-[var(--emerald)]">+30 млн ₸</span> за 30 дней
-              - с системой{" "}
-              <span className="text-[var(--primary)]">MarkVision&nbsp;AI</span>
+              <span className="inline-flex items-center rounded-xl border border-[var(--emerald)]/30 bg-[var(--emerald)]/10 px-2.5 py-0.5 text-[var(--emerald)]">
+                +30 млн ₸
+              </span>{" "}
+              за 30 дней с системой{" "}
+              <span className="relative whitespace-nowrap text-[var(--primary)]">
+                MarkVision&nbsp;AI
+                <span
+                  aria-hidden
+                  className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full opacity-70"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, transparent, var(--primary), transparent)",
+                  }}
+                />
+              </span>
             </h1>
-            <p className="mt-5 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-              Без разорительных акций и скидок. 85% доходимости пациентов до
-              приёма. Каждый второй остаётся на курсовое лечение.
+            <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-slate-700 sm:text-lg">
+              Без разорительных акций и скидок. Поток пациентов на дорогостоящие
+              услуги вашей клиники.
             </p>
           </div>
 
           <ul className="reveal mt-7 space-y-3.5">
             <Bullet>Без разорительных акций и скидок</Bullet>
-            <Bullet>85% доходимости пациентов до приёма</Bullet>
-            <Bullet>Каждый второй пациент - на курсовое лечение</Bullet>
+            <Bullet>До 70% доходимости пациентов на платную диагностику</Bullet>
+            <Bullet>Стабильный поток на дорогостоящие услуги</Bullet>
           </ul>
 
           <div className="reveal mt-8 flex flex-col gap-3 sm:flex-row">
             <WaButton variant="primary">Записаться на разбор</WaButton>
             <a
               href="#how"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-white px-6 py-4 text-base font-semibold text-[var(--foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-white px-6 py-4 text-base font-semibold text-[var(--foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)] hover:shadow-md hover:shadow-teal-900/5"
             >
               Как это работает
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
           </div>
 
@@ -258,7 +276,16 @@ function Landing() {
             </span>
           </a>
 
-          <div className="reveal relative mx-auto mt-12 max-w-2xl overflow-hidden rounded-3xl border border-[var(--border)] shadow-xl shadow-slate-900/5">
+          <div className="reveal relative mx-auto mt-12 max-w-2xl">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-6 -z-10 rounded-[36px] opacity-50 blur-2xl"
+              style={{
+                background:
+                  "radial-gradient(circle, color-mix(in oklab, var(--primary) 25%, transparent), transparent 70%)",
+              }}
+            />
+            <div className="relative overflow-hidden rounded-[28px] border border-white/60 shadow-2xl shadow-teal-900/10 ring-1 ring-[var(--primary)]/10">
             <img
               src={heroImg}
               alt="Современный медицинский центр"
@@ -277,7 +304,7 @@ function Landing() {
               <div className="absolute right-3 top-10 float-b sm:right-5">
                 <div className="chip-3d">
                   <span className="dot" />
-                  85% доходимость
+                  70% на платную диагностику
                 </div>
               </div>
               <div className="absolute bottom-3 left-3 float-c sm:bottom-5 sm:left-5">
@@ -287,14 +314,28 @@ function Landing() {
                 </div>
               </div>
             </div>
+            </div>
           </div>
 
-          <div className="reveal mt-10 rounded-2xl border border-[var(--border)] bg-white p-6">
-            <p className="font-display text-lg leading-snug text-[var(--foreground)] sm:text-xl">Получая поток пациентов на дорогостоящие услуги:</p>
-            <p className="mt-2 text-sm text-[var(--muted-foreground)] sm:text-base">
-              платные диагностики, реабилитационные курсы, комплексные
-              обследования.
+          <div className="reveal mt-10 grid gap-5 rounded-2xl border border-[var(--border)] bg-white p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-7">
+            <p className="font-display text-lg leading-snug text-[var(--foreground)] sm:text-xl">
+              Поток пациентов на дорогостоящие услуги:
             </p>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { Icon: Stethoscope, t: "Платная диагностика" },
+                { Icon: HeartPulse, t: "Реабилитация" },
+                { Icon: Sparkles, t: "Комплексные обследования" },
+              ].map(({ Icon, t }) => (
+                <span
+                  key={t}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--secondary)] px-3 py-1.5 text-xs font-semibold text-[var(--foreground)] sm:text-sm"
+                >
+                  <Icon className="h-3.5 w-3.5 text-[var(--primary)]" />
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
