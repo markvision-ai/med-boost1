@@ -594,7 +594,7 @@ function Landing() {
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
         <div className="relative mx-auto max-w-3xl px-5 text-center">
           <div className="reveal mb-4 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--primary)]">
-            <Sparkles className="h-3.5 w-3.5" /> Метод MarkVision AI
+            <Sparkles className="h-3.5 w-3.5" /> МЕТОД MARKVISION AI
           </div>
           <h2 className="reveal font-display text-3xl leading-[1.15] text-[var(--foreground)] sm:text-4xl md:text-[44px]">
             3 шага, которые превращают клинику <br />
