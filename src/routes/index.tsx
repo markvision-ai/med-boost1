@@ -945,8 +945,9 @@ function Step({
     <section className={`${alt ? "bg-[var(--secondary)]" : "bg-white"} py-16 sm:py-24`}>
       <div className="mx-auto max-w-3xl px-5">
         <div className="reveal mb-4 flex items-center gap-3">
-          <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[var(--primary)] font-display text-xl text-white">
-            {number}
+          <span className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-[var(--primary)] font-display text-xl text-white">
+            <span aria-hidden className="absolute inset-0 -m-2 rounded-full" style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 35%, transparent), transparent 70%)", filter: "blur(10px)", animation: "halo-pulse 5s ease-in-out infinite" }} />
+            <span className="relative">{number}</span>
           </span>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
             Шаг {number} из 3
