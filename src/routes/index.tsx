@@ -409,10 +409,11 @@ function Landing() {
       </section>
 
       {/* ===== EXPERT ===== */}
-      <section id="how" className="bg-white py-20 sm:py-28">
+      <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
+        <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="03" label="Эксперт" />
-          <article className="reveal flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
+          <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
               alt="Юрий Запоинов, основатель MarkVision AI"
@@ -432,6 +433,12 @@ function Landing() {
                 Казахстане — от семейных центров до сетей в Алматы, Астане и
                 Шымкенте.
               </p>
+            </div>
+            <div className="hidden sm:block absolute -right-3 -top-4 float-a">
+              <div className="chip-3d">
+                <Stethoscope className="h-3.5 w-3.5 text-[var(--primary)]" />
+                20+ клиник в РК
+              </div>
             </div>
           </article>
 
@@ -464,8 +471,9 @@ function Landing() {
             ].map((p, i) => (
               <article
                 key={i}
-                className="reveal rounded-2xl border border-[var(--border)] bg-white p-5"
+                className="reveal card-lift relative rounded-2xl border border-[var(--border)] bg-white p-5"
               >
+                <span aria-hidden className="absolute right-4 top-4 h-2 w-2 rounded-full bg-rose-400" />
                 <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--primary-soft)] text-sm font-bold text-[var(--primary)]">
                   {i + 1}
                 </div>
