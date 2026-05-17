@@ -321,16 +321,7 @@ function Landing() {
               </p>
 
               {/* Hero video */}
-              <div className="w-full max-w-2xl overflow-hidden rounded-3xl border border-[var(--border)] bg-black shadow-xl shadow-slate-900/10">
-                <video
-                  src="/hero-video.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="h-auto w-full"
-                />
-              </div>
+              <HeroVideo />
 
               {/* CTA */}
               <div className="flex flex-col items-center gap-4 pt-1 sm:flex-row sm:justify-center">
