@@ -1002,10 +1002,22 @@ function Landing() {
 
 function FamiliarSituation() {
   const items = [
-    "Обращения и заявки есть.",
-    "Платите таргетологам — толку нет.",
-    "Скидки и демпинг ради записей.",
-    "Не умеете продавать дорогие услуги.",
+    {
+      title: "Нет стабильного потока первички",
+      desc: "Заявки то есть, то нет. План по выручке держится на удаче, а не на системе.",
+    },
+    {
+      title: "Таргетологи жгут бюджет",
+      desc: "Меняете подрядчиков по кругу, платите каждый месяц — а понятных заявок и записей всё так же мало.",
+    },
+    {
+      title: "Держитесь на скидках и акциях",
+      desc: "Бесплатные консультации, демпинг, «приведи друга». Пациенты идут на низкий чек и больше не возвращаются.",
+    },
+    {
+      title: "Администраторы не дожимают",
+      desc: "Из 10 обращений на приём доходят 2–3. Записать на дорогую услугу — вообще отдельная боль.",
+    },
   ];
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-28">
@@ -1020,7 +1032,7 @@ function FamiliarSituation() {
         </h2>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {items.map((t, i) => (
+          {items.map((it, i) => (
             <article
               key={i}
               className="reveal card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5"
@@ -1029,9 +1041,14 @@ function FamiliarSituation() {
                 <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-700">
                   {i + 1}
                 </span>
-                <p className="text-sm leading-relaxed text-[var(--foreground)] sm:text-base">
-                  {t}
-                </p>
+                <div>
+                  <p className="text-sm font-semibold leading-snug text-[var(--foreground)] sm:text-base">
+                    {it.title}
+                  </p>
+                  <p className="mt-1.5 text-[13px] leading-relaxed text-[var(--muted-foreground)] sm:text-sm">
+                    {it.desc}
+                  </p>
+                </div>
               </div>
             </article>
           ))}
