@@ -608,7 +608,8 @@ function Landing() {
             в систему роста
           </h2>
           <p className="reveal mx-auto mt-5 max-w-2xl text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
-            Не «волшебная реклама» — связка из адресного предложения, системы привлечения и удержания. Работает на 20+ клиниках по РК.
+            Не «волшебная реклама» — связка из адресного предложения, системы привлечения и удержания. <br />
+            Работает на 20+ клиниках по РК.
           </p>
 
           <div className="reveal mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
