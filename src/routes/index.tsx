@@ -1160,7 +1160,7 @@ function Step({
             <span className="relative">{number}</span>
           </span>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
-            Шаг {number} из 3 года
+            ШАГ {number} ИЗ 3
           </span>
         </div>
         <h2 className="reveal font-display text-3xl leading-tight text-[var(--foreground)] sm:text-4xl">
@@ -1193,8 +1193,8 @@ function Step({
 
         {example && (
           <div className="reveal mt-8 rounded-2xl border border-[var(--border)] border-l-4 border-l-[var(--primary)] bg-white p-6">
-            <div className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
-              <Sparkles className="h-4 w-4" /> Пример
+            <div className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--primary)]">
+              <Sparkles className="h-4 w-4" /> ПРИМЕР
             </div>
             {example.split("\n\n").map((p, i) => (
               <p
@@ -1229,8 +1229,8 @@ function Step({
 
         {result && (
           <div className="reveal mt-8 rounded-2xl bg-[var(--primary-soft)] p-6">
-            <div className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
-              Результат
+            <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-[var(--primary)]">
+              РЕЗУЛЬТАТ
             </div>
             <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
               {result}
