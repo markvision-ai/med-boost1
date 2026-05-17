@@ -341,10 +341,14 @@ function Landing() {
       </section>
 
       {/* ===== CASE: BAKYT ===== */}
+      <FamiliarSituation />
+
+      {/* ===== CASE: BAKYT ===== */}
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="01" label="Кейс клиники" />
+
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
@@ -1089,6 +1093,57 @@ function Landing() {
 }
 
 /* ============ subcomponents ============ */
+
+function FamiliarSituation() {
+  const items = [
+    "У вас нет стабильного потока первичных пациентов.",
+    "Вы устали постоянно нанимать таргетологов, которые что-то делают, но результата как не было, так и нет. Платите - и не понимаете, за что.",
+    "Видите, как ваши коллеги успешно зарабатывают и путешествуют, а вы смотрите на них и не понимаете, что делаете не так.",
+    "Вынуждены цепляться за каждого пациента, даже на невыгодных условиях, и работаете в минус.",
+    "Не знаете, как привлекать пациентов на премиум-услуги и выйти из ловушки дешёвых пациентов.",
+  ];
+  return (
+    <section className="relative overflow-hidden bg-white py-20 sm:py-28">
+      <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
+      <div aria-hidden className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-rose-100/60 blur-3xl" />
+      <div className="relative mx-auto max-w-3xl px-5">
+        <div className="reveal mb-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">
+          <AlertTriangle className="h-3.5 w-3.5" /> Знакомая ситуация?
+        </div>
+        <h2 className="reveal font-display text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
+          Узнаёте себя?
+        </h2>
+        <p className="reveal mt-3 text-base text-[var(--muted-foreground)] sm:text-lg">
+          Отметьте про себя, на сколько утверждений вы ответите «да».
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {items.map((t, i) => (
+            <article
+              key={i}
+              className="reveal card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5"
+            >
+              <div className="flex items-start gap-3">
+                <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-rose-100 text-xs font-bold text-rose-700">
+                  {i + 1}
+                </span>
+                <p className="text-sm leading-relaxed text-[var(--foreground)] sm:text-base">
+                  {t}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="reveal mt-8 rounded-2xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] p-5 text-center sm:p-6">
+          <p className="font-display text-base font-bold uppercase tracking-wide text-[var(--primary)] sm:text-lg">
+            Если ответили «да» хотя бы на 1 вопрос - эта информация точно для вас
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function PriceRow({
   label,
