@@ -71,12 +71,21 @@ function HeroVideo() {
     const v = ref.current;
     if (!v) return;
     v.muted = false;
-    v.currentTime = 0;
-    v.play().then(() => {
+    v.volume = 1;
+    const p = v.play();
+    if (p && typeof p.then === "function") {
+      p.then(() => {
+        setMuted(false);
+        setPlaying(true);
+        setStarted(true);
+      }).catch(() => {
+        setMuted(false);
+        setStarted(true);
+      });
+    } else {
       setMuted(false);
-      setPlaying(true);
       setStarted(true);
-    }).catch(() => setStarted(true));
+    }
   };
 
   const toggleMute = () => {
@@ -113,14 +122,14 @@ function HeroVideo() {
           <button
             type="button"
             onClick={enableSound}
-            className="absolute inset-0 flex items-center justify-center bg-black/30 transition hover:bg-black/40"
+            className="absolute inset-0 flex items-center justify-center bg-black/25 transition hover:bg-black/35"
             aria-label="Включить звук"
           >
-            <span className="flex items-center gap-3 rounded-full bg-white/95 px-6 py-3.5 font-semibold text-slate-900 shadow-xl backdrop-blur transition hover:scale-105">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--primary)] text-white">
-                <Play className="h-4 w-4 fill-white" />
+            <span className="flex items-center gap-2 rounded-full bg-white/95 px-3.5 py-2 text-xs font-semibold text-slate-900 shadow-xl backdrop-blur transition hover:scale-105 sm:px-4 sm:py-2.5 sm:text-sm">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--primary)] text-white sm:h-7 sm:w-7">
+                <Play className="h-3 w-3 fill-white sm:h-3.5 sm:w-3.5" />
               </span>
-              Включить со звуком
+              Включить звук
             </span>
           </button>
         )}
