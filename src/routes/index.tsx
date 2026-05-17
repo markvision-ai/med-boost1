@@ -625,17 +625,22 @@ function Landing() {
             <PriceRow label="Обычная цена консультации" value="50 000 ₸" strike />
           </div>
 
-          <div className="reveal mt-4 rounded-3xl border-2 border-[var(--primary)] bg-white p-8 text-center shadow-lg shadow-teal-900/5">
+          <div className="reveal relative overflow-hidden mt-4 rounded-3xl border-2 border-[var(--primary)] bg-white p-8 text-center shadow-lg shadow-teal-900/5">
+            <div aria-hidden className="ribbon">−75%</div>
+            <div aria-hidden className="halo halo-emerald" />
             <div className="inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
               <Users className="h-3.5 w-3.5" /> Цена для первых 10 владельцев
             </div>
-            <div className="mt-3 font-display text-5xl text-[var(--emerald)] sm:text-6xl">
+            <div className="relative mt-3 font-display text-5xl text-[var(--emerald)] sm:text-7xl">
               4 990 ₸
+            </div>
+            <div className="relative mt-2 text-sm text-[var(--muted-foreground)]">
+              было <span className="strike-rose font-semibold text-[var(--foreground)]">19 900 ₸</span>
             </div>
             <p className="mt-3 text-sm text-[var(--muted-foreground)]">
               Осталось <strong className="text-[var(--foreground)]">7 из 10</strong> мест на этот месяц
             </p>
-            <div className="mt-6 flex justify-center">
+            <div className="relative mt-6 flex justify-center">
               <WaButton variant="primary">Записаться за 4 990 ₸</WaButton>
             </div>
           </div>
