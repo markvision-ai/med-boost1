@@ -1001,11 +1001,10 @@ function Landing() {
 
 function FamiliarSituation() {
   const items = [
-    "У вас нет стабильного потока первичных пациентов.",
-    "Вы устали постоянно нанимать таргетологов, которые что-то делают, но результата как не было, так и нет. Платите - и не понимаете, за что.",
-    "Видите, как ваши коллеги успешно зарабатывают и путешествуют, а вы смотрите на них и не понимаете, что делаете не так.",
-    "Вынуждены цепляться за каждого пациента, даже на невыгодных условиях, и работаете в минус.",
-    "Не знаете, как привлекать пациентов на премиум-услуги и выйти из ловушки дешёвых пациентов.",
+    "Нет стабильного потока первички.",
+    "Платите таргетологам — толку нет.",
+    "Скидки и демпинг ради записей.",
+    "Не умеете продавать дорогие услуги.",
   ];
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-28">
@@ -1018,9 +1017,6 @@ function FamiliarSituation() {
         <h2 className="reveal font-display text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
           Узнаёте себя?
         </h2>
-        <p className="reveal mt-3 text-base text-[var(--muted-foreground)] sm:text-lg">
-          Отметьте про себя, на сколько утверждений вы ответите «да».
-        </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {items.map((t, i) => (
@@ -1042,7 +1038,7 @@ function FamiliarSituation() {
 
         <div className="reveal mt-8 rounded-2xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] p-5 text-center sm:p-6">
           <p className="font-display text-base font-bold uppercase tracking-wide text-[var(--primary)] sm:text-lg">
-            Если ответили «да» хотя бы на 1 вопрос - эта информация точно для вас
+            Хотя бы 1 «да» — это для вас.
           </p>
         </div>
       </div>
