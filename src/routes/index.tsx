@@ -846,9 +846,12 @@ function Landing() {
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
           <Chapter label="БОНУСЫ" />
-          <SectionTitle eyebrow="Бонусы">
-            Первым 10 владельцам - 3 бонуса на 110 000 ₸
+          <SectionTitle eyebrow="Подарок к разбору">
+            Первым 10 владельцам — 3 бонуса на 110 000 ₸
           </SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Кроме самого разбора, вы забираете 3 готовых инструмента — чтобы внедрить план сразу, не собирая ничего с нуля.
+          </p>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
               {
@@ -911,7 +914,10 @@ function Landing() {
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
           <Chapter label="ЧЕСТНЫЙ РАЗГОВОР" />
-          <SectionTitle>А теперь честно</SectionTitle>
+          <SectionTitle eyebrow="Подумайте">А теперь честно</SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Прежде чем закрыть страницу — задайте себе всего 4 вопроса.
+          </p>
           <ul className="mt-8 space-y-3">
             {[
               "Сколько денег вы потратили на рекламу, которая не привела пациентов?",
@@ -964,7 +970,8 @@ function Landing() {
           <SectionTitle align="center" eyebrow="Гарантия">
             Вы ничем не рискуете
           </SectionTitle>
-          <p className="reveal mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
+          <p className="reveal mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
+            Чтобы вам было ещё проще решиться — беру весь риск на себя.<br />
             Не понравится — напишите{" "}
             <span className="font-semibold text-[var(--foreground)]">«Юрий, хочу возврат»</span>.
             Верну 4 990 ₸ и{" "}
@@ -981,7 +988,10 @@ function Landing() {
       <section id="faq" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
           <Chapter label="ВОПРОСЫ И ОТВЕТЫ" />
-          <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
+          <SectionTitle eyebrow="FAQ">Остались вопросы?</SectionTitle>
+          <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Самое частое, что спрашивают перед записью на разбор.
+          </p>
           <div className="mt-8 space-y-3">
             {[
               {
