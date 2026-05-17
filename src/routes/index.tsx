@@ -341,6 +341,9 @@ function Landing() {
       </section>
 
       {/* ===== CASE: BAKYT ===== */}
+      <FamiliarSituation />
+
+      {/* ===== CASE: BAKYT ===== */}
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="mx-auto max-w-3xl px-5">
