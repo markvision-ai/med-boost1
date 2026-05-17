@@ -21,6 +21,7 @@ import {
 import heroImg from "../assets/hero.jpg";
 import ownerImg from "../assets/clinic-owner.jpg";
 import expertImg from "../assets/expert.jpg";
+import astanaHubImg from "../assets/astana-hub.png";
 import { useReveal } from "../hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
