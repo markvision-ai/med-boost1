@@ -8,8 +8,11 @@ export function useReveal() {
       els.forEach((el) => el.classList.add("is-visible"));
       return;
     }
-    // Arm the "hidden-before-reveal" styles only now that JS is running.
-    document.documentElement.classList.add("js-reveal-ready");
+    // Make elements visible immediately if IO isn't supported or no elements found.
+    if (!("IntersectionObserver" in window) || els.length === 0) {
+      els.forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
