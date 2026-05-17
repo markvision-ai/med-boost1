@@ -1108,8 +1108,11 @@ function FamiliarSituation() {
           <AlertTriangle className="h-3.5 w-3.5" /> Если узнаёте себя — читайте дальше
         </div>
         <h2 className="reveal font-display text-3xl font-bold leading-[1.15] tracking-tight text-[var(--foreground)] sm:text-4xl md:text-[44px]">
-          <br />
+          Узнаёте себя?
         </h2>
+        <p className="reveal mt-4 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+          Прежде чем показать решение — давайте честно. Вот 4 ситуации, в которых оказывается почти каждый владелец медцентра.
+        </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {items.map((it, i) => (
