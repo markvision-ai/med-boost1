@@ -94,7 +94,7 @@ function HeroVideo() {
   };
 
   return (
-    <div className="relative w-full max-w-2xl">
+    <div className="relative w-full">
       <div aria-hidden className="pointer-events-none absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-[var(--primary)]/20 via-transparent to-emerald-300/20 blur-2xl" />
       <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-black shadow-2xl shadow-slate-900/15">
         <video
