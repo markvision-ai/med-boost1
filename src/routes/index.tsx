@@ -818,8 +818,8 @@ function Landing() {
                   <Gift className="h-5 w-5" />
                 </div>
                 <div className="mb-3 flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
-                    Бонус №{b.n}
+                  <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary)]">
+                    БОНУС №{b.n}
                   </span>
                   <span className="text-xs">
                     <span className="text-[var(--muted-foreground)] line-through">
