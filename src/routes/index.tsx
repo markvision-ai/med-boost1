@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Clock,
   Users,
+  Activity,
   Star,
   AlertTriangle,
   MessageCircle,
@@ -170,7 +171,7 @@ function StickyHeader() {
             className="flex h-8 w-8 items-center justify-center rounded-xl bg-[var(--primary)] text-white shadow-sm"
             aria-hidden
           >
-            <HeartPulse className="h-4 w-4" strokeWidth={2.5} />
+            <Activity className="h-4 w-4" strokeWidth={2.5} />
           </span>
           <span className="font-display text-base font-extrabold tracking-tight text-[var(--foreground)] sm:text-lg">
             MarkVision <span className="text-[var(--primary)]">AI</span>
