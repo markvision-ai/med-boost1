@@ -758,11 +758,12 @@ function Landing() {
           <Chapter n="12" label="Гарантия" align="center" />
           <div className="text-center">
           <div
-            className="reveal mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
+            className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
             style={{
               boxShadow: "0 0 0 12px color-mix(in oklab, var(--primary) 8%, transparent)",
             }}
           >
+            <span aria-hidden className="absolute inset-0 -m-4 rounded-full" style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 30%, transparent), transparent 70%)", filter: "blur(12px)", animation: "halo-pulse 5s ease-in-out infinite" }} />
             <ShieldCheck className="h-12 w-12 text-[var(--primary)]" />
           </div>
           <SectionTitle align="center" eyebrow="Гарантия">
