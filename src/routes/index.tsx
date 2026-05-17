@@ -212,26 +212,12 @@ function Landing() {
               Для владельцев медицинских центров
             </div>
             <h1 className="font-display text-[34px] leading-[1.05] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
-              Как медцентру вырасти на{" "}
-              <span className="inline-flex items-center rounded-xl border border-[var(--emerald)]/30 bg-[var(--emerald)]/10 px-2.5 py-0.5 text-[var(--emerald)]">
-                +30 млн ₸
-              </span>{" "}
-              за 30 дней с системой{" "}
-              <span className="relative whitespace-nowrap text-[var(--primary)]">
-                MarkVision&nbsp;AI
-                <span
-                  aria-hidden
-                  className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full opacity-70"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, transparent, var(--primary), transparent)",
-                  }}
-                />
-              </span>
+              Как мед центру получить 100+ пациентов на платную диагностику
             </h1>
             <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-slate-700 sm:text-lg">
-              Без разорительных акций и скидок. Поток пациентов на дорогостоящие
-              услуги вашей клиники.
+              Для владельцев центров реабилитации, которые хотят обойти
+              конкурентов в 2026 году и увеличить выручку в 2–3 раза без
+              увеличения расходов на рекламу.
             </p>
           </div>
 
