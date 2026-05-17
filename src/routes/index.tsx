@@ -16,7 +16,6 @@ import {
   AlertTriangle,
   MessageCircle,
   Gift,
-  Phone,
   CalendarCheck,
 } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
