@@ -285,9 +285,7 @@ function Landing() {
           </div>
 
           <div className="reveal mt-10 rounded-2xl border border-[var(--border)] bg-white p-6">
-            <p className="font-display text-lg leading-snug text-[var(--foreground)] sm:text-xl">
-              Получая бесперебойный поток пациентов на дорогостоящие услуги:
-            </p>
+            <p className="font-display text-lg leading-snug text-[var(--foreground)] sm:text-xl">Получая поток пациентов на дорогостоящие услуги:</p>
             <p className="mt-2 text-sm text-[var(--muted-foreground)] sm:text-base">
               платные диагностики, реабилитационные курсы, комплексные
               обследования.
