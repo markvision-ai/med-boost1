@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useRef, useState } from "react";
 import {
   Check,
   CheckCircle2,
@@ -23,9 +24,13 @@ import {
   UserPlus,
   Receipt,
   Wallet,
+  Play,
+  Volume2,
+  VolumeX,
+  Pause,
 } from "lucide-react";
 import ownerImg from "../assets/clinic-owner.jpg";
-import expertImg from "../assets/expert.jpg";
+import expertImg from "../assets/yuri-portrait.png";
 import astanaHubImg from "../assets/astana-hub.png";
 import { useReveal } from "../hooks/use-reveal";
 
