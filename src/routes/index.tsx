@@ -177,6 +177,11 @@ function WaButton({
       target="_blank"
       rel="noopener noreferrer"
       data-event={event}
+      onClick={() => {
+        if (typeof window !== "undefined" && (window as any).fbq) {
+          (window as any).fbq("track", "Contact");
+        }
+      }}
       className={`inline-flex w-full max-w-md items-center justify-center gap-2.5 rounded-full font-semibold shadow-sm shadow-slate-900/5 transition active:scale-[0.98] ${sz} ${vr}`}
     >
       {variant === "whatsapp" && <MessageCircle className="h-5 w-5" />}
