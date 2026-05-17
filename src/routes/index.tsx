@@ -206,11 +206,11 @@ function Landing() {
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
                 </span>
                 <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
-                  Проверенная методика для медцентров
+                  Без скидок и акций
                 </span>
               </div>
 
-              <h1 className="font-display text-[34px] font-extrabold leading-[1.05] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl lg:text-[60px]">
+              <h1 className="font-display font-extrabold leading-[1.05] tracking-[-0.025em] sm:text-5xl lg:text-[60px] text-center text-2xl">
                 Как медцентру в Казахстане получать{" "}
                 <span className="relative whitespace-nowrap">
                   <span className="relative z-10 text-[var(--primary)]">100+ пациентов</span>
