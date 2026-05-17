@@ -1096,7 +1096,8 @@ function FamiliarSituation() {
 
         <div className="reveal mt-8 rounded-2xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] p-5 text-center sm:p-6">
           <p className="text-[15px] font-semibold text-[var(--primary)] sm:text-base">
-            Если вам это знакомо — читайте дальше. Я расскажу, как исправить эту ситуацию за 3 шага.
+            Если вам это знакомо — читайте дальше. Я расскажу, как исправить <br />
+            эту ситуацию за 3 шага.
           </p>
         </div>
       </div>
