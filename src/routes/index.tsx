@@ -256,7 +256,7 @@ function Landing() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
                       <Check className="h-5 w-5" strokeWidth={3} />
                     </div>
-                    <p className="text-sm font-semibold text-slate-700">Без скидок и демпинга</p>
+                    <p className="text-sm font-semibold text-slate-700">ДЛЯ ВЛАДЕЛЬЦЕВ МЕДИЦИНСКИХ КЛИНИК</p>
                   </div>
                   <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
