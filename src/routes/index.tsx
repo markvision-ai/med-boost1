@@ -205,17 +205,18 @@ function Landing() {
               Проверенная методика для медцентров
             </div>
             <h1 className="font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
-              100+ пациентов на{" "}
+              Как мед центру в Казахстане получать{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 text-[var(--primary)]">платную диагностику</span>
+                <span className="relative z-10 text-[var(--primary)]">100+ пациентов</span>
                 <span
                   aria-hidden
                   className="absolute bottom-1 left-0 right-0 -z-0 h-3 rounded-sm bg-[var(--primary-soft)] sm:h-4"
                 />
-              </span>
+              </span>{" "}
+              на платную диагностику
             </h1>
             <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-slate-600 sm:text-lg">
-              Выручка центра реабилитации ×2–3 без роста бюджета на рекламу.
+              Для владельцев центров реабилитации, которые хотят обойти конкурентов в 2026 году и увеличить выручку в 2–3 раза без увеличения расходов на рекламу.
             </p>
           </div>
 
@@ -240,7 +241,7 @@ function Landing() {
           </ul>
 
           <div className="reveal mt-8 flex flex-col gap-3 sm:flex-row">
-            <WaButton variant="primary">Записаться на разбор</WaButton>
+            <WaButton variant="primary">Записаться на диагностику</WaButton>
             <a
               href="#how"
               className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-[var(--border)] bg-white px-6 py-4 text-base font-bold text-[var(--foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)] hover:shadow-md hover:shadow-teal-900/5"
