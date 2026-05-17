@@ -248,8 +248,8 @@ function Landing() {
                 </span>
               </div>
 
-              <h1 className="max-w-4xl font-display text-[34px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[var(--foreground)] sm:text-5xl md:text-[56px] lg:text-[64px]">
-                +100 пациентов на{" "}
+              <h1 className="max-w-4xl font-display font-extrabold leading-[1.05] tracking-[-0.02em] sm:text-5xl md:text-[56px] lg:text-[64px] text-3xl">
+                +100 пациентов на <br />
                 <span className="relative inline-block">
                   <span className="relative z-10 text-[var(--primary)]">платную диагностику</span>
                   <span
