@@ -226,13 +226,19 @@ function Landing() {
                 на платную диагностику
               </h1>
 
-              <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
-                Для владельцев медицинских клиник, которые хотят обойти конкурентов в 2026 году и{" "}
-                <span className="font-semibold italic text-[var(--foreground)]">
-                  увеличить выручку в 2–3 раза
-                </span>{" "}
-                без раздувания рекламных бюджетов.
-              </p>
+              <div className="max-w-xl space-y-4">
+                <p className="text-base leading-[1.55] text-slate-700 sm:text-lg">
+                  Для владельцев медицинских клиник, которые хотят обойти конкурентов в 2026 году и увеличить выручку{" "}
+                  <span className="whitespace-nowrap rounded-md bg-[var(--primary-soft)] px-1.5 py-0.5 font-bold text-[var(--primary)]">
+                    в 2–3 раза
+                  </span>{" "}
+                  — без раздувания рекламных бюджетов.
+                </p>
+                <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-slate-500">
+                  <span className="h-px w-8 bg-slate-300" />
+                  Метод проверен на 20+ клиниках в РК
+                </div>
+              </div>
 
               {/* Stat grid */}
               <div className="grid gap-3">
