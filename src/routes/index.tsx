@@ -314,27 +314,6 @@ function Landing() {
             </div>
             </div>
           </div>
-
-          <div className="reveal mt-10 grid gap-5 rounded-2xl border border-[var(--border)] bg-white p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-7">
-            <p className="font-display text-lg leading-snug text-[var(--foreground)] sm:text-xl">
-              Поток пациентов на дорогостоящие услуги:
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { Icon: Stethoscope, t: "Платная диагностика" },
-                { Icon: HeartPulse, t: "Реабилитация" },
-                { Icon: Sparkles, t: "Комплексные обследования" },
-              ].map(({ Icon, t }) => (
-                <span
-                  key={t}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--secondary)] px-3 py-1.5 text-xs font-semibold text-[var(--foreground)] sm:text-sm"
-                >
-                  <Icon className="h-3.5 w-3.5 text-[var(--primary)]" />
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
