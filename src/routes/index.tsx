@@ -80,7 +80,7 @@ function HeroVideo() {
     const p = v.play();
     if (p && typeof p.then === "function") {
       p.then(() => {
-       setPlaying(true);
+        setPlaying(true);
       }).catch(() => {
         setPlaying(!v.paused);
       });
