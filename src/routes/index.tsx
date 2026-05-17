@@ -441,7 +441,7 @@ function Landing() {
         <div className="mx-auto max-w-5xl px-5">
           <Chapter n="03" label="До и после" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
-            До MarkVision AI&nbsp;- и после
+            <br />
           </SectionTitle>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
