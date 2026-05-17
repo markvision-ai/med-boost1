@@ -576,14 +576,8 @@ function Landing() {
             </div>
           </article>
 
-          <div className="reveal mt-10">
-            <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-              Я помогаю клиникам находить неочевидные точки потерь: от рекламы и заявок до администраторов, первичных консультаций и повторных продаж.
-            </p>
-          </div>
-
           {/* Stats */}
-          <div className="reveal mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="reveal mt-10 grid gap-4 sm:grid-cols-3">
             <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
               <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
                 5
@@ -591,9 +585,6 @@ function Landing() {
               <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">5 лет</h3>
               <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
                 в медицинском маркетинге
-              </p>
-              <p className="mt-1 text-xs text-[var(--primary)]">
-                знаю, где чаще всего теряются заявки
               </p>
             </article>
             <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
@@ -604,9 +595,6 @@ function Landing() {
               <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
                 разобранных клиник
               </p>
-              <p className="mt-1 text-xs text-[var(--primary)]">
-                стоматологии, косметологии и многопрофильные центры
-              </p>
             </article>
             <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
               <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
@@ -616,26 +604,12 @@ function Landing() {
               <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
                 рост окупаемости
               </p>
-              <p className="mt-1 text-xs text-[var(--primary)]">
-                когда исправлена вся система, а не только реклама
-              </p>
             </article>
           </div>
 
-          <div className="reveal mt-10 rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
-            <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-              Я не смотрю на рекламу отдельно от продаж. В клинике всё связано: заявка, звонок, запись, визит, план лечения и повторный приём.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-              Поэтому на диагностике мы ищем не "красивую гипотезу", а конкретные места, где сейчас утекают пациенты и деньги.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-              Мы с командой помогали клиникам повышать окупаемость в 3, 5 и даже 10 раз.
-            </p>
-            <div className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] px-4 py-3 text-sm font-semibold text-[var(--primary)]">
-              <Sparkles className="h-4 w-4" />
-              С этой системой вы перестанете терять деньги, а каждая инвестиция в маркетинг начнёт работать на результат.
-            </div>
+          <div className="reveal mt-10 inline-flex items-center gap-2 rounded-xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] px-4 py-3 text-sm font-semibold text-[var(--primary)]">
+            <Sparkles className="h-4 w-4" />
+            Реклама без продаж не работает. Чиним всю воронку — от заявки до повторного приёма.
           </div>
         </div>
       </section>
