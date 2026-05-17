@@ -107,17 +107,22 @@
 
   /* Reveal on scroll */
   .reveal {
-    opacity: 0;
-    transform: translateY(16px);
+    opacity: 1;
+    transform: none;
     transition: opacity .6s ease, transform .6s ease;
     will-change: opacity, transform;
+  }
+  /* Only hide before the entrance animation when JS has marked the page as ready */
+  .js-reveal-ready .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(16px);
   }
   .reveal.is-visible {
     opacity: 1;
     transform: none;
   }
   @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
+    .js-reveal-ready .reveal:not(.is-visible) { opacity: 1; transform: none; transition: none; }
   }
 
   html { scroll-behavior: smooth; }
