@@ -17,6 +17,11 @@ import {
   MessageCircle,
   Gift,
   CalendarCheck,
+  Megaphone,
+  Inbox,
+  UserPlus,
+  Receipt,
+  Wallet,
 } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
 import ownerImg from "../assets/clinic-owner.jpg";
