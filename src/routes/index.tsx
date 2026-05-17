@@ -674,18 +674,12 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="05" label="Зачем разбор" />
           <h2 className="reveal font-display text-2xl leading-tight text-[var(--foreground)] sm:text-3xl md:text-4xl">
-            На первый взгляд всё просто. Но у меня ушло{" "}
-            <span className="text-[var(--primary)]">3 года</span>, чтобы
-            собрать это в систему.
+            Система собрана за{" "}
+            <span className="text-[var(--primary)]">3 года</span> на 20+ клиниках.
           </h2>
           <p className="reveal mt-5 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            Все ответы найдены, все шаги отработаны на десятках медцентров. Я
-            делюсь ими на часовой консультации.
-          </p>
-          <p className="reveal mt-3 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            После неё у вас будет понимание, как получать дополнительно{" "}
-            <span className="font-semibold text-[var(--emerald)]">+30 млн ₸ в год</span>{" "}
-            за счёт стабильного потока пациентов на дорогостоящие услуги.
+            Часовой разбор — и у вас план на{" "}
+            <span className="font-semibold text-[var(--emerald)]">+30 млн ₸ в год</span>.
           </p>
         </div>
       </section>
@@ -699,12 +693,12 @@ function Landing() {
           </SectionTitle>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {[
-              "Адресное предложение, дающее поток на дорогие услуги",
-              "Как ежедневно получать 5+ пациентов на дорогостоящие услуги",
-              "Предложение, которое снимает возражения до контакта",
-              "85% загрузки кабинетов каждый день недели",
-              "Стабильные 30 млн ₸ без акций и скидок",
-              "20% пациентов, приносящих 80% выручки",
+              "Адресное предложение под вашу нишу",
+              "5+ дорогих пациентов в день",
+              "Снятие возражений ещё до контакта",
+              "85% загрузки кабинетов",
+              "30 млн ₸/мес без скидок",
+              "20% пациентов = 80% выручки",
             ].map((t) => (
               <li
                 key={t}
