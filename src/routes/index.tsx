@@ -15,6 +15,8 @@ import {
   Star,
   AlertTriangle,
   MessageCircle,
+  Gift,
+  CalendarCheck,
 } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
 import ownerImg from "../assets/clinic-owner.jpg";
@@ -236,6 +238,27 @@ function Landing() {
               height={896}
               className="h-auto w-full"
             />
+            {/* Floating decor over hero image */}
+            <div aria-hidden className="pointer-events-none absolute inset-0">
+              <div className="absolute left-3 top-3 float-a sm:left-5 sm:top-5">
+                <div className="chip-3d">
+                  <TrendingUp className="h-3.5 w-3.5 text-[var(--emerald)]" />
+                  +30 млн ₸ / 30 дней
+                </div>
+              </div>
+              <div className="absolute right-3 top-10 float-b sm:right-5">
+                <div className="chip-3d">
+                  <span className="dot" />
+                  85% доходимость
+                </div>
+              </div>
+              <div className="absolute bottom-3 left-3 float-c sm:bottom-5 sm:left-5">
+                <div className="chip-3d">
+                  <CalendarCheck className="h-3.5 w-3.5 text-[var(--primary)]" />
+                  Новая запись · Имплантация
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="reveal mt-10 rounded-2xl border border-[var(--border)] bg-white p-6">
@@ -251,10 +274,11 @@ function Landing() {
       </section>
 
       {/* ===== CASE: BAKYT ===== */}
-      <section className="bg-[var(--secondary)] py-20 sm:py-28">
+      <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
+        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="01" label="Кейс клиента" />
-          <article className="reveal flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
+          <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
               alt="Бакыт, владелец медцентра"
@@ -277,6 +301,30 @@ function Landing() {
                 после двух лет застоя.
               </p>
             </div>
+            {/* Mini-ops overlay */}
+            <div className="hidden sm:block absolute -right-4 -top-6 w-56 rotate-[3deg] rounded-2xl border border-[var(--border)] bg-white p-3 shadow-xl shadow-slate-900/10 float-b">
+              <div className="mb-1.5 flex items-center justify-between">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Записи · сегодня</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" />
+              </div>
+              {[
+                ["09:00", "Консультация"],
+                ["11:30", "Имплантация"],
+                ["14:00", "Контроль"],
+              ].map(([t, l]) => (
+                <div key={t} className="flex items-center justify-between border-t border-[var(--border)] py-1.5 text-[11px]">
+                  <span className="font-semibold text-[var(--foreground)]">{t}</span>
+                  <span className="text-[var(--muted-foreground)]">{l}</span>
+                  <CheckCircle2 className="h-3 w-3 text-[var(--emerald)]" />
+                </div>
+              ))}
+            </div>
+            <div className="hidden sm:block absolute -bottom-5 left-6 float-c">
+              <div className="chip-3d">
+                <span className="dot" />
+                +13 млн ₸ / мес
+              </div>
+            </div>
           </article>
         </div>
       </section>
@@ -291,7 +339,8 @@ function Landing() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {/* BEFORE */}
-            <div className="reveal rounded-3xl border border-rose-100 bg-rose-50/60 p-6 sm:p-8">
+            <div className="reveal card-lift relative overflow-hidden rounded-3xl border border-rose-100 bg-rose-50/60 p-6 sm:p-8">
+              <div aria-hidden className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 rounded-full bg-rose-200/40 blur-2xl" />
               <div className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-rose-600">
                 <AlertTriangle className="h-4 w-4" /> До
               </div>
@@ -314,13 +363,14 @@ function Landing() {
             </div>
 
             {/* AFTER */}
-            <div className="reveal rounded-3xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-6 sm:p-8">
+            <div className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-6 sm:p-8">
+              <div aria-hidden className="halo halo-emerald" />
               <div className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary)]">
                 <Sparkles className="h-4 w-4" /> После
               </div>
-              <p className="mb-5 text-lg font-semibold leading-snug text-[var(--foreground)]">
+              <p className="relative mb-5 text-lg font-semibold leading-snug text-[var(--foreground)]">
                 Стабильные{" "}
-                <span className="text-[var(--emerald)]">30 млн ₸</span> и
+                <span className="font-display text-2xl text-[var(--emerald)]">30 млн ₸</span> и
                 очередь на дорогостоящие услуги.
               </p>
               <ul className="space-y-3.5">
@@ -358,10 +408,11 @@ function Landing() {
       </section>
 
       {/* ===== EXPERT ===== */}
-      <section id="how" className="bg-white py-20 sm:py-28">
+      <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
+        <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="03" label="Эксперт" />
-          <article className="reveal flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
+          <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
               alt="Юрий Запоинов, основатель MarkVision AI"
@@ -381,6 +432,12 @@ function Landing() {
                 Казахстане — от семейных центров до сетей в Алматы, Астане и
                 Шымкенте.
               </p>
+            </div>
+            <div className="hidden sm:block absolute -right-3 -top-4 float-a">
+              <div className="chip-3d">
+                <Stethoscope className="h-3.5 w-3.5 text-[var(--primary)]" />
+                20+ клиник в РК
+              </div>
             </div>
           </article>
 
@@ -413,8 +470,9 @@ function Landing() {
             ].map((p, i) => (
               <article
                 key={i}
-                className="reveal rounded-2xl border border-[var(--border)] bg-white p-5"
+                className="reveal card-lift relative rounded-2xl border border-[var(--border)] bg-white p-5"
               >
+                <span aria-hidden className="absolute right-4 top-4 h-2 w-2 rounded-full bg-rose-400" />
                 <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--primary-soft)] text-sm font-bold text-[var(--primary)]">
                   {i + 1}
                 </div>
@@ -566,17 +624,22 @@ function Landing() {
             <PriceRow label="Обычная цена консультации" value="50 000 ₸" strike />
           </div>
 
-          <div className="reveal mt-4 rounded-3xl border-2 border-[var(--primary)] bg-white p-8 text-center shadow-lg shadow-teal-900/5">
+          <div className="reveal relative overflow-hidden mt-4 rounded-3xl border-2 border-[var(--primary)] bg-white p-8 text-center shadow-lg shadow-teal-900/5">
+            <div aria-hidden className="ribbon">−75%</div>
+            <div aria-hidden className="halo halo-emerald" />
             <div className="inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
               <Users className="h-3.5 w-3.5" /> Цена для первых 10 владельцев
             </div>
-            <div className="mt-3 font-display text-5xl text-[var(--emerald)] sm:text-6xl">
+            <div className="relative mt-3 font-display text-5xl text-[var(--emerald)] sm:text-7xl">
               4 990 ₸
+            </div>
+            <div className="relative mt-2 text-sm text-[var(--muted-foreground)]">
+              было <span className="strike-rose font-semibold text-[var(--foreground)]">19 900 ₸</span>
             </div>
             <p className="mt-3 text-sm text-[var(--muted-foreground)]">
               Осталось <strong className="text-[var(--foreground)]">7 из 10</strong> мест на этот месяц
             </p>
-            <div className="mt-6 flex justify-center">
+            <div className="relative mt-6 flex justify-center">
               <WaButton variant="primary">Записаться за 4 990 ₸</WaButton>
             </div>
           </div>
@@ -613,8 +676,11 @@ function Landing() {
             ].map((b) => (
               <article
                 key={b.n}
-                className="reveal flex flex-col rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6"
+                className="reveal card-lift relative flex flex-col rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6"
               >
+                <div aria-hidden className="absolute -right-2 -top-2 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-lg shadow-teal-900/20 float-c">
+                  <Gift className="h-5 w-5" />
+                </div>
                 <div className="mb-3 flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
                     Бонус №{b.n}
@@ -691,11 +757,12 @@ function Landing() {
           <Chapter n="12" label="Гарантия" align="center" />
           <div className="text-center">
           <div
-            className="reveal mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
+            className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
             style={{
               boxShadow: "0 0 0 12px color-mix(in oklab, var(--primary) 8%, transparent)",
             }}
           >
+            <span aria-hidden className="absolute inset-0 -m-4 rounded-full" style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 30%, transparent), transparent 70%)", filter: "blur(12px)", animation: "halo-pulse 5s ease-in-out infinite" }} />
             <ShieldCheck className="h-12 w-12 text-[var(--primary)]" />
           </div>
           <SectionTitle align="center" eyebrow="Гарантия">
@@ -745,7 +812,7 @@ function Landing() {
             ].map((f) => (
               <details
                 key={f.q}
-                className="reveal group rounded-2xl border border-[var(--border)] bg-white p-5 open:border-[var(--primary)]"
+                className="reveal card-lift group rounded-2xl border border-[var(--border)] bg-white p-5 open:border-[var(--primary)]"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold text-[var(--foreground)] sm:text-base">
                   {f.q}
@@ -877,8 +944,9 @@ function Step({
     <section className={`${alt ? "bg-[var(--secondary)]" : "bg-white"} py-16 sm:py-24`}>
       <div className="mx-auto max-w-3xl px-5">
         <div className="reveal mb-4 flex items-center gap-3">
-          <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[var(--primary)] font-display text-xl text-white">
-            {number}
+          <span className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-[var(--primary)] font-display text-xl text-white">
+            <span aria-hidden className="absolute inset-0 -m-2 rounded-full" style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--primary) 35%, transparent), transparent 70%)", filter: "blur(10px)", animation: "halo-pulse 5s ease-in-out infinite" }} />
+            <span className="relative">{number}</span>
           </span>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
             Шаг {number} из 3
