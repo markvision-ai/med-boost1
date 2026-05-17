@@ -158,29 +158,6 @@ function Bullet({ children }: { children: React.ReactNode }) {
   );
 }
 
-function TrustBar() {
-  const items = [
-    { icon: ShieldCheck, label: "Возврат 100%, если не зашло" },
-    { icon: HeartPulse, label: "Только медицинские клиники" },
-    { icon: Star, label: "5+ лет в медмаркетинге" },
-    { icon: Clock, label: "Разбор 60 минут" },
-  ];
-  return (
-    <div className="mt-12 grid grid-cols-2 gap-2.5 sm:mt-14 sm:grid-cols-4 sm:gap-3 lg:mt-16">
-      {items.map(({ icon: Icon, label }) => (
-        <div
-          key={label}
-          className="flex items-center gap-2.5 rounded-2xl border border-[var(--border)] bg-white px-3.5 py-3 shadow-sm shadow-slate-900/[0.02] transition hover:border-[var(--primary)]/30"
-        >
-          <Icon className="h-4 w-4 shrink-0 text-[var(--primary)]" strokeWidth={2.2} />
-          <span className="text-[12px] font-medium leading-tight text-[var(--muted-foreground)] sm:text-[13px]">
-            {label}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 /* ============ page ============ */
 
