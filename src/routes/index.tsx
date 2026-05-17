@@ -962,7 +962,7 @@ function Landing() {
           </h2>
           <p className="reveal mt-3 max-w-md text-base text-[var(--muted-foreground)] sm:text-lg">
             Часовой разбор за 4 990 ₸ с гарантией возврата. Кодовое слово -
-            «Медцентр».
+            «Разбор».
           </p>
           <div className="reveal mt-7 w-full flex justify-center">
             <WaButton>Написать в WhatsApp</WaButton>
