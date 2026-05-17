@@ -596,6 +596,7 @@ function Landing() {
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="04" label="Эксперт" />
+
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
@@ -612,72 +613,71 @@ function Landing() {
               </div>
               <p className="text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
                 Меня зовут <strong className="text-[var(--foreground)]">Юрий</strong>.
-                За последние 2 года я разобрал десятки медицинских клиник в
-                Казахстане - от семейных центров до сетей в Алматы, Астане и
-                Шымкенте.
               </p>
-            </div>
-            <div className="hidden sm:block absolute -right-3 -top-4 float-a">
-              <div className="chip-3d">
-                <Stethoscope className="h-3.5 w-3.5 text-[var(--primary)]" />
-                20+ клиник в РК
-              </div>
             </div>
           </article>
 
-          <div className="reveal mt-12">
-            <SectionTitle eyebrow="Главное наблюдение">
-              И почти везде одни и те же проблемы, которые{" "}
-              <span className="text-[var(--primary)]">мешают пробить потолок</span>{" "}
-              в 10–15 млн ₸
-            </SectionTitle>
+          <div className="reveal mt-10">
+            <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
+              Я помогаю клиникам находить неочевидные точки потерь: от рекламы и заявок до администраторов, первичных консультаций и повторных продаж.
+            </p>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {[
-              {
-                t: "Зависимость от сарафанного радио",
-                d: "Сегодня пациенты есть - завтра пустые кабинеты.",
-              },
-              {
-                t: "Высокая конкуренция и демпинг",
-                d: "Пациент звонит в 5 центров и идёт туда, где дешевле.",
-              },
-              {
-                t: "Привлечение только через акции",
-                d: "Разорительные скидки съедают прибыль.",
-              },
-              {
-                t: "70–80% - на дешёвые услуги",
-                d: "Анализы, разовые приёмы, ОСМС. Большой чек - мимо.",
-              },
-            ].map((p, i) => (
-              <article
-                key={i}
-                className="reveal card-lift relative rounded-2xl border border-[var(--border)] bg-white p-5"
-              >
-                <span aria-hidden className="absolute right-4 top-4 h-2 w-2 rounded-full bg-rose-400" />
-                <div className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--primary-soft)] text-sm font-bold text-[var(--primary)]">
-                  {i + 1}
-                </div>
-                <h3 className="font-display text-lg text-[var(--foreground)]">
-                  {p.t}
-                </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-[var(--muted-foreground)]">
-                  {p.d}
-                </p>
-              </article>
-            ))}
+          {/* Stats */}
+          <div className="reveal mt-8 grid gap-4 sm:grid-cols-3">
+            <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
+              <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
+                5
+              </div>
+              <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">5 лет</h3>
+              <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
+                в медицинском маркетинге
+              </p>
+              <p className="mt-1 text-xs text-[var(--primary)]">
+                знаю, где чаще всего теряются заявки
+              </p>
+            </article>
+            <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
+              <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
+                <Users className="h-5 w-5" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">десятки</h3>
+              <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
+                разобранных клиник
+              </p>
+              <p className="mt-1 text-xs text-[var(--primary)]">
+                стоматологии, косметологии и многопрофильные центры
+              </p>
+            </article>
+            <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
+              <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
+                <TrendingUp className="h-5 w-5" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">до 10x</h3>
+              <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
+                рост окупаемости
+              </p>
+              <p className="mt-1 text-xs text-[var(--primary)]">
+                когда исправлена вся система, а не только реклама
+              </p>
+            </article>
           </div>
 
-          <p className="reveal mt-8 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            Чтобы медцентр стабильно приносил прибыль, нужно понимать: какие{" "}
-            <span className="font-semibold text-[var(--primary)]">20% пациентов</span>{" "}
-            приносят{" "}
-            <span className="font-semibold text-[var(--primary)]">80% выручки</span>{" "}
-            - и привлекать именно их без скидок, демпинга и зависимости от
-            сарафана.
-          </p>
+          <div className="reveal mt-10 rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
+            <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
+              Я не смотрю на рекламу отдельно от продаж. В клинике всё связано: заявка, звонок, запись, визит, план лечения и повторный приём.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
+              Поэтому на диагностике мы ищем не "красивую гипотезу", а конкретные места, где сейчас утекают пациенты и деньги.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
+              Мы с командой помогали клиникам повышать окупаемость в 3, 5 и даже 10 раз.
+            </p>
+            <div className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] px-4 py-3 text-sm font-semibold text-[var(--primary)]">
+              <Sparkles className="h-4 w-4" />
+              С этой системой вы перестанете терять деньги, а каждая инвестиция в маркетинг начнёт работать на результат.
+            </div>
+          </div>
         </div>
       </section>
 
