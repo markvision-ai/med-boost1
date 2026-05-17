@@ -220,8 +220,8 @@ function Landing() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--primary)] opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
                 </span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--primary)]">
-                  Для медицинских клиник в Казахстане
+                <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--primary)] text-center">
+                  ДЛЯ МЕДИЦИНСКИХ КЛИНИК <br /> В КАЗАХСТАНЕ
                 </span>
               </div>
 
