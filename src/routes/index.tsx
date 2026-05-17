@@ -41,7 +41,7 @@ function WaButton({
 }) {
   const styles =
     variant === "green"
-      ? "bg-[#25D366] text-white hover:bg-[#1ebe5b]"
+      ? "bg-[#25D366] text-slate-900 hover:bg-[#1ebe5b]"
       : "bg-[#FACC15] text-black hover:bg-[#eab308]";
   return (
     <a
@@ -72,18 +72,17 @@ function Landing() {
   return (
     <main className="min-h-screen bg-white text-foreground antialiased">
       {/* ============ HERO (dark bold like reference) ============ */}
-      <section className="relative overflow-hidden bg-black text-white">
+      <section className="relative overflow-hidden bg-white text-slate-900">
         <div
           className="pointer-events-none absolute inset-0 opacity-30"
           style={{
             background:
-              "radial-gradient(60% 50% at 50% 0%, rgba(250,204,21,0.25), transparent)",
+              "radial-gradient(60% 50% at 50% 0%, rgba(250,204,21,0.18), transparent)",
           }}
         />
         <div className="relative mx-auto max-w-3xl px-5 pt-14 pb-16 sm:pt-20 sm:pb-20">
           <h1
-            className="font-display text-3xl font-bold uppercase leading-[1.05] sm:text-5xl"
-            style={{ color: YELLOW }}
+            className="font-display text-3xl font-bold uppercase leading-[1.05] text-slate-900 sm:text-5xl"
           >
             КАК МЕДИЦИНСКОМУ ЦЕНТРУ УВЕЛИЧИТЬ ВЫРУЧКУ НА +30 МЛН ₸ ВСЕГО ЗА 30 ДНЕЙ С
             ПОМОЩЬЮ СИСТЕМЫ «MARKVISION AI»
@@ -96,7 +95,7 @@ function Landing() {
             </YellowBullet>
           </ul>
 
-          <div className="relative mx-auto mt-10 max-w-md overflow-hidden rounded-3xl ring-1 ring-white/10">
+          <div className="relative mx-auto mt-10 max-w-md overflow-hidden rounded-3xl ring-1 ring-slate-200">
             <img
               src={heroImg}
               alt="Современный медицинский центр"
@@ -106,20 +105,19 @@ function Landing() {
             />
           </div>
 
-          <div className="mt-10 rounded-2xl bg-white/5 p-6 text-center backdrop-blur">
+          <div className="mt-10 rounded-2xl bg-slate-50 ring-1 ring-slate-200 p-6 text-center">
             <p
-              className="font-display text-xl font-bold uppercase leading-tight sm:text-2xl"
-              style={{ color: YELLOW }}
+              className="font-display text-xl font-bold uppercase leading-tight text-slate-900 sm:text-2xl"
             >
               Получая бесперебойный поток пациентов на дорогостоящие услуги:
             </p>
-            <p className="mt-3 text-base text-white/80 sm:text-lg">
+            <p className="mt-3 text-base text-slate-600 sm:text-lg">
               платные диагностики, реабилитационные курсы, комплексные обследования
             </p>
           </div>
 
           <div className="mt-10 flex flex-col items-center gap-4">
-            <p className="text-base text-white/70">Как работает эта система</p>
+            <p className="text-base text-slate-500">Как работает эта система</p>
             <ArrowDown className="h-6 w-6 animate-bounce" style={{ color: YELLOW }} />
           </div>
         </div>
@@ -161,11 +159,11 @@ function Landing() {
       </section>
 
       {/* ============ BEFORE ============ */}
-      <section className="bg-black py-16 text-white">
+      <section className="bg-slate-50 py-16 text-slate-900">
         <div className="mx-auto max-w-3xl px-5">
           <h2
             className="font-display text-5xl font-bold uppercase sm:text-6xl"
-            style={{ color: "white" }}
+            
           >
             ДО:
           </h2>
@@ -233,7 +231,7 @@ function Landing() {
       </section>
 
       {/* ============ EXPERT YURIY ============ */}
-      <section className="bg-black py-16 text-white">
+      <section className="bg-slate-50 py-16 text-slate-900">
         <div className="mx-auto max-w-3xl px-5">
           <div
             className="rounded-[2.5rem] border-2 p-5 sm:p-7"
@@ -259,11 +257,11 @@ function Landing() {
 
           <h2
             className="mt-12 font-display text-2xl font-bold uppercase leading-tight sm:text-3xl"
-            style={{ color: "white" }}
+            
           >
             И ПОЧТИ ВЕЗДЕ ВИЖУ ОДНИ И ТЕ ЖЕ ПРОБЛЕМЫ,
           </h2>
-          <p className="mt-3 text-base text-white/80 sm:text-lg">
+          <p className="mt-3 text-base text-slate-600 sm:text-lg">
             которые{" "}
             <span
               className="font-bold"
@@ -274,7 +272,7 @@ function Landing() {
             в 10–15 млн ₸
           </p>
 
-          <div className="mt-8 space-y-5 rounded-3xl bg-neutral-800 p-6 sm:p-8">
+          <div className="mt-8 space-y-5 rounded-3xl bg-white ring-1 ring-slate-200 p-6 sm:p-8">
             {[
               "Зависимость от сарафанного радио. Сегодня пациенты есть, завтра — пустые кабинеты.",
               "Высокая конкуренция и демпинг цен. Пациент звонит в 5 центров и идёт туда, где дешевле.",
@@ -297,7 +295,7 @@ function Landing() {
             />
           </div>
 
-          <div className="mt-8 text-base leading-relaxed text-white/80 sm:text-lg">
+          <div className="mt-8 text-base leading-relaxed text-slate-600 sm:text-lg">
             Чтобы ваш медицинский центр стабильно приносил прибыль, у вас должно быть
             понимание: какие <span style={{ color: YELLOW }} className="font-bold">20% пациентов</span>{" "}
             приносят <span style={{ color: YELLOW }} className="font-bold">80% выручки</span>. И как
@@ -366,18 +364,18 @@ function Landing() {
       />
 
       {/* ============ CALL TO BREAKDOWN ============ */}
-      <section className="bg-black py-16 text-white">
+      <section className="bg-slate-50 py-16 text-slate-900">
         <div className="mx-auto max-w-3xl px-5">
           <h2 className="font-display text-2xl font-bold uppercase leading-tight sm:text-3xl">
             На первый взгляд всё выглядит просто. Но у меня ушло{" "}
             <span style={{ color: YELLOW }}>3 года</span>, чтобы разобраться в этом до
             уровня системы.
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
             Все ответы уже найдены. Все шаги отработаны на десятках медицинских центров.
             Я предлагаю их вам на часовой консультации.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
             После неё у вас будет полное понимание, как получать дополнительно{" "}
             <span style={{ color: YELLOW }} className="font-bold">+30 млн ₸ в год</span>{" "}
             за счёт стабильного потока пациентов на дорогостоящие услуги.
@@ -435,7 +433,7 @@ function Landing() {
             <PriceRow label="Обычная цена консультации" value="50 000 ₸" strike />
           </div>
           <div
-            className="mt-4 rounded-3xl border-4 border-black p-7 text-center"
+            className="mt-4 rounded-3xl border-2 border-slate-900/10 p-7 text-center"
             style={{ backgroundColor: YELLOW }}
           >
             <div className="text-xs font-bold uppercase tracking-wider text-black">
@@ -449,7 +447,7 @@ function Landing() {
       </section>
 
       {/* ============ BONUSES ============ */}
-      <section className="bg-black py-16 text-white">
+      <section className="bg-slate-50 py-16 text-slate-900">
         <div className="mx-auto max-w-4xl px-5">
           <h2
             className="font-display text-2xl font-bold uppercase leading-tight sm:text-3xl"
@@ -480,7 +478,7 @@ function Landing() {
             ].map((b) => (
               <article
                 key={b.n}
-                className="rounded-3xl bg-neutral-900 p-6 ring-1 ring-white/10"
+                className="rounded-3xl bg-slate-100 p-6 ring-1 ring-slate-200"
               >
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <span
@@ -490,14 +488,14 @@ function Landing() {
                     Бонус №{b.n}
                   </span>
                   <span className="text-sm">
-                    <span className="text-white/40 line-through">{b.price}</span>{" "}
+                    <span className="text-slate-400 line-through">{b.price}</span>{" "}
                     <span className="font-bold" style={{ color: YELLOW }}>
                       бесплатно
                     </span>
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold">{b.t}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/70">{b.d}</p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-500">{b.d}</p>
               </article>
             ))}
           </div>
@@ -536,12 +534,12 @@ function Landing() {
           </ul>
           <div
             className="mt-8 rounded-3xl p-6 text-center"
-            style={{ backgroundColor: "#000" }}
+            style={{ backgroundColor: '#0f172a00' }}
           >
-            <p className="font-display text-2xl font-bold uppercase text-white sm:text-3xl">
+            <p className="font-display text-2xl font-bold uppercase text-slate-900 sm:text-3xl">
               5 МЛН ₸? 10 МЛН ₸? 20 МЛН ₸?
             </p>
-            <p className="mt-4 text-base text-white/80 sm:text-lg">
+            <p className="mt-4 text-base text-slate-600 sm:text-lg">
               Сейчас вы можете получить весь алгоритм всего за
             </p>
             <p
@@ -567,7 +565,7 @@ function Landing() {
       </section>
 
       {/* ============ GUARANTEE ============ */}
-      <section className="bg-black py-16 text-white">
+      <section className="bg-slate-50 py-16 text-slate-900">
         <div className="mx-auto max-w-3xl px-5 text-center">
           <h2 className="font-display text-4xl font-bold uppercase sm:text-5xl">
             ВЫ НИЧЕМ НЕ РИСКУЕТЕ
@@ -587,11 +585,11 @@ function Landing() {
             Я УВЕРЕН В СВОЕЙ ТЕХНОЛОГИИ И ЕЁ ПОЛЬЗЕ, ПОЭТОМУ ДАЮ БЕЗУСЛОВНУЮ{" "}
             <span style={{ color: YELLOW }}>ГАРАНТИЮ ВОЗВРАТА СРЕДСТВ</span>
           </h3>
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-white/80 sm:text-lg">
+          <div className="mt-8 space-y-5 text-base leading-relaxed text-slate-600 sm:text-lg">
             <p>
               Если информация на консультации покажется банальной, и вы захотите возврат —
               просто напишите мне{" "}
-              <span className="font-semibold text-white">«Юрий, хочу возврат»</span>
+              <span className="font-semibold text-slate-900">«Юрий, хочу возврат»</span>
             </p>
             <p>
               Скажу даже больше!{" "}
@@ -600,7 +598,7 @@ function Landing() {
               </span>{" "}
               за потраченное время, если информация не оправдает твоих ожиданий
             </p>
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-slate-900">
               Всю ответственность беру на себя!
             </p>
           </div>
@@ -630,7 +628,7 @@ function Landing() {
             ].map((f) => (
               <details
                 key={f.q}
-                className="group rounded-2xl border-2 border-black bg-white p-5 open:bg-neutral-50"
+                className="group rounded-2xl border border-slate-200 bg-white p-5 open:bg-neutral-50"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-bold sm:text-lg">
                   {f.q}
@@ -647,7 +645,7 @@ function Landing() {
       </section>
 
       {/* ============ FINAL CTA ============ */}
-      <section className="bg-black py-20 text-white">
+      <section className="bg-slate-50 py-20 text-slate-900">
         <div className="mx-auto flex max-w-2xl flex-col items-center px-5 text-center">
           <h2 className="font-display text-4xl font-bold uppercase sm:text-5xl">
             <span style={{ color: YELLOW }}>Готовы</span> начать?
@@ -655,14 +653,14 @@ function Landing() {
           <div className="mt-8 w-full flex justify-center">
             <WaButton variant="green">Написать в WhatsApp</WaButton>
           </div>
-          <p className="mt-5 text-sm text-white/70">
+          <p className="mt-5 text-sm text-slate-500">
             При нажатии откроется чат. Кодовое слово — «Медцентр».
           </p>
         </div>
       </section>
 
       {/* ============ FOOTER ============ */}
-      <footer className="bg-neutral-900 py-10 text-white/70">
+      <footer className="bg-slate-100 py-10 text-slate-500">
         <div className="mx-auto max-w-5xl px-5 text-sm">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <div
