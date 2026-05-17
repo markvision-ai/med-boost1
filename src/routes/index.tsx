@@ -890,6 +890,12 @@ function Landing() {
                 Система роста для медицинских центров в Казахстане. Юрий
                 Запоинов, основатель.
               </p>
+              <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
+                <img src={astanaHubImg} alt="Astana Hub" width={80} height={20} className="h-5 w-auto invert" />
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-300">
+                  Участник Astana Hub
+                </span>
+              </div>
             </div>
             <div className="flex flex-col gap-2 text-sm sm:text-right">
               <a
@@ -902,6 +908,23 @@ function Landing() {
                 WhatsApp: +7 708 902 70 71
               </a>
               <span className="text-xs text-slate-500">© 2026 MarkVision AI</span>
+            </div>
+          </div>
+
+          <div className="mt-10 border-t border-white/10 pt-6">
+            <div className="grid gap-2 text-xs leading-relaxed text-slate-500 sm:grid-cols-2">
+              <div>
+                <div className="mb-1 font-semibold uppercase tracking-wider text-slate-400">Реквизиты</div>
+                <div>ТОО «MarkVision AI»</div>
+                <div>БИН: 000000000000</div>
+                <div>Директор: Запоинов Ю.</div>
+              </div>
+              <div className="sm:text-right">
+                <div className="mb-1 font-semibold uppercase tracking-wider text-slate-400">Адрес</div>
+                <div>Республика Казахстан, г. Астана</div>
+                <div>пр. Мангилик Ел, 55/15, Astana Hub</div>
+                <div>info@markvision.ai</div>
+              </div>
             </div>
           </div>
         </div>
