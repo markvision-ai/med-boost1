@@ -731,8 +731,8 @@ function Landing() {
             Часовой разбор — и у вас план на <br />
             <span className="text-[var(--primary)]">+100 млн ₸ в год</span>
           </SectionTitle>
-          <p className="reveal mt-6 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
-            Без воды, без шаблонов — конкретные шаги под вашу клинику.
+          <p className="reveal mt-5 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Теория понятна. Чтобы применить эти 3 шага к вашей клинике, нужен час разбора — без воды и шаблонов, только конкретика под ваш случай.
           </p>
 
           <div className="reveal mt-8 grid gap-4 sm:grid-cols-3">
@@ -776,9 +776,12 @@ function Landing() {
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
           <Chapter label="РЕЗУЛЬТАТ СЕССИИ" />
-          <SectionTitle eyebrow="Результат сессии">
-            Что вы получите на консультации
+          <SectionTitle eyebrow="Что вы заберёте">
+            Что вы получите на разборе
           </SectionTitle>
+          <p className="reveal mt-5 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            После часа со мной у вас на руках — готовый план роста. Конкретно, по пунктам:
+          </p>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {[
               "Адресное предложение под вашу нишу",
@@ -807,8 +810,11 @@ function Landing() {
         <div className="mx-auto max-w-2xl px-5">
           <Chapter label="СТОИМОСТЬ" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
-            Сколько это стоит?
+            Сколько стоит такой разбор?
           </SectionTitle>
+          <p className="reveal mx-auto mt-4 max-w-xl text-center text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            План, который вы получаете, в работе стоит сотни тысяч тенге. Но сейчас — намеренно символическая цена, чтобы вы точно дошли до встречи.
+          </p>
           <div className="reveal mt-8 space-y-2.5">
             <PriceRow label="Реальная ценность" value="500 000 ₸" strike />
             <PriceRow label="Обычная цена консультации" value="50 000 ₸" strike />
