@@ -206,7 +206,7 @@ function Landing() {
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
                 </span>
                 <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
-                  Проверенная методика для медицинских клиник
+                  Проверенная методика для медицинских клиник в Казахстане
                 </span>
               </div>
 
