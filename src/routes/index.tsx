@@ -813,7 +813,7 @@ function Landing() {
             ].map((f) => (
               <details
                 key={f.q}
-                className="reveal group rounded-2xl border border-[var(--border)] bg-white p-5 open:border-[var(--primary)]"
+                className="reveal card-lift group rounded-2xl border border-[var(--border)] bg-white p-5 open:border-[var(--primary)]"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold text-[var(--foreground)] sm:text-base">
                   {f.q}
