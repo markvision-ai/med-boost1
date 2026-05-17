@@ -298,7 +298,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="01" label="Кейс клиента" />
+          <Chapter n="01" label="Кейс клиники" />
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
@@ -310,7 +310,7 @@ function Landing() {
             />
             <div>
               <div className="mb-1 inline-flex items-center gap-1 rounded-full bg-[var(--primary-soft)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--primary)]">
-                Клиент MarkVision AI
+                Клиника-партнёр MarkVision AI
               </div>
               <p className="text-base text-[var(--muted-foreground)] sm:text-lg">
                 Знакомьтесь, <strong className="text-[var(--foreground)]">Бакыт</strong> -
@@ -539,7 +539,7 @@ function Landing() {
 
       <Step
         number={2}
-        title="Система привлечения клиентов (СПК)"
+        title="Система привлечения пациентов (СПП)"
         paragraphs={[
           "Не тратьте рекламный бюджет на тех, кто никогда ничего не купит без скидки 50%. Сфокусируйтесь на 20% пациентов, которые сами готовы платить за качественное лечение.",
         ]}
@@ -549,8 +549,8 @@ function Landing() {
           "Получили отказ или непонятный диагноз",
           "Готовы платить за результат, а не за дешёвый приём",
         ]}
-        afterBullets="Для них нужен другой подход - система привлечения клиентов (СПК)."
-        listTitle="Что делает СПК"
+        afterBullets="Для них нужен другой подход - система привлечения пациентов (СПП)."
+        listTitle="Что делает СПП"
         list={[
           "Привлекает горячих пациентов с конкретной болью",
           "Показывает рекламу только целевой аудитории",
@@ -609,9 +609,9 @@ function Landing() {
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {[
               "Адресное предложение, дающее поток на дорогие услуги",
-              "Как привлекать от 5 пациентов в день через СПК",
+              "Как привлекать от 5 пациентов в день через СПП",
               "Предложение, которое снимает возражения до контакта",
-              "85% загрузки кабинетов благодаря СПК",
+              "85% загрузки кабинетов каждый день",
               "Стабильные 30 млн ₸ без акций и скидок",
               "20% пациентов, приносящих 80% выручки",
             ].map((t) => (
