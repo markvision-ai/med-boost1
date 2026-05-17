@@ -249,9 +249,7 @@ function Landing() {
               <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
                 Официальный участник
               </span>
-              <span className="text-sm font-semibold text-[var(--foreground)]">
-                Astana Hub
-              </span>
+              <span className="text-sm font-semibold text-[var(--foreground)]">​</span>
             </span>
           </a>
 
@@ -892,9 +890,7 @@ function Landing() {
               </p>
               <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
                 <img src={astanaHubImg} alt="Astana Hub" width={80} height={20} className="h-5 w-auto invert" />
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-300">
-                  Участник Astana Hub
-                </span>
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-300">Участник ​</span>
               </div>
             </div>
             <div className="flex flex-col gap-2 text-sm sm:text-right">
