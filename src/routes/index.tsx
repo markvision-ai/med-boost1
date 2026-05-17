@@ -112,6 +112,32 @@ function SectionTitle({
   );
 }
 
+function Chapter({
+  n,
+  label,
+  align = "left",
+}: {
+  n: string;
+  label: string;
+  align?: "left" | "center";
+}) {
+  return (
+    <div
+      className={`mb-8 flex items-center gap-3 ${
+        align === "center" ? "justify-center" : ""
+      }`}
+    >
+      <span className="font-display text-sm font-bold tracking-[0.2em] text-[var(--primary)]">
+        {n}
+      </span>
+      <span className="h-px w-10 bg-[var(--primary)]/30" />
+      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-foreground)]">
+        {label}
+      </span>
+    </div>
+  );
+}
+
 function Bullet({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-3">
@@ -149,40 +175,13 @@ function TrustBar() {
   );
 }
 
-function StickyMobileCta() {
-  return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--border)] bg-white/95 px-4 py-3 backdrop-blur md:hidden">
-      <div className="mx-auto flex max-w-md items-center gap-3">
-        <div className="flex flex-col leading-tight">
-          <span className="text-[10px] uppercase tracking-wider text-[var(--muted-foreground)]">
-            Разбор
-          </span>
-          <span className="text-base font-bold text-[var(--foreground)]">
-            4 990 ₸
-          </span>
-        </div>
-        <a
-          href={WA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          data-event="cta_sticky_whatsapp"
-          className="ml-auto inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white"
-        >
-          <MessageCircle className="h-4 w-4" />
-          Записаться
-        </a>
-      </div>
-    </div>
-  );
-}
-
 /* ============ page ============ */
 
 function Landing() {
   useReveal();
 
   return (
-    <main className="min-h-screen bg-white pb-20 text-[var(--foreground)] antialiased md:pb-0">
+    <main className="min-h-screen bg-white text-[var(--foreground)] antialiased">
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[var(--secondary)] to-white">
         <div
@@ -252,8 +251,9 @@ function Landing() {
       </section>
 
       {/* ===== CASE: BAKYT ===== */}
-      <section className="bg-[var(--secondary)] py-16 sm:py-20">
+      <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
+          <Chapter n="01" label="Кейс клиента" />
           <article className="reveal flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
@@ -282,8 +282,9 @@ function Landing() {
       </section>
 
       {/* ===== BEFORE / AFTER ===== */}
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
+          <Chapter n="02" label="До и после" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
             До MarkVision AI&nbsp;— и после
           </SectionTitle>
@@ -357,8 +358,9 @@ function Landing() {
       </section>
 
       {/* ===== EXPERT ===== */}
-      <section id="how" className="bg-white py-16 sm:py-24">
+      <section id="how" className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
+          <Chapter n="03" label="Эксперт" />
           <article className="reveal flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
@@ -498,8 +500,9 @@ function Landing() {
       />
 
       {/* ===== CALL TO BREAKDOWN ===== */}
-      <section className="bg-[var(--secondary)] py-16 sm:py-20">
+      <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
+          <Chapter n="07" label="Зачем разбор" />
           <h2 className="reveal font-display text-2xl leading-tight text-[var(--foreground)] sm:text-3xl md:text-4xl">
             На первый взгляд всё просто. Но у меня ушло{" "}
             <span className="text-[var(--primary)]">3 года</span>, чтобы
@@ -518,8 +521,9 @@ function Landing() {
       </section>
 
       {/* ===== OUTCOME ===== */}
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
+          <Chapter n="08" label="Результат сессии" />
           <SectionTitle eyebrow="Результат сессии">
             Что вы получите на консультации
           </SectionTitle>
@@ -547,8 +551,9 @@ function Landing() {
       </section>
 
       {/* ===== PRICING ===== */}
-      <section id="cta" className="bg-[var(--secondary)] py-16 sm:py-24">
+      <section id="cta" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5">
+          <Chapter n="09" label="Стоимость" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
@@ -579,8 +584,9 @@ function Landing() {
       </section>
 
       {/* ===== BONUSES ===== */}
-      <section className="bg-white py-16 sm:py-24">
+      <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
+          <Chapter n="10" label="Бонусы" />
           <SectionTitle eyebrow="Бонусы">
             Первым 10 владельцам — 3 бонуса на 110 000 ₸
           </SectionTitle>
@@ -640,8 +646,9 @@ function Landing() {
       </section>
 
       {/* ===== HONEST TALK ===== */}
-      <section className="bg-[var(--secondary)] py-16 sm:py-24">
+      <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
+          <Chapter n="11" label="Честный разговор" />
           <SectionTitle>А теперь честно</SectionTitle>
           <ul className="mt-8 space-y-3">
             {[
@@ -679,8 +686,10 @@ function Landing() {
       </section>
 
       {/* ===== GUARANTEE ===== */}
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl px-5 text-center">
+      <section className="bg-white py-20 sm:py-28">
+        <div className="mx-auto max-w-3xl px-5">
+          <Chapter n="12" label="Гарантия" align="center" />
+          <div className="text-center">
           <div
             className="reveal mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
             style={{
@@ -710,12 +719,14 @@ function Landing() {
           <p className="reveal mt-4 font-semibold text-[var(--foreground)]">
             Всю ответственность беру на себя.
           </p>
+          </div>
         </div>
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="bg-[var(--secondary)] py-16 sm:py-24">
+      <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
+          <Chapter n="13" label="Вопросы и ответы" />
           <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
           <div className="mt-8 space-y-3">
             {[
@@ -804,7 +815,6 @@ function Landing() {
         </div>
       </footer>
 
-      <StickyMobileCta />
     </main>
   );
 }
