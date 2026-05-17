@@ -320,7 +320,7 @@ function Landing() {
 
           </div>
 
-          <TrustBar />
+          
         </div>
       </section>
 
