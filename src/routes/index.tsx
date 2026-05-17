@@ -785,7 +785,7 @@ function Landing() {
       {/* ===== BONUSES ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
-          <Chapter n="08" label="Бонусы" />
+          <Chapter n="08" label="БОНУСЫ" />
           <SectionTitle eyebrow="Бонусы">
             Первым 10 владельцам - 3 бонуса на 110 000 ₸
           </SectionTitle>
@@ -850,7 +850,7 @@ function Landing() {
       {/* ===== HONEST TALK ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="09" label="Честный разговор" />
+          <Chapter n="09" label="ЧЕСТНЫЙ РАЗГОВОР" />
           <SectionTitle>А теперь честно</SectionTitle>
           <ul className="mt-8 space-y-3">
             {[
@@ -890,7 +890,7 @@ function Landing() {
       {/* ===== GUARANTEE ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="10" label="Гарантия" align="center" />
+          <Chapter n="10" label="ГАРАНТИЯ" align="center" />
           <div className="text-center">
           <div
             className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
@@ -920,7 +920,7 @@ function Landing() {
       {/* ===== FAQ ===== */}
       <section id="faq" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="11" label="Вопросы и ответы" />
+          <Chapter n="11" label="ВОПРОСЫ И ОТВЕТЫ" />
           <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
           <div className="mt-8 space-y-3">
             {[
@@ -1057,7 +1057,7 @@ function FamiliarSituation() {
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
       <div aria-hidden className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-rose-100/60 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-5">
-        <Chapter n="01" label="Знакомая ситуация" />
+        <Chapter n="01" label="ЗНАКОМАЯ СИТУАЦИЯ" />
         <div className="reveal mb-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">
           <AlertTriangle className="h-3.5 w-3.5" /> Если узнаёте себя — читайте дальше
         </div>
