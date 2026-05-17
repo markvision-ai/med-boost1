@@ -94,7 +94,7 @@ function HeroVideo() {
   };
 
   return (
-    <div className="relative w-full max-w-2xl">
+    <div className="relative w-full">
       <div aria-hidden className="pointer-events-none absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-[var(--primary)]/20 via-transparent to-emerald-300/20 blur-2xl" />
       <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-black shadow-2xl shadow-slate-900/15">
         <video
@@ -289,10 +289,10 @@ function Landing() {
         <div aria-hidden className="pointer-events-none absolute bottom-0 -left-32 h-72 w-72 rounded-full bg-rose-100/50 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-25" />
 
-        <div className="relative mx-auto max-w-4xl px-5 pt-12 pb-16 text-center sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28">
+        <div className="relative mx-auto max-w-5xl px-5 pt-10 pb-14 text-center sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24">
           <div>
             {/* === Content === */}
-            <div className="reveal mx-auto flex flex-col items-center space-y-6 lg:space-y-7">
+            <div className="reveal mx-auto flex flex-col items-center space-y-5 lg:space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-[var(--primary)]/15 bg-white/80 px-3.5 py-1.5 shadow-sm shadow-slate-900/5 backdrop-blur">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--primary)] opacity-60" />
@@ -303,7 +303,7 @@ function Landing() {
                 </span>
               </div>
 
-              <h1 className="max-w-4xl font-display font-extrabold leading-[1.05] tracking-[-0.02em] sm:text-5xl md:text-[56px] lg:text-[64px] text-3xl">
+              <h1 className="max-w-4xl font-display font-extrabold leading-[1.05] tracking-[-0.02em] text-3xl sm:text-4xl md:text-5xl lg:text-[52px]">
                 +100 пациентов на <br />
                 <span className="relative inline-block">
                   <span className="relative z-10 text-[var(--primary)]">платную диагностику</span>
@@ -315,13 +315,15 @@ function Landing() {
                 каждый месяц
               </h1>
 
-              <p className="max-w-2xl text-base leading-[1.6] text-slate-700 sm:text-lg">
+              <p className="max-w-2xl text-base leading-[1.6] text-slate-700 sm:text-[17px]">
                 Для владельцев медклиник, которые хотят обойти конкурентов в 2026 году <br />
                 и увеличить выручку в 2–3 раза
               </p>
 
               {/* Hero video */}
-              <HeroVideo />
+              <div className="w-full max-w-xl">
+                <HeroVideo />
+              </div>
 
               {/* CTA */}
               <div className="flex flex-col items-center gap-4 pt-1 sm:flex-row sm:justify-center">
