@@ -440,7 +440,7 @@ function Landing() {
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
-              alt="Юрий Запоинов, основатель MarkVision AI"
+              alt="Юрий Запойнов, основатель MarkVision AI"
               width={400}
               height={400}
               loading="lazy"
