@@ -345,6 +345,7 @@ function Landing() {
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="01" label="Кейс клиники" />
+
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
