@@ -681,11 +681,11 @@ function Landing() {
         <div className="relative mx-auto max-w-3xl px-5">
           <Chapter n="05" label="Зачем разбор" />
           <SectionTitle eyebrow="Часовая сессия со мной">
-            Система собрана за <span className="text-[var(--primary)]">3 года</span> на 20+ клиниках
+            Часовой разбор — и у вас план на <br />
+            <span className="text-[var(--primary)]">+100 млн ₸ в год</span>
           </SectionTitle>
           <p className="reveal mt-6 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
-            Часовой разбор — и у вас план на{" "}
-            <span className="font-semibold text-[var(--emerald)]">+30 млн ₸ в год</span>. Без воды, без шаблонов — конкретные шаги под вашу клинику.
+            Без воды, без шаблонов — конкретные шаги под вашу клинику.
           </p>
 
           <div className="reveal mt-8 grid gap-4 sm:grid-cols-3">
