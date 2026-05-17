@@ -355,10 +355,127 @@ function Landing() {
         </div>
       </section>
 
+      {/* ===== ALMATY CASE: REAL CLINIC RESULTS ===== */}
+      <section className="relative overflow-hidden bg-white py-20 sm:py-28">
+        <div className="mx-auto max-w-4xl px-5">
+          <Chapter n="02" label="Реальные результаты" />
+          <SectionTitle eyebrow="Кейс клиники">
+            Результаты из реальных клиник
+          </SectionTitle>
+          <p className="reveal mt-4 text-base text-[var(--muted-foreground)] sm:text-lg">
+            Разные города, разные ниши - одна система.
+          </p>
+
+          <div className="reveal mt-8 rounded-3xl border border-[var(--border)] bg-white p-6 sm:p-8">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
+              <Stethoscope className="h-3.5 w-3.5" />
+              Клиника из Алматы
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {/* БЫЛО */}
+              <div className="rounded-2xl border border-rose-100 bg-rose-50/60 p-5">
+                <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-rose-600">
+                  <AlertTriangle className="h-4 w-4" /> Было
+                </div>
+                <p className="text-[15px] leading-relaxed text-slate-700 sm:text-base">
+                  Один администратор не справлялся со звонками. Записывал
+                  всех подряд - приходило только{" "}
+                  <strong className="text-rose-700">30%</strong> от записанных.
+                </p>
+              </div>
+
+              {/* ЧТО СДЕЛАЛИ */}
+              <div className="rounded-2xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-5">
+                <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary)]">
+                  <Sparkles className="h-4 w-4" /> Что мы сделали
+                </div>
+                <ul className="space-y-2.5">
+                  {[
+                    "Вывели 2 сотрудниц в отдельный колл-центр",
+                    "Обучили скриптам продажи первичной консультации",
+                    "Поставили задачу: записать с предоплатой или полной оплатой",
+                  ].map((t) => (
+                    <li key={t} className="flex items-start gap-2.5">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--primary)]" />
+                      <span className="text-[14px] leading-relaxed text-slate-700 sm:text-[15px]">
+                        {t}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* RESULT DASHBOARD CARD */}
+          <div
+            className="reveal relative mt-5 overflow-hidden rounded-3xl p-6 text-white sm:p-8"
+            style={{
+              background:
+                "linear-gradient(160deg, var(--primary) 0%, color-mix(in oklab, var(--primary) 80%, black) 100%)",
+            }}
+          >
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-30 blur-3xl"
+              style={{ background: "var(--emerald)" }}
+            />
+
+            <div className="relative mb-6 flex justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur">
+                <TrendingUp className="h-3.5 w-3.5 text-[var(--emerald)]" />
+                Результат за 2 недели
+              </div>
+            </div>
+
+            <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                { Icon: Megaphone, v: "830 000 ₸", l: "Расходы на рекламу" },
+                { Icon: Inbox, v: "415", l: "Обращений" },
+                { Icon: Stethoscope, v: "83", l: "Платных диагностик" },
+                { Icon: UserPlus, v: "29", l: "Новых пациентов" },
+              ].map(({ Icon, v, l }) => (
+                <div
+                  key={l}
+                  className="flex flex-col items-center rounded-2xl border border-white/15 bg-white/10 p-4 text-center backdrop-blur"
+                >
+                  <Icon className="mb-2 h-5 w-5 text-[var(--emerald)]" strokeWidth={2.2} />
+                  <div className="font-display text-xl leading-none text-white sm:text-2xl">
+                    {v}
+                  </div>
+                  <div className="mt-2 text-[11px] leading-snug text-white/80 sm:text-xs">
+                    {l}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="relative mt-4 flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-center backdrop-blur">
+              <Receipt className="h-4 w-4 text-[var(--emerald)]" />
+              <span className="text-sm text-white/90">
+                Средний чек:{" "}
+                <strong className="font-display text-white">350 000 ₸</strong>
+              </span>
+            </div>
+
+            <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/15 bg-white/10 px-5 py-7 text-center backdrop-blur">
+              <Wallet className="mx-auto mb-3 h-6 w-6 text-[var(--emerald)]" />
+              <div className="font-display text-4xl leading-none text-[var(--emerald)] sm:text-6xl">
+                +13 000 000 ₸
+              </div>
+              <div className="mt-3 text-sm text-white/80 sm:text-base">
+                выручки в кассу
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== BEFORE / AFTER ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
-          <Chapter n="02" label="До и после" align="center" />
+          <Chapter n="03" label="До и после" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
             До MarkVision AI&nbsp;- и после
           </SectionTitle>
