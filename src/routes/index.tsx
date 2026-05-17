@@ -379,9 +379,6 @@ function Landing() {
           <SectionTitle eyebrow="Кейс клиники">
             Результаты из реальных клиник
           </SectionTitle>
-          <p className="reveal mt-4 text-base text-[var(--muted-foreground)] sm:text-lg">
-            Разные города, разные ниши - одна система.
-          </p>
 
           <div className="reveal mt-8 rounded-3xl border border-[var(--border)] bg-white p-6 sm:p-8">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
@@ -396,9 +393,8 @@ function Landing() {
                   <AlertTriangle className="h-4 w-4" /> Было
                 </div>
                 <p className="text-[15px] leading-relaxed text-slate-700 sm:text-base">
-                  Один администратор не справлялся со звонками. Записывал
-                  всех подряд - приходило только{" "}
-                  <strong className="text-rose-700">30%</strong> от записанных.
+                  1 админ на всё. Доходимость{" "}
+                  <strong className="text-rose-700">30%</strong>.
                 </p>
               </div>
 
@@ -409,9 +405,9 @@ function Landing() {
                 </div>
                 <ul className="space-y-2.5">
                   {[
-                    "Вывели 2 сотрудниц в отдельный колл-центр",
-                    "Обучили скриптам продажи первичной консультации",
-                    "Поставили задачу: записать с предоплатой или полной оплатой",
+                    "Отдельный колл-центр на 2 человека",
+                    "Скрипты продажи первичной",
+                    "Запись только с предоплатой",
                   ].map((t) => (
                     <li key={t} className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--primary)]" />
