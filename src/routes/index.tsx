@@ -239,6 +239,27 @@ function Landing() {
               height={896}
               className="h-auto w-full"
             />
+            {/* Floating decor over hero image */}
+            <div aria-hidden className="pointer-events-none absolute inset-0">
+              <div className="absolute left-3 top-3 float-a sm:left-5 sm:top-5">
+                <div className="chip-3d">
+                  <TrendingUp className="h-3.5 w-3.5 text-[var(--emerald)]" />
+                  +30 млн ₸ / 30 дней
+                </div>
+              </div>
+              <div className="absolute right-3 top-10 float-b sm:right-5">
+                <div className="chip-3d">
+                  <span className="dot" />
+                  85% доходимость
+                </div>
+              </div>
+              <div className="absolute bottom-3 left-3 float-c sm:bottom-5 sm:left-5">
+                <div className="chip-3d">
+                  <CalendarCheck className="h-3.5 w-3.5 text-[var(--primary)]" />
+                  Новая запись · Имплантация
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="reveal mt-10 rounded-2xl border border-[var(--border)] bg-white p-6">
