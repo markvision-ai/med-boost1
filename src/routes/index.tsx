@@ -177,11 +177,7 @@ function StickyHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--muted-foreground)] md:flex">
-          <a href="#how" className="transition hover:text-[var(--foreground)]">Метод</a>
-          <a href="#cta" className="transition hover:text-[var(--foreground)]">Стоимость</a>
-          <a href="#faq" className="transition hover:text-[var(--foreground)]">Вопросы</a>
-        </nav>
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--muted-foreground)] md:flex" />
 
         <a
           href={WA_URL}
@@ -233,16 +229,13 @@ function Landing() {
                     aria-hidden
                     className="absolute inset-x-0 bottom-0.5 -z-0 h-2.5 bg-[var(--primary-soft)] sm:bottom-1 sm:h-3.5"
                   />
-                </span>{" "}
+                </span> <br />
                 каждый месяц
               </h1>
 
               <p className="max-w-2xl text-base leading-[1.6] text-slate-700 sm:text-lg">
                 Для владельцев медклиник, которые хотят обойти конкурентов в 2026 году <br />
-                и увеличить выручку{" "}
-                <span className="whitespace-nowrap rounded-md bg-[var(--primary-soft)] px-1.5 py-0.5 font-bold text-[var(--primary)]">
-                  в 2–3 раза
-                </span>
+                и увеличить выручку в 2–3 раза
               </p>
 
               {/* KPI row — 3 cards */}
@@ -290,7 +283,7 @@ function Landing() {
               >
                 <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
-                  Официальный участник
+                  ОФИЦИАЛЬНЫЙ УЧАСТНИК
                 </span>
               </a>
             </div>
@@ -307,7 +300,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="relative mx-auto max-w-4xl px-5">
-          <Chapter n="02" label="Кейс клиники" />
+          <Chapter n="02" label="КЕЙС КЛИНИКИ" />
           <SectionTitle eyebrow="Реальный результат">
             Медцентр в Алматы: <br />
             +13 млн без доп бюджета на рекламу
@@ -439,7 +432,7 @@ function Landing() {
       {/* ===== BEFORE / AFTER ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
-          <Chapter n="03" label="До и после" align="center" />
+          <Chapter n="03" label="ДО И ПОСЛЕ" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
             <br />
           </SectionTitle>
@@ -505,7 +498,7 @@ function Landing() {
       <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="04" label="Эксперт" />
+          <Chapter n="04" label="ЭКСПЕРТ" />
 
           {/* Expert intro: photo + name + lead paragraph */}
           <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
@@ -601,7 +594,7 @@ function Landing() {
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
         <div className="relative mx-auto max-w-3xl px-5 text-center">
           <div className="reveal mb-4 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--primary)]">
-            <Sparkles className="h-3.5 w-3.5" /> Метод MarkVision AI
+            <Sparkles className="h-3.5 w-3.5" /> МЕТОД MARKVISION AI
           </div>
           <h2 className="reveal font-display text-3xl leading-[1.15] text-[var(--foreground)] sm:text-4xl md:text-[44px]">
             3 шага, которые превращают клинику <br />
@@ -679,7 +672,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-50 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-5">
-          <Chapter n="05" label="Зачем разбор" />
+          <Chapter n="05" label="ЗАЧЕМ РАЗБОР" />
           <SectionTitle eyebrow="Часовая сессия со мной">
             Часовой разбор — и у вас план на <br />
             <span className="text-[var(--primary)]">+100 млн ₸ в год</span>
@@ -728,7 +721,7 @@ function Landing() {
       {/* ===== OUTCOME ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="06" label="Результат сессии" />
+          <Chapter n="06" label="РЕЗУЛЬТАТ СЕССИИ" />
           <SectionTitle eyebrow="Результат сессии">
             Что вы получите на консультации
           </SectionTitle>
@@ -758,7 +751,7 @@ function Landing() {
       {/* ===== PRICING ===== */}
       <section id="cta" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5">
-          <Chapter n="07" label="Стоимость" align="center" />
+          <Chapter n="07" label="СТОИМОСТЬ" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
@@ -792,7 +785,7 @@ function Landing() {
       {/* ===== BONUSES ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
-          <Chapter n="08" label="Бонусы" />
+          <Chapter n="08" label="БОНУСЫ" />
           <SectionTitle eyebrow="Бонусы">
             Первым 10 владельцам - 3 бонуса на 110 000 ₸
           </SectionTitle>
@@ -825,8 +818,8 @@ function Landing() {
                   <Gift className="h-5 w-5" />
                 </div>
                 <div className="mb-3 flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
-                    Бонус №{b.n}
+                  <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary)]">
+                    БОНУС №{b.n}
                   </span>
                   <span className="text-xs">
                     <span className="text-[var(--muted-foreground)] line-through">
@@ -857,7 +850,7 @@ function Landing() {
       {/* ===== HONEST TALK ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="09" label="Честный разговор" />
+          <Chapter n="09" label="ЧЕСТНЫЙ РАЗГОВОР" />
           <SectionTitle>А теперь честно</SectionTitle>
           <ul className="mt-8 space-y-3">
             {[
@@ -897,7 +890,7 @@ function Landing() {
       {/* ===== GUARANTEE ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="10" label="Гарантия" align="center" />
+          <Chapter n="10" label="ГАРАНТИЯ" align="center" />
           <div className="text-center">
           <div
             className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
@@ -927,7 +920,7 @@ function Landing() {
       {/* ===== FAQ ===== */}
       <section id="faq" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="11" label="Вопросы и ответы" />
+          <Chapter n="11" label="ВОПРОСЫ И ОТВЕТЫ" />
           <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
           <div className="mt-8 space-y-3">
             {[
@@ -1064,7 +1057,7 @@ function FamiliarSituation() {
       <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
       <div aria-hidden className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-rose-100/60 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-5">
-        <Chapter n="01" label="Знакомая ситуация" />
+        <Chapter n="01" label="ЗНАКОМАЯ СИТУАЦИЯ" />
         <div className="reveal mb-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700">
           <AlertTriangle className="h-3.5 w-3.5" /> Если узнаёте себя — читайте дальше
         </div>
@@ -1167,7 +1160,7 @@ function Step({
             <span className="relative">{number}</span>
           </span>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
-            Шаг {number} из 3 года
+            ШАГ {number} ИЗ 3
           </span>
         </div>
         <h2 className="reveal font-display text-3xl leading-tight text-[var(--foreground)] sm:text-4xl">
@@ -1200,8 +1193,8 @@ function Step({
 
         {example && (
           <div className="reveal mt-8 rounded-2xl border border-[var(--border)] border-l-4 border-l-[var(--primary)] bg-white p-6">
-            <div className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
-              <Sparkles className="h-4 w-4" /> Пример
+            <div className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--primary)]">
+              <Sparkles className="h-4 w-4" /> ПРИМЕР
             </div>
             {example.split("\n\n").map((p, i) => (
               <p
@@ -1236,8 +1229,8 @@ function Step({
 
         {result && (
           <div className="reveal mt-8 rounded-2xl bg-[var(--primary-soft)] p-6">
-            <div className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
-              Результат
+            <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-[var(--primary)]">
+              РЕЗУЛЬТАТ
             </div>
             <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
               {result}
