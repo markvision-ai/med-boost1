@@ -275,10 +275,11 @@ function Landing() {
       </section>
 
       {/* ===== CASE: BAKYT ===== */}
-      <section className="bg-[var(--secondary)] py-20 sm:py-28">
+      <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
+        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="01" label="Кейс клиента" />
-          <article className="reveal flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
+          <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
               alt="Бакыт, владелец медцентра"
@@ -300,6 +301,30 @@ function Landing() {
                 <span className="font-bold text-[var(--emerald)]">13 млн ₸</span>{" "}
                 после двух лет застоя.
               </p>
+            </div>
+            {/* Mini-ops overlay */}
+            <div className="hidden sm:block absolute -right-4 -top-6 w-56 rotate-[3deg] rounded-2xl border border-[var(--border)] bg-white p-3 shadow-xl shadow-slate-900/10 float-b">
+              <div className="mb-1.5 flex items-center justify-between">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Записи · сегодня</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" />
+              </div>
+              {[
+                ["09:00", "Консультация"],
+                ["11:30", "Имплантация"],
+                ["14:00", "Контроль"],
+              ].map(([t, l]) => (
+                <div key={t} className="flex items-center justify-between border-t border-[var(--border)] py-1.5 text-[11px]">
+                  <span className="font-semibold text-[var(--foreground)]">{t}</span>
+                  <span className="text-[var(--muted-foreground)]">{l}</span>
+                  <CheckCircle2 className="h-3 w-3 text-[var(--emerald)]" />
+                </div>
+              ))}
+            </div>
+            <div className="hidden sm:block absolute -bottom-5 left-6 float-c">
+              <div className="chip-3d">
+                <span className="dot" />
+                +13 млн ₸ / мес
+              </div>
             </div>
           </article>
         </div>
