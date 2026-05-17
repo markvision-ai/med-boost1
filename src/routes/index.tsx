@@ -672,7 +672,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-50 blur-3xl" />
         <div className="relative mx-auto max-w-3xl px-5">
-          <Chapter n="05" label="Зачем разбор" />
+          <Chapter n="05" label="ЗАЧЕМ РАЗБОР" />
           <SectionTitle eyebrow="Часовая сессия со мной">
             Часовой разбор — и у вас план на <br />
             <span className="text-[var(--primary)]">+100 млн ₸ в год</span>
@@ -721,7 +721,7 @@ function Landing() {
       {/* ===== OUTCOME ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="06" label="Результат сессии" />
+          <Chapter n="06" label="РЕЗУЛЬТАТ СЕССИИ" />
           <SectionTitle eyebrow="Результат сессии">
             Что вы получите на консультации
           </SectionTitle>
@@ -751,7 +751,7 @@ function Landing() {
       {/* ===== PRICING ===== */}
       <section id="cta" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5">
-          <Chapter n="07" label="Стоимость" align="center" />
+          <Chapter n="07" label="СТОИМОСТЬ" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
