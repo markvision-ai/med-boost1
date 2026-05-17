@@ -112,6 +112,32 @@ function SectionTitle({
   );
 }
 
+function Chapter({
+  n,
+  label,
+  align = "left",
+}: {
+  n: string;
+  label: string;
+  align?: "left" | "center";
+}) {
+  return (
+    <div
+      className={`mb-8 flex items-center gap-3 ${
+        align === "center" ? "justify-center" : ""
+      }`}
+    >
+      <span className="font-display text-sm font-bold tracking-[0.2em] text-[var(--primary)]">
+        {n}
+      </span>
+      <span className="h-px w-10 bg-[var(--primary)]/30" />
+      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted-foreground)]">
+        {label}
+      </span>
+    </div>
+  );
+}
+
 function Bullet({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-3">
