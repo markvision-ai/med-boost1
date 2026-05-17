@@ -604,7 +604,7 @@ function Landing() {
             <Sparkles className="h-3.5 w-3.5" /> Метод MarkVision AI
           </div>
           <h2 className="reveal font-display text-3xl leading-[1.15] text-[var(--foreground)] sm:text-4xl md:text-[44px]">
-            3 шага, которые превращают клинику <br className="hidden sm:inline" />
+            3 шага, которые превращают клинику <br />
             в систему роста
           </h2>
           <p className="reveal mx-auto mt-5 max-w-2xl text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
