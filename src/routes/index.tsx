@@ -353,107 +353,69 @@ function Landing() {
         </div>
       </section>
 
-      {/* ===== CASE: BAKYT ===== */}
       <FamiliarSituation />
 
-      {/* ===== CASE: BAKYT ===== */}
+      {/* ===== CASE: BAKYT — MERGED ===== */}
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
-        <div className="mx-auto max-w-3xl px-5">
+        <div className="relative mx-auto max-w-4xl px-5">
           <Chapter n="01" label="Кейс клиники" />
+          <SectionTitle eyebrow="Реальный результат">
+            Медцентр в Алматы: +13 млн ₸/мес без роста бюджета
+          </SectionTitle>
 
-          <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
+          {/* OWNER CARD */}
+          <article className="reveal card-lift relative mt-8 flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
-              alt="Бакыт, владелец медцентра"
+              alt="Бакыт, владелец медцентра в Алматы"
               width={400}
               height={400}
               loading="lazy"
               className="h-24 w-24 shrink-0 rounded-full object-cover ring-4 ring-[var(--primary-soft)] sm:h-28 sm:w-28"
             />
             <div>
-              <div className="mb-1 inline-flex items-center gap-1 rounded-full bg-[var(--primary-soft)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--primary)]">
-                Клиника-партнёр MarkVision AI
+              <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-[var(--primary-soft)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--primary)]">
+                <Stethoscope className="h-3 w-3" />
+                Клиника-партнёр · Алматы
               </div>
               <p className="text-base text-[var(--muted-foreground)] sm:text-lg">
-                <strong className="text-[var(--foreground)]">Бакыт</strong> — владелец медцентра. Вышел на{" "}
-                <span className="font-bold text-[var(--emerald)]">+13 млн ₸/мес</span>.
+                <strong className="text-[var(--foreground)]">Бакыт</strong> — владелец медцентра в Алматы. Вышел на{" "}
+                <span className="font-bold text-[var(--emerald)]">+13 млн ₸/мес</span> без увеличения расходов на рекламу.
               </p>
             </div>
-            {/* Mini-ops overlay */}
-            <div className="hidden sm:block absolute -right-4 -top-6 w-56 rotate-[3deg] rounded-2xl border border-[var(--border)] bg-white p-3 shadow-xl shadow-slate-900/10 float-b">
-              <div className="mb-1.5 flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Записи · сегодня</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--emerald)]" />
-              </div>
-              {[
-                ["09:00", "Консультация"],
-                ["11:30", "Имплантация"],
-                ["14:00", "Контроль"],
-              ].map(([t, l]) => (
-                <div key={t} className="flex items-center justify-between border-t border-[var(--border)] py-1.5 text-[11px]">
-                  <span className="font-semibold text-[var(--foreground)]">{t}</span>
-                  <span className="text-[var(--muted-foreground)]">{l}</span>
-                  <CheckCircle2 className="h-3 w-3 text-[var(--emerald)]" />
-                </div>
-              ))}
-            </div>
-            <div className="hidden sm:block absolute -bottom-5 left-6 float-c">
-              <div className="chip-3d">
-                <span className="dot" />
-                +13 млн ₸ / мес
-              </div>
-            </div>
           </article>
-        </div>
-      </section>
 
-      {/* ===== ALMATY CASE: REAL CLINIC RESULTS ===== */}
-      <section className="relative overflow-hidden bg-white py-20 sm:py-28">
-        <div className="mx-auto max-w-4xl px-5">
-          <Chapter n="02" label="Реальные результаты" />
-          <SectionTitle eyebrow="Кейс клиники">
-            Результаты из реальных клиник
-          </SectionTitle>
-
-          <div className="reveal mt-8 rounded-3xl border border-[var(--border)] bg-white p-6 sm:p-8">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
-              <Stethoscope className="h-3.5 w-3.5" />
-              Клиника из Алматы
+          {/* BEFORE / WHAT WE DID */}
+          <div className="reveal mt-5 grid gap-5 md:grid-cols-2">
+            <div className="rounded-3xl border border-rose-100 bg-rose-50/60 p-6">
+              <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-rose-600">
+                <AlertTriangle className="h-4 w-4" /> Было
+              </div>
+              <p className="text-[15px] leading-relaxed text-slate-700 sm:text-base">
+                Один администратор не справлялся со звонками. Записывал всех подряд — приходило только{" "}
+                <strong className="text-rose-700">30%</strong>.
+              </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
-              {/* БЫЛО */}
-              <div className="rounded-2xl border border-rose-100 bg-rose-50/60 p-5">
-                <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-rose-600">
-                  <AlertTriangle className="h-4 w-4" /> Было
-                </div>
-                <p className="text-[15px] leading-relaxed text-slate-700 sm:text-base">
-                  1 админ на всё. Доходимость{" "}
-                  <strong className="text-rose-700">30%</strong>.
-                </p>
+            <div className="rounded-3xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-6">
+              <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary)]">
+                <Sparkles className="h-4 w-4" /> Что мы сделали
               </div>
-
-              {/* ЧТО СДЕЛАЛИ */}
-              <div className="rounded-2xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-5">
-                <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary)]">
-                  <Sparkles className="h-4 w-4" /> Что мы сделали
-                </div>
-                <ul className="space-y-2.5">
-                  {[
-                    "Отдельный колл-центр на 2 человека",
-                    "Скрипты продажи первичной",
-                    "Запись только с предоплатой",
-                  ].map((t) => (
-                    <li key={t} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--primary)]" />
-                      <span className="text-[14px] leading-relaxed text-slate-700 sm:text-[15px]">
-                        {t}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="space-y-2.5">
+                {[
+                  "Вывели 2 девушек в отдельный колл-центр",
+                  "Обучили скриптам продажи первичной консультации",
+                  "Запись только с предоплатой или полной оплатой",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--primary)]" />
+                    <span className="text-[14px] leading-relaxed text-slate-700 sm:text-[15px]">
+                      {t}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
@@ -481,7 +443,7 @@ function Landing() {
             <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
                 { Icon: Megaphone, v: "830 000 ₸", l: "Расходы на рекламу" },
-                { Icon: Inbox, v: "415", l: "Обращений" },
+                { Icon: Inbox, v: "415", l: "Заявок с рекламы" },
                 { Icon: Stethoscope, v: "83", l: "Платных диагностик" },
                 { Icon: UserPlus, v: "29", l: "Новых пациентов" },
               ].map(({ Icon, v, l }) => (
@@ -517,6 +479,10 @@ function Landing() {
                 выручки в кассу
               </div>
             </div>
+
+            <p className="relative mt-5 text-center text-sm text-white/80 sm:text-base">
+              Тот же бюджет на рекламу — в 3 раза больше реально пришедших и оплативших пациентов.
+            </p>
           </div>
         </div>
       </section>
