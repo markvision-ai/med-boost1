@@ -340,7 +340,8 @@ function Landing() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {/* BEFORE */}
-            <div className="reveal rounded-3xl border border-rose-100 bg-rose-50/60 p-6 sm:p-8">
+            <div className="reveal card-lift relative overflow-hidden rounded-3xl border border-rose-100 bg-rose-50/60 p-6 sm:p-8">
+              <div aria-hidden className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 rounded-full bg-rose-200/40 blur-2xl" />
               <div className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-rose-600">
                 <AlertTriangle className="h-4 w-4" /> До
               </div>
@@ -363,13 +364,14 @@ function Landing() {
             </div>
 
             {/* AFTER */}
-            <div className="reveal rounded-3xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-6 sm:p-8">
+            <div className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-6 sm:p-8">
+              <div aria-hidden className="halo halo-emerald" />
               <div className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary)]">
                 <Sparkles className="h-4 w-4" /> После
               </div>
-              <p className="mb-5 text-lg font-semibold leading-snug text-[var(--foreground)]">
+              <p className="relative mb-5 text-lg font-semibold leading-snug text-[var(--foreground)]">
                 Стабильные{" "}
-                <span className="text-[var(--emerald)]">30 млн ₸</span> и
+                <span className="font-display text-2xl text-[var(--emerald)]">30 млн ₸</span> и
                 очередь на дорогостоящие услуги.
               </p>
               <ul className="space-y-3.5">
