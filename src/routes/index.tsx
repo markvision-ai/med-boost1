@@ -226,25 +226,16 @@ function Landing() {
                 и увеличить выручку в 2–3 раза
               </p>
 
-              {/* KPI row — 3 cards */}
-              <div className="grid w-full max-w-xl grid-cols-3 gap-2.5 sm:gap-3">
-                {[
-                  { value: "70%", label: "доходимости на платный приём" },
-                  { value: "+13 млн ₸", label: "выручки в месяц" },
-                  { value: "20+", label: "клиник в РК внедрили" },
-                ].map((s) => (
-                  <div
-                    key={s.label}
-                    className="rounded-2xl border border-[var(--border)] bg-white p-3.5 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md sm:p-4"
-                  >
-                    <div className="whitespace-nowrap font-display text-[18px] font-extrabold leading-none tracking-tight text-[var(--primary)] sm:text-[24px] md:text-[28px]">
-                      {s.value}
-                    </div>
-                    <div className="mt-2 text-[11px] leading-tight text-slate-600 sm:text-[12.5px]">
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
+              {/* Hero video */}
+              <div className="w-full max-w-2xl overflow-hidden rounded-3xl border border-[var(--border)] bg-black shadow-xl shadow-slate-900/10">
+                <video
+                  src="/hero-video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-auto w-full"
+                />
               </div>
 
               {/* CTA */}
@@ -261,19 +252,6 @@ function Landing() {
                   </p>
                 </div>
               </div>
-
-              <a
-                href="https://astanahub.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-2.5 backdrop-blur transition hover:border-[var(--primary)] hover:shadow-sm"
-                aria-label="Резидент Astana Hub"
-              >
-                <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
-                  ОФИЦИАЛЬНЫЙ УЧАСТНИК
-                </span>
-              </a>
             </div>
 
           </div>
