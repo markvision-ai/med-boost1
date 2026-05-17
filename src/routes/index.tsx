@@ -556,6 +556,9 @@ function Landing() {
           <Chapter label="ЭКСПЕРТ" />
 
           {/* Expert intro: photo + name + lead paragraph */}
+          <p className="reveal mb-6 text-base leading-[1.65] text-[var(--muted-foreground)] sm:text-lg">
+            Закономерный вопрос — кто стоит за этой системой и почему ей можно доверять.
+          </p>
           <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
             <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[var(--primary-soft)] opacity-60 blur-3xl" />
             <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-start sm:gap-7">
