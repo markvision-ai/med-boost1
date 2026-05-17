@@ -15,6 +15,9 @@ import {
   Star,
   AlertTriangle,
   MessageCircle,
+  Gift,
+  Phone,
+  CalendarCheck,
 } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
 import ownerImg from "../assets/clinic-owner.jpg";
