@@ -554,15 +554,12 @@ function Landing() {
           {/* Expert intro: photo + name + lead paragraph */}
           <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
             <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[var(--primary-soft)] opacity-60 blur-3xl" />
-            <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+            <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-start sm:gap-7">
               <img
                 src={expertImg}
                 alt="Юрий Запойнов, основатель MarkVision AI"
-                width={400}
-                height={400}
                 loading="lazy"
-                className="h-24 w-24 shrink-0 rounded-full object-cover ring-4 ring-white sm:h-32 sm:w-32"
-                style={{ boxShadow: "0 0 0 4px var(--primary-soft)" }}
+                className="w-full shrink-0 rounded-2xl object-cover shadow-lg shadow-slate-900/10 ring-1 ring-[var(--border)] sm:w-56"
               />
               <div>
                 <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-[var(--primary)] ring-1 ring-[var(--primary)]/15">
