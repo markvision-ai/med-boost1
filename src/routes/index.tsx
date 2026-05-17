@@ -916,8 +916,8 @@ function Landing() {
               <div>
                 <div className="mb-1 font-semibold uppercase tracking-wider text-slate-400">Реквизиты</div>
                 <div>ТОО «MarkVision AI»</div>
-                <div>БИН: 000000000000</div>
-                <div>Директор: Запоинов Ю.</div>
+                <div>БИН: 260240010690</div>
+                <div>Директор: Запойнов Ю.В.</div>
               </div>
               <div className="sm:text-right">
                 <div className="mb-1 font-semibold uppercase tracking-wider text-slate-400">Адрес</div>
