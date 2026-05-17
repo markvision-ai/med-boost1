@@ -332,7 +332,8 @@ function Landing() {
         <div className="relative mx-auto max-w-4xl px-5">
           <Chapter n="02" label="Кейс клиники" />
           <SectionTitle eyebrow="Реальный результат">
-            Медцентр в Алматы: +13 млн ₸/мес без роста бюджета
+            Медцентр в Алматы: <br />
+            +13 млн без доп бюджета на рекламу
           </SectionTitle>
 
           {/* OWNER CARD */}
