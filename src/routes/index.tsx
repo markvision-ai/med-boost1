@@ -546,60 +546,91 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="04" label="Эксперт" />
 
-          <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
-            <img
-              src={expertImg}
-              alt="Юрий Запойнов, основатель MarkVision AI"
-              width={400}
-              height={400}
-              loading="lazy"
-              className="h-24 w-24 shrink-0 rounded-full object-cover ring-4 ring-white sm:h-32 sm:w-32"
-              style={{ boxShadow: "0 0 0 4px var(--primary-soft)" }}
-            />
-            <div>
-              <div className="mb-1 inline-flex items-center gap-1 text-xs font-semibold text-[var(--primary)]">
-                <Star className="h-3.5 w-3.5 fill-[var(--primary)]" /> Основатель MarkVision AI
+          {/* Expert intro: photo + name + lead paragraph */}
+          <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
+            <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[var(--primary-soft)] opacity-60 blur-3xl" />
+            <div className="relative flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+              <img
+                src={expertImg}
+                alt="Юрий Запойнов, основатель MarkVision AI"
+                width={400}
+                height={400}
+                loading="lazy"
+                className="h-24 w-24 shrink-0 rounded-full object-cover ring-4 ring-white sm:h-32 sm:w-32"
+                style={{ boxShadow: "0 0 0 4px var(--primary-soft)" }}
+              />
+              <div>
+                <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-white px-2.5 py-1 text-[11px] font-semibold text-[var(--primary)] ring-1 ring-[var(--primary)]/15">
+                  <Star className="h-3 w-3 fill-[var(--primary)]" /> Основатель MarkVision AI
+                </div>
+                <h3 className="font-display text-2xl font-extrabold text-[var(--foreground)] sm:text-3xl">
+                  Меня зовут Юрий
+                </h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-[var(--muted-foreground)] sm:text-base">
+                  Помогаю клиникам находить неочевидные точки потерь — от рекламы и заявок до администраторов, первичных консультаций и повторных продаж.
+                </p>
               </div>
-              <p className="text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-                Меня зовут <strong className="text-[var(--foreground)]">Юрий</strong>.
-              </p>
             </div>
           </article>
 
           {/* Stats */}
-          <div className="reveal mt-10 grid gap-4 sm:grid-cols-3">
-            <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
-              <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
-                5
-              </div>
-              <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">5 лет</h3>
-              <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
-                в медицинском маркетинге
-              </p>
-            </article>
-            <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
-              <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
-                <Users className="h-5 w-5" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">десятки</h3>
-              <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
-                разобранных клиник
-              </p>
-            </article>
-            <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
-              <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
-                <TrendingUp className="h-5 w-5" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">до 10x</h3>
-              <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
-                рост окупаемости
-              </p>
-            </article>
+          <div className="reveal mt-6 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                Icon: Star,
+                value: "5 лет",
+                title: "в медицинском маркетинге",
+                sub: "знаю, где чаще всего теряются заявки",
+              },
+              {
+                Icon: Users,
+                value: "десятки",
+                title: "разобранных клиник",
+                sub: "стоматологии, косметологии, многопрофильные центры",
+              },
+              {
+                Icon: TrendingUp,
+                value: "до 10×",
+                title: "рост окупаемости",
+                sub: "когда исправлена вся система, а не только реклама",
+              },
+            ].map(({ Icon, value, title, sub }) => (
+              <article
+                key={value}
+                className="card-lift relative flex flex-col rounded-2xl border border-[var(--border)] bg-white p-5"
+              >
+                <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-[var(--primary)]">
+                  <Icon className="h-4 w-4" />
+                </div>
+                <div className="font-display text-3xl font-extrabold leading-none text-[var(--foreground)]">
+                  {value}
+                </div>
+                <div className="mt-2 text-sm font-semibold text-[var(--foreground)]">
+                  {title}
+                </div>
+                <p className="mt-1.5 text-[13px] leading-relaxed text-[var(--muted-foreground)]">
+                  {sub}
+                </p>
+              </article>
+            ))}
           </div>
 
-          <div className="reveal mt-10 inline-flex items-center gap-2 rounded-xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] px-4 py-3 text-sm font-semibold text-[var(--primary)]">
-            <Sparkles className="h-4 w-4" />
-            Реклама без продаж не работает. Чиним всю воронку — от заявки до повторного приёма.
+          {/* Philosophy */}
+          <div className="reveal mt-6 rounded-3xl border border-[var(--border)] bg-white p-6 sm:p-8">
+            <div className="mb-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--primary)]">
+              <Sparkles className="h-3.5 w-3.5" /> Подход
+            </div>
+            <div className="space-y-4 text-[15px] leading-relaxed text-slate-700 sm:text-base">
+              <p>
+                Я не смотрю на рекламу отдельно от продаж. В клинике всё связано: заявка → звонок → запись → визит → план лечения → повторный приём.
+              </p>
+              <p>
+                Поэтому на диагностике мы ищем не «красивую гипотезу», а конкретные места, где сейчас утекают пациенты и деньги.
+              </p>
+              <p className="rounded-2xl border border-[var(--primary)]/15 bg-[var(--primary-soft)]/60 p-4 font-semibold text-[var(--foreground)]">
+                С этой системой вы перестанете терять деньги — каждая инвестиция в маркетинг начнёт работать на результат.
+              </p>
+            </div>
           </div>
         </div>
       </section>
