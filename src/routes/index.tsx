@@ -250,23 +250,6 @@ function Landing() {
             </a>
           </div>
 
-          {/* Floating ROI badge */}
-          <div className="reveal pointer-events-none mt-8 flex sm:mt-10">
-            <div className="rotate-[-3deg] inline-flex items-center gap-3 rounded-2xl border border-white/60 bg-white/70 p-3 shadow-xl shadow-teal-900/10 backdrop-blur-md">
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--primary-soft)] font-display text-[11px] font-extrabold text-[var(--primary)]">
-                ROI
-              </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                  Средний рост
-                </span>
-                <span className="font-display text-base font-extrabold text-[var(--foreground)]">
-                  +240%
-                </span>
-              </div>
-            </div>
-          </div>
-
           <TrustBar />
 
           <a
@@ -331,27 +314,6 @@ function Landing() {
             </div>
             </div>
           </div>
-
-          <div className="reveal mt-10 grid gap-5 rounded-2xl border border-[var(--border)] bg-white p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-7">
-            <p className="font-display text-lg leading-snug text-[var(--foreground)] sm:text-xl">
-              Поток пациентов на дорогостоящие услуги:
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { Icon: Stethoscope, t: "Платная диагностика" },
-                { Icon: HeartPulse, t: "Реабилитация" },
-                { Icon: Sparkles, t: "Комплексные обследования" },
-              ].map(({ Icon, t }) => (
-                <span
-                  key={t}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--secondary)] px-3 py-1.5 text-xs font-semibold text-[var(--foreground)] sm:text-sm"
-                >
-                  <Icon className="h-3.5 w-3.5 text-[var(--primary)]" />
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -378,13 +340,8 @@ function Landing() {
                 Клиника-партнёр MarkVision AI
               </div>
               <p className="text-base text-[var(--muted-foreground)] sm:text-lg">
-                Знакомьтесь, <strong className="text-[var(--foreground)]">Бакыт</strong> -
-                владелец многопрофильного медцентра.
-              </p>
-              <p className="mt-2 text-base text-[var(--muted-foreground)] sm:text-lg">
-                Его клиника вышла на стабильные{" "}
-                <span className="font-bold text-[var(--emerald)]">13 млн ₸</span>{" "}
-                после двух лет застоя.
+                <strong className="text-[var(--foreground)]">Бакыт</strong> — владелец медцентра. Вышел на{" "}
+                <span className="font-bold text-[var(--emerald)]">+13 млн ₸/мес</span>.
               </p>
             </div>
             {/* Mini-ops overlay */}
@@ -422,9 +379,6 @@ function Landing() {
           <SectionTitle eyebrow="Кейс клиники">
             Результаты из реальных клиник
           </SectionTitle>
-          <p className="reveal mt-4 text-base text-[var(--muted-foreground)] sm:text-lg">
-            Разные города, разные ниши - одна система.
-          </p>
 
           <div className="reveal mt-8 rounded-3xl border border-[var(--border)] bg-white p-6 sm:p-8">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
@@ -439,9 +393,8 @@ function Landing() {
                   <AlertTriangle className="h-4 w-4" /> Было
                 </div>
                 <p className="text-[15px] leading-relaxed text-slate-700 sm:text-base">
-                  Один администратор не справлялся со звонками. Записывал
-                  всех подряд - приходило только{" "}
-                  <strong className="text-rose-700">30%</strong> от записанных.
+                  1 админ на всё. Доходимость{" "}
+                  <strong className="text-rose-700">30%</strong>.
                 </p>
               </div>
 
@@ -452,9 +405,9 @@ function Landing() {
                 </div>
                 <ul className="space-y-2.5">
                   {[
-                    "Вывели 2 сотрудниц в отдельный колл-центр",
-                    "Обучили скриптам продажи первичной консультации",
-                    "Поставили задачу: записать с предоплатой или полной оплатой",
+                    "Отдельный колл-центр на 2 человека",
+                    "Скрипты продажи первичной",
+                    "Запись только с предоплатой",
                   ].map((t) => (
                     <li key={t} className="flex items-start gap-2.5">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--primary)]" />
@@ -549,11 +502,11 @@ function Landing() {
               </div>
               <ul className="space-y-3.5">
                 {[
-                  "Без акций и скидок пациенты не идут",
-                  "80% пациентов - на самые дешёвые услуги или ОСМС",
-                  "Большая зависимость от сарафанного радио",
-                  "Кабинеты простаивают по 4–6 часов в день",
-                  "Записи нет дальше двух дней вперёд",
+                  "Без скидок пациенты не идут",
+                  "80% — дешёвые услуги и ОСМС",
+                  "Всё держится на сарафане",
+                  "Простой кабинетов 4–6 часов",
+                  "Запись только на 2 дня вперёд",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-3">
                     <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-rose-500" />
@@ -578,11 +531,11 @@ function Landing() {
               </p>
               <ul className="space-y-3.5">
                 {[
-                  "Закрывает +13 млн ₸ в месяц",
-                  "Запись пациентов на 2 недели вперёд",
-                  "Забыли про разорительные акции и скидки",
-                  "От 5 пациентов в день на дорогостоящие услуги",
-                  "Кабинеты загружены на 85% весь день",
+                  "+13 млн ₸ в месяц",
+                  "Запись на 2 недели вперёд",
+                  "Без акций и скидок",
+                  "5+ дорогих пациентов в день",
+                  "Загрузка кабинетов 85%",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--primary)]" />
@@ -594,19 +547,6 @@ function Landing() {
               </ul>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ===== TRIGGER ===== */}
-      <section className="bg-[var(--secondary)] py-14">
-        <div className="mx-auto max-w-2xl px-5 text-center">
-          <p className="reveal text-xl leading-relaxed text-[var(--foreground)] sm:text-2xl">
-            Если знакомо - читайте дальше. Расскажу, как за{" "}
-            <span className="rounded-md bg-[var(--primary-soft)] px-2 py-0.5 font-semibold text-[var(--primary)]">
-              3 шага
-            </span>{" "}
-            исправить ситуацию.
-          </p>
         </div>
       </section>
 
@@ -636,14 +576,8 @@ function Landing() {
             </div>
           </article>
 
-          <div className="reveal mt-10">
-            <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-              Я помогаю клиникам находить неочевидные точки потерь: от рекламы и заявок до администраторов, первичных консультаций и повторных продаж.
-            </p>
-          </div>
-
           {/* Stats */}
-          <div className="reveal mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="reveal mt-10 grid gap-4 sm:grid-cols-3">
             <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
               <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
                 5
@@ -651,9 +585,6 @@ function Landing() {
               <h3 className="font-display text-2xl font-bold text-[var(--foreground)]">5 лет</h3>
               <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
                 в медицинском маркетинге
-              </p>
-              <p className="mt-1 text-xs text-[var(--primary)]">
-                знаю, где чаще всего теряются заявки
               </p>
             </article>
             <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
@@ -664,9 +595,6 @@ function Landing() {
               <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
                 разобранных клиник
               </p>
-              <p className="mt-1 text-xs text-[var(--primary)]">
-                стоматологии, косметологии и многопрофильные центры
-              </p>
             </article>
             <article className="card-lift relative rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-5 text-center">
               <div className="mx-auto mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary-soft)] text-lg font-bold text-[var(--primary)]">
@@ -676,26 +604,12 @@ function Landing() {
               <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
                 рост окупаемости
               </p>
-              <p className="mt-1 text-xs text-[var(--primary)]">
-                когда исправлена вся система, а не только реклама
-              </p>
             </article>
           </div>
 
-          <div className="reveal mt-10 rounded-2xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
-            <p className="text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-              Я не смотрю на рекламу отдельно от продаж. В клинике всё связано: заявка, звонок, запись, визит, план лечения и повторный приём.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-              Поэтому на диагностике мы ищем не "красивую гипотезу", а конкретные места, где сейчас утекают пациенты и деньги.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
-              Мы с командой помогали клиникам повышать окупаемость в 3, 5 и даже 10 раз.
-            </p>
-            <div className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] px-4 py-3 text-sm font-semibold text-[var(--primary)]">
-              <Sparkles className="h-4 w-4" />
-              С этой системой вы перестанете терять деньги, а каждая инвестиция в маркетинг начнёт работать на результат.
-            </div>
+          <div className="reveal mt-10 inline-flex items-center gap-2 rounded-xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] px-4 py-3 text-sm font-semibold text-[var(--primary)]">
+            <Sparkles className="h-4 w-4" />
+            Реклама без продаж не работает. Чиним всю воронку — от заявки до повторного приёма.
           </div>
         </div>
       </section>
@@ -705,17 +619,15 @@ function Landing() {
         number={1}
         title="Адресное предложение"
         paragraphs={[
-          "Рынок медцентров в Казахстане перенасыщен. В небольшом городе - больше 100 клиник, в Алматы и Астане - сотни.",
-          "Почти все привлекают одинаково: акции «терапевт за 3 000 ₸», скидки, демпинг. Пациент не видит разницы и выбирает по цене.",
-          "Чтобы выделяться - нужно адресное предложение, которое решает одну конкретную проблему у одной конкретной аудитории.",
+          "Все клиники привлекают одинаково — скидками и демпингом. Чтобы выделяться, нужно адресное предложение под одну конкретную боль.",
         ]}
         example={`Представьте - у вас стали болеть суставы. Тяжело встаёте по утрам, к вечеру колени распухают.\n\nКуда пойдёте - в первую попавшуюся клинику, «где есть ревматолог»? Или туда, где специализируются на восстановлении подвижности суставов: сразу делают комплексную диагностику с УЗИ, МРТ и анализами, а врач показывает план лечения на 3 месяца с прогнозом?\n\nОчевидно - во второй.`}
         listTitle="Что даёт адресное предложение"
         list={[
-          "Вы выделяетесь среди конкурентов",
-          "Пациент сразу видит, что вы решаете его проблему",
-          "Бесперебойный поток на дорогостоящие услуги",
-          "Перестаёте конкурировать по цене",
+          "Выделяетесь среди конкурентов",
+          "Пациент видит решение своей боли",
+          "Поток на дорогие услуги",
+          "Не конкурируете по цене",
         ]}
       />
 
@@ -723,22 +635,21 @@ function Landing() {
         number={2}
         title="Система привлечения пациентов (СПП)"
         paragraphs={[
-          "Не тратьте рекламный бюджет на тех, кто никогда ничего не купит без скидки 50%. Сфокусируйтесь на 20% пациентов, которые сами готовы платить за качественное лечение.",
+          "Не тратьте бюджет на охотников за скидками. Фокус — на 20% пациентов, готовых платить за результат.",
         ]}
         bulletList={[
-          "Уже год терпят боль и наконец решились",
-          "Не нашли решения в государственной клинике",
+          "Долго терпели и решились",
+          "Не помогли в госклинике",
           "Получили отказ или непонятный диагноз",
-          "Готовы платить за результат, а не за дешёвый приём",
+          "Платят за результат, не за дешёвый приём",
         ]}
-        afterBullets="Для них нужен другой подход - система привлечения пациентов (СПП)."
         listTitle="Что делает СПП"
         list={[
-          "Привлекает горячих пациентов с конкретной болью",
-          "Показывает рекламу только целевой аудитории",
-          "Окупает затраты уже после первой платной диагностики",
+          "Ведёт горячих пациентов с конкретной болью",
+          "Реклама только на целевую аудиторию",
+          "Окупается после первой диагностики",
         ]}
-        result="Вы выходите на стабильные 15–30 млн ₸ выручки в месяц и выстраиваете очередь на дорогостоящие услуги."
+        result="Стабильные 15–30 млн ₸/мес и очередь на дорогие услуги."
         alt
       />
 
@@ -746,18 +657,16 @@ function Landing() {
         number={3}
         title="Механизм удержания пациентов"
         paragraphs={[
-          "Пациенты записываются - но не доходят. Кабинеты простаивают, вы платите за каждую такую запись.",
-          "Ваша задача - не просто принять звонок, а записать пациента на лечение и показать, почему лечиться нужно именно у вас.",
+          "Записываются — но не доходят. Задача: не принять звонок, а продать лечение.",
         ]}
         listTitle="Для этого нужно"
         list={[
-          "Администратор, который перезванивает за 5 минут",
-          "Отдел продаж, который продаёт пакет диагностики",
-          "Скрипты под возражения «дорого» и «подумаю»",
-          "Автонапоминания за день и за час до приёма",
-          "Понятный план лечения уже на первом приёме",
+          "Перезвон за 5 минут",
+          "Отдел продаж, продающий пакет диагностики",
+          "Скрипты на «дорого» и «подумаю»",
+          "Автонапоминания за день и за час",
+          "План лечения на первом приёме",
         ]}
-        outro="Не каждый администратор умеет снимать возражения с первого звонка. Чтобы расти на 20% каждый месяц, нужно супер-предложение, которое закрывает возражения ещё до того, как пациент позвонил."
       />
 
       {/* ===== CALL TO BREAKDOWN ===== */}
@@ -765,18 +674,12 @@ function Landing() {
         <div className="mx-auto max-w-3xl px-5">
           <Chapter n="05" label="Зачем разбор" />
           <h2 className="reveal font-display text-2xl leading-tight text-[var(--foreground)] sm:text-3xl md:text-4xl">
-            На первый взгляд всё просто. Но у меня ушло{" "}
-            <span className="text-[var(--primary)]">3 года</span>, чтобы
-            собрать это в систему.
+            Система собрана за{" "}
+            <span className="text-[var(--primary)]">3 года</span> на 20+ клиниках.
           </h2>
           <p className="reveal mt-5 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            Все ответы найдены, все шаги отработаны на десятках медцентров. Я
-            делюсь ими на часовой консультации.
-          </p>
-          <p className="reveal mt-3 text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            После неё у вас будет понимание, как получать дополнительно{" "}
-            <span className="font-semibold text-[var(--emerald)]">+30 млн ₸ в год</span>{" "}
-            за счёт стабильного потока пациентов на дорогостоящие услуги.
+            Часовой разбор — и у вас план на{" "}
+            <span className="font-semibold text-[var(--emerald)]">+30 млн ₸ в год</span>.
           </p>
         </div>
       </section>
@@ -790,12 +693,12 @@ function Landing() {
           </SectionTitle>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {[
-              "Адресное предложение, дающее поток на дорогие услуги",
-              "Как ежедневно получать 5+ пациентов на дорогостоящие услуги",
-              "Предложение, которое снимает возражения до контакта",
-              "85% загрузки кабинетов каждый день недели",
-              "Стабильные 30 млн ₸ без акций и скидок",
-              "20% пациентов, приносящих 80% выручки",
+              "Адресное предложение под вашу нишу",
+              "5+ дорогих пациентов в день",
+              "Снятие возражений ещё до контакта",
+              "85% загрузки кабинетов",
+              "30 млн ₸/мес без скидок",
+              "20% пациентов = 80% выручки",
             ].map((t) => (
               <li
                 key={t}
@@ -818,10 +721,6 @@ function Landing() {
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
-          <p className="reveal mx-auto mt-4 max-w-lg text-center text-base text-[var(--muted-foreground)] sm:text-lg">
-            Положа руку на сердце - решение таких задач стоит минимум 500 000 ₸.
-          </p>
-
           <div className="reveal mt-8 space-y-2.5">
             <PriceRow label="Реальная ценность" value="500 000 ₸" strike />
             <PriceRow label="Обычная цена консультации" value="50 000 ₸" strike />
@@ -862,19 +761,19 @@ function Landing() {
                 n: 1,
                 t: "Скрипт дожима первичных пациентов",
                 price: "50 000 ₸",
-                d: "Готовые речевые конструкции для администратора. Что говорить, если пациент отвечает «подумаю». Можно распечатать.",
+                d: "Готовые речёвки на «подумаю» и «дорого».",
               },
               {
                 n: 2,
                 t: "Чек-лист отдела продаж медцентра",
                 price: "30 000 ₸",
-                d: "Пошаговая карта создания эталонного отдела продаж. Проверена на 50+ клиниках с оборотом от 15 млн ₸.",
+                d: "Пошаговая карта построения отдела продаж.",
               },
               {
                 n: 3,
                 t: "Система оплаты и мотивации администраторов",
                 price: "30 000 ₸",
-                d: "Какая должна быть система оплаты и KPI, чтобы каждый звонок и сообщение обрабатывали на 100%.",
+                d: "KPI и оплата, чтобы каждый звонок шёл в работу.",
               },
             ].map((b) => (
               <article
@@ -972,19 +871,10 @@ function Landing() {
             Вы ничем не рискуете
           </SectionTitle>
           <p className="reveal mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            Если информация на консультации покажется банальной и вы захотите
-            возврат - просто напишите{" "}
-            <span className="font-semibold text-[var(--foreground)]">
-              «Юрий, хочу возврат»
-            </span>
-            .
-          </p>
-          <p className="reveal mx-auto mt-3 max-w-2xl text-base leading-relaxed text-[var(--muted-foreground)] sm:text-lg">
-            Скажу больше -{" "}
-            <span className="font-semibold text-[var(--emerald)]">
-              дополнительно скину 4 990 ₸
-            </span>{" "}
-            за потраченное время, если информация не оправдает ваших ожиданий.
+            Не понравится — напишите{" "}
+            <span className="font-semibold text-[var(--foreground)]">«Юрий, хочу возврат»</span>.
+            Верну 4 990 ₸ и{" "}
+            <span className="font-semibold text-[var(--emerald)]">ещё 4 990 ₸ за время</span>.
           </p>
           <p className="reveal mt-4 font-semibold text-[var(--foreground)]">
             Всю ответственность беру на себя.
@@ -1002,15 +892,15 @@ function Landing() {
             {[
               {
                 q: "Почему так дёшево, если это так ценно?",
-                a: "Хочу, чтобы максимальное число владельцев медцентров в Казахстане увидели, как работает система. 4 990 ₸ - плата за вашу готовность дойти до встречи и не пропустить её. На самой консультации никто ничего не продаёт: вы получаете готовый план - внедряете сами или со мной.",
+                a: "4 990 ₸ — плата за то, что вы дойдёте до встречи. На разборе ничего не продаю: даю план, дальше внедряете сами или со мной.",
               },
               {
                 q: "Почему только 10 человек? Это дожим или уловка?",
-                a: "10 консультаций - это 10 часов моего личного времени. Именно столько физически могу выделить в месяц без вреда для основной деятельности. Поэтому 10 мест, а не 100.",
+                a: "10 разборов = 10 часов в месяц. Больше физически не успеваю.",
               },
               {
                 q: "Откуда вы взяли эту систему?",
-                a: "Разработана на основе исследования наших проектов и протестирована в 20+ медицинских клиниках Казахстана - от Алматы до Усть-Каменогорска. Упакована в формат, который внедряется за 30 дней.",
+                a: "Собрана на 20+ клиниках по Казахстану. Внедряется за 30 дней.",
               },
             ].map((f) => (
               <details
@@ -1111,11 +1001,10 @@ function Landing() {
 
 function FamiliarSituation() {
   const items = [
-    "У вас нет стабильного потока первичных пациентов.",
-    "Вы устали постоянно нанимать таргетологов, которые что-то делают, но результата как не было, так и нет. Платите - и не понимаете, за что.",
-    "Видите, как ваши коллеги успешно зарабатывают и путешествуют, а вы смотрите на них и не понимаете, что делаете не так.",
-    "Вынуждены цепляться за каждого пациента, даже на невыгодных условиях, и работаете в минус.",
-    "Не знаете, как привлекать пациентов на премиум-услуги и выйти из ловушки дешёвых пациентов.",
+    "Нет стабильного потока первички.",
+    "Платите таргетологам — толку нет.",
+    "Скидки и демпинг ради записей.",
+    "Не умеете продавать дорогие услуги.",
   ];
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-28">
@@ -1128,9 +1017,6 @@ function FamiliarSituation() {
         <h2 className="reveal font-display text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
           Узнаёте себя?
         </h2>
-        <p className="reveal mt-3 text-base text-[var(--muted-foreground)] sm:text-lg">
-          Отметьте про себя, на сколько утверждений вы ответите «да».
-        </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {items.map((t, i) => (
@@ -1152,7 +1038,7 @@ function FamiliarSituation() {
 
         <div className="reveal mt-8 rounded-2xl border border-[var(--primary)]/20 bg-[var(--primary-soft)] p-5 text-center sm:p-6">
           <p className="font-display text-base font-bold uppercase tracking-wide text-[var(--primary)] sm:text-lg">
-            Если ответили «да» хотя бы на 1 вопрос - эта информация точно для вас
+            Хотя бы 1 «да» — это для вас.
           </p>
         </div>
       </div>
