@@ -300,7 +300,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="relative mx-auto max-w-4xl px-5">
-          <Chapter n="02" label="Кейс клиники" />
+          <Chapter n="02" label="КЕЙС КЛИНИКИ" />
           <SectionTitle eyebrow="Реальный результат">
             Медцентр в Алматы: <br />
             +13 млн без доп бюджета на рекламу
@@ -432,7 +432,7 @@ function Landing() {
       {/* ===== BEFORE / AFTER ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
-          <Chapter n="03" label="До и после" align="center" />
+          <Chapter n="03" label="ДО И ПОСЛЕ" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
             <br />
           </SectionTitle>
@@ -498,7 +498,7 @@ function Landing() {
       <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="04" label="Эксперт" />
+          <Chapter n="04" label="ЭКСПЕРТ" />
 
           {/* Expert intro: photo + name + lead paragraph */}
           <article className="reveal card-lift relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:p-8">
