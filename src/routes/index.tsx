@@ -342,7 +342,7 @@ function Landing() {
                 <AlertTriangle className="h-4 w-4" /> Было
               </div>
               <p className="text-[15px] leading-relaxed text-slate-700 sm:text-base">
-                Один администратор не справлялся со звонками. Записывал всех подряд — приходило только{" "}
+                Один администратор не справлялся со звонками. Записывал всех подряд приходило только{" "}
                 <strong className="text-rose-700">30%</strong>.
               </p>
             </div>
