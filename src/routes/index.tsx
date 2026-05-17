@@ -192,50 +192,83 @@ function Landing() {
     <main className="min-h-screen bg-white text-[var(--foreground)] antialiased">
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[var(--secondary)] to-white">
-        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-40" />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-40 left-1/2 h-[480px] w-[720px] -translate-x-1/2 rounded-full opacity-60 blur-3xl"
-          style={{
-            background:
-              "radial-gradient(circle, color-mix(in oklab, var(--primary) 18%, transparent), transparent 70%)",
-          }}
-        />
+        <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[var(--primary-soft)] opacity-70 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute top-1/2 -left-32 h-64 w-64 rounded-full bg-rose-100/60 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-30" />
         <div className="relative mx-auto max-w-3xl px-5 pt-12 pb-14 sm:pt-20 sm:pb-20">
           <div className="reveal">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--muted-foreground)] shadow-sm shadow-slate-900/5">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-[var(--muted-foreground)] shadow-sm shadow-slate-900/5 backdrop-blur">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--primary)] opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
               </span>
-              <HeartPulse className="h-3.5 w-3.5 text-[var(--primary)]" />
-              Проверенная методика для медицинских центров
+              Проверенная методика для медцентров
             </div>
-            <h1 className="font-display text-[34px] leading-[1.05] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
-              Как мед центру получить 100+ пациентов на платную диагностику
+            <h1 className="font-display text-[34px] font-extrabold leading-[1.08] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
+              Как мед центру получить{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 text-[var(--primary)]">100+ пациентов</span>
+                <span
+                  aria-hidden
+                  className="absolute bottom-1 left-0 right-0 -z-0 h-3 rounded-sm bg-[var(--primary-soft)] sm:h-4"
+                />
+              </span>{" "}
+              на платную диагностику
             </h1>
-            <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-slate-700 sm:text-lg">
+            <p className="mt-6 max-w-[56ch] text-base leading-relaxed text-slate-600 sm:text-lg">
               Для владельцев центров реабилитации, которые хотят обойти
-              конкурентов в 2026 году и увеличить выручку в 2–3 раза без
-              увеличения расходов на рекламу.
+              конкурентов в{" "}
+              <span className="font-semibold italic text-rose-600">2026 году</span>{" "}
+              и увеличить выручку в 2–3 раза без увеличения расходов на рекламу.
             </p>
           </div>
 
-          <ul className="reveal mt-7 space-y-3.5">
-            <Bullet>Без разорительных акций и скидок</Bullet>
-            <Bullet>До 70% доходимости пациентов на платную диагностику</Bullet>
-            <Bullet>Стабильный поток на дорогостоящие услуги</Bullet>
+          <ul className="reveal mt-8 space-y-3">
+            {[
+              "Без разорительных акций и скидок",
+              "До 70% доходимости пациентов на платную диагностику",
+              "Стабильный поток на дорогостоящие услуги",
+            ].map((t, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-4 rounded-2xl border border-[var(--border)]/70 bg-white/60 p-3.5 backdrop-blur-sm"
+              >
+                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-sm shadow-teal-900/20">
+                  <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                </span>
+                <span className="text-[14px] font-semibold text-slate-700 sm:text-base">
+                  {t}
+                </span>
+              </li>
+            ))}
           </ul>
 
           <div className="reveal mt-8 flex flex-col gap-3 sm:flex-row">
             <WaButton variant="primary">Записаться на разбор</WaButton>
             <a
               href="#how"
-              className="group inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-white px-6 py-4 text-base font-semibold text-[var(--foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)] hover:shadow-md hover:shadow-teal-900/5"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-[var(--border)] bg-white px-6 py-4 text-base font-bold text-[var(--foreground)] transition hover:border-[var(--primary)] hover:text-[var(--primary)] hover:shadow-md hover:shadow-teal-900/5"
             >
               Как это работает
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 text-slate-400 transition group-hover:translate-x-0.5 group-hover:text-[var(--primary)]" />
             </a>
+          </div>
+
+          {/* Floating ROI badge */}
+          <div className="reveal pointer-events-none mt-8 flex sm:mt-10">
+            <div className="rotate-[-3deg] inline-flex items-center gap-3 rounded-2xl border border-white/60 bg-white/70 p-3 shadow-xl shadow-teal-900/10 backdrop-blur-md">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--primary-soft)] font-display text-[11px] font-extrabold text-[var(--primary)]">
+                ROI
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                  Средний рост
+                </span>
+                <span className="font-display text-base font-extrabold text-[var(--foreground)]">
+                  +240%
+                </span>
+              </div>
+            </div>
           </div>
 
           <TrustBar />
