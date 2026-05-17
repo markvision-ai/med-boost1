@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Система роста для медицинских центров в Казахстане: +30 млн ₸ за 30 дней, 85% доходимости, без скидок. Разбор клиники от Юрия Запоинова.",
+          "Система роста для медицинских центров в Казахстане: +30 млн ₸ за 30 дней, 85% доходимости, без скидок. Разбор клиники от Юрия Запойнова.",
       },
       { property: "og:title", content: "MarkVision AI — рост медцентра на +30 млн ₸ за 30 дней" },
       {
@@ -440,7 +440,7 @@ function Landing() {
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
-              alt="Юрий Запоинов, основатель MarkVision AI"
+              alt="Юрий Запойнов, основатель MarkVision AI"
               width={400}
               height={400}
               loading="lazy"
@@ -888,7 +888,7 @@ function Landing() {
               </div>
               <p className="mt-1 max-w-sm text-sm text-slate-400">
                 Система роста для медицинских центров в Казахстане. Юрий
-                Запоинов, основатель.
+                Запойнов, основатель.
               </p>
               <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2">
                 <img src={astanaHubImg} alt="Astana Hub" width={80} height={20} className="h-5 w-auto invert" />
@@ -916,8 +916,8 @@ function Landing() {
               <div>
                 <div className="mb-1 font-semibold uppercase tracking-wider text-slate-400">Реквизиты</div>
                 <div>ТОО «MarkVision AI»</div>
-                <div>БИН: 000000000000</div>
-                <div>Директор: Запоинов Ю.</div>
+                <div>БИН: 260240010690</div>
+                <div>Директор: Запойнов Ю.В.</div>
               </div>
               <div className="sm:text-right">
                 <div className="mb-1 font-semibold uppercase tracking-wider text-slate-400">Адрес</div>
