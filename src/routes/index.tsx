@@ -17,6 +17,11 @@ import {
   MessageCircle,
   Gift,
   CalendarCheck,
+  Megaphone,
+  Inbox,
+  UserPlus,
+  Receipt,
+  Wallet,
 } from "lucide-react";
 import heroImg from "../assets/hero.jpg";
 import ownerImg from "../assets/clinic-owner.jpg";
@@ -37,7 +42,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Адресное предложение, СПК и удержание пациентов. Часовой разбор за 4 990 ₸ с гарантией возврата.",
+          "Адресное предложение, поток пациентов на дорогостоящие услуги и их удержание. Часовой разбор за 4 990 ₸ с гарантией возврата.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -298,7 +303,7 @@ function Landing() {
       <section className="relative overflow-hidden bg-[var(--secondary)] py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0 grid-dot opacity-50" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="01" label="Кейс клиента" />
+          <Chapter n="01" label="Кейс клиники" />
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-white p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={ownerImg}
@@ -310,7 +315,7 @@ function Landing() {
             />
             <div>
               <div className="mb-1 inline-flex items-center gap-1 rounded-full bg-[var(--primary-soft)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--primary)]">
-                Клиент MarkVision AI
+                Клиника-партнёр MarkVision AI
               </div>
               <p className="text-base text-[var(--muted-foreground)] sm:text-lg">
                 Знакомьтесь, <strong className="text-[var(--foreground)]">Бакыт</strong> -
@@ -350,10 +355,127 @@ function Landing() {
         </div>
       </section>
 
+      {/* ===== ALMATY CASE: REAL CLINIC RESULTS ===== */}
+      <section className="relative overflow-hidden bg-white py-20 sm:py-28">
+        <div className="mx-auto max-w-4xl px-5">
+          <Chapter n="02" label="Реальные результаты" />
+          <SectionTitle eyebrow="Кейс клиники">
+            Результаты из реальных клиник
+          </SectionTitle>
+          <p className="reveal mt-4 text-base text-[var(--muted-foreground)] sm:text-lg">
+            Разные города, разные ниши - одна система.
+          </p>
+
+          <div className="reveal mt-8 rounded-3xl border border-[var(--border)] bg-white p-6 sm:p-8">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
+              <Stethoscope className="h-3.5 w-3.5" />
+              Клиника из Алматы
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {/* БЫЛО */}
+              <div className="rounded-2xl border border-rose-100 bg-rose-50/60 p-5">
+                <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-rose-600">
+                  <AlertTriangle className="h-4 w-4" /> Было
+                </div>
+                <p className="text-[15px] leading-relaxed text-slate-700 sm:text-base">
+                  Один администратор не справлялся со звонками. Записывал
+                  всех подряд - приходило только{" "}
+                  <strong className="text-rose-700">30%</strong> от записанных.
+                </p>
+              </div>
+
+              {/* ЧТО СДЕЛАЛИ */}
+              <div className="rounded-2xl border border-[var(--primary-soft)] bg-[var(--primary-soft)]/40 p-5">
+                <div className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary)]">
+                  <Sparkles className="h-4 w-4" /> Что мы сделали
+                </div>
+                <ul className="space-y-2.5">
+                  {[
+                    "Вывели 2 сотрудниц в отдельный колл-центр",
+                    "Обучили скриптам продажи первичной консультации",
+                    "Поставили задачу: записать с предоплатой или полной оплатой",
+                  ].map((t) => (
+                    <li key={t} className="flex items-start gap-2.5">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--primary)]" />
+                      <span className="text-[14px] leading-relaxed text-slate-700 sm:text-[15px]">
+                        {t}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* RESULT DASHBOARD CARD */}
+          <div
+            className="reveal relative mt-5 overflow-hidden rounded-3xl p-6 text-white sm:p-8"
+            style={{
+              background:
+                "linear-gradient(160deg, var(--primary) 0%, color-mix(in oklab, var(--primary) 80%, black) 100%)",
+            }}
+          >
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-30 blur-3xl"
+              style={{ background: "var(--emerald)" }}
+            />
+
+            <div className="relative mb-6 flex justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur">
+                <TrendingUp className="h-3.5 w-3.5 text-[var(--emerald)]" />
+                Результат за 2 недели
+              </div>
+            </div>
+
+            <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                { Icon: Megaphone, v: "830 000 ₸", l: "Расходы на рекламу" },
+                { Icon: Inbox, v: "415", l: "Обращений" },
+                { Icon: Stethoscope, v: "83", l: "Платных диагностик" },
+                { Icon: UserPlus, v: "29", l: "Новых пациентов" },
+              ].map(({ Icon, v, l }) => (
+                <div
+                  key={l}
+                  className="flex flex-col items-center rounded-2xl border border-white/15 bg-white/10 p-4 text-center backdrop-blur"
+                >
+                  <Icon className="mb-2 h-5 w-5 text-[var(--emerald)]" strokeWidth={2.2} />
+                  <div className="font-display text-xl leading-none text-white sm:text-2xl">
+                    {v}
+                  </div>
+                  <div className="mt-2 text-[11px] leading-snug text-white/80 sm:text-xs">
+                    {l}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="relative mt-4 flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-center backdrop-blur">
+              <Receipt className="h-4 w-4 text-[var(--emerald)]" />
+              <span className="text-sm text-white/90">
+                Средний чек:{" "}
+                <strong className="font-display text-white">350 000 ₸</strong>
+              </span>
+            </div>
+
+            <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/15 bg-white/10 px-5 py-7 text-center backdrop-blur">
+              <Wallet className="mx-auto mb-3 h-6 w-6 text-[var(--emerald)]" />
+              <div className="font-display text-4xl leading-none text-[var(--emerald)] sm:text-6xl">
+                +13 000 000 ₸
+              </div>
+              <div className="mt-3 text-sm text-white/80 sm:text-base">
+                выручки в кассу
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== BEFORE / AFTER ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
-          <Chapter n="02" label="До и после" align="center" />
+          <Chapter n="03" label="До и после" align="center" />
           <SectionTitle align="center" eyebrow="Что меняется">
             До MarkVision AI&nbsp;- и после
           </SectionTitle>
@@ -432,7 +554,7 @@ function Landing() {
       <section id="how" className="relative overflow-hidden bg-white py-20 sm:py-28">
         <div aria-hidden className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-[var(--primary-soft)] opacity-40 blur-3xl" />
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="03" label="Эксперт" />
+          <Chapter n="04" label="Эксперт" />
           <article className="reveal card-lift relative flex flex-col items-start gap-5 rounded-3xl border border-[var(--border)] bg-[var(--secondary)] p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-8">
             <img
               src={expertImg}
@@ -539,7 +661,7 @@ function Landing() {
 
       <Step
         number={2}
-        title="Система привлечения клиентов (СПК)"
+        title="Система привлечения пациентов (СПП)"
         paragraphs={[
           "Не тратьте рекламный бюджет на тех, кто никогда ничего не купит без скидки 50%. Сфокусируйтесь на 20% пациентов, которые сами готовы платить за качественное лечение.",
         ]}
@@ -549,8 +671,8 @@ function Landing() {
           "Получили отказ или непонятный диагноз",
           "Готовы платить за результат, а не за дешёвый приём",
         ]}
-        afterBullets="Для них нужен другой подход - система привлечения клиентов (СПК)."
-        listTitle="Что делает СПК"
+        afterBullets="Для них нужен другой подход - система привлечения пациентов (СПП)."
+        listTitle="Что делает СПП"
         list={[
           "Привлекает горячих пациентов с конкретной болью",
           "Показывает рекламу только целевой аудитории",
@@ -565,11 +687,11 @@ function Landing() {
         title="Механизм удержания пациентов"
         paragraphs={[
           "Пациенты записываются - но не доходят. Кабинеты простаивают, вы платите за каждую такую запись.",
-          "Ваша задача - не получить заявку, а продать основную услугу и показать пациенту, почему лечиться нужно у вас.",
+          "Ваша задача - не просто принять звонок, а записать пациента на лечение и показать, почему лечиться нужно именно у вас.",
         ]}
         listTitle="Для этого нужно"
         list={[
-          "Администратор, отвечающий на заявку за 5 минут",
+          "Администратор, который перезванивает за 5 минут",
           "Отдел продаж, который продаёт пакет диагностики",
           "Скрипты под возражения «дорого» и «подумаю»",
           "Автонапоминания за день и за час до приёма",
@@ -581,7 +703,7 @@ function Landing() {
       {/* ===== CALL TO BREAKDOWN ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="07" label="Зачем разбор" />
+          <Chapter n="05" label="Зачем разбор" />
           <h2 className="reveal font-display text-2xl leading-tight text-[var(--foreground)] sm:text-3xl md:text-4xl">
             На первый взгляд всё просто. Но у меня ушло{" "}
             <span className="text-[var(--primary)]">3 года</span>, чтобы
@@ -602,16 +724,16 @@ function Landing() {
       {/* ===== OUTCOME ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="08" label="Результат сессии" />
+          <Chapter n="06" label="Результат сессии" />
           <SectionTitle eyebrow="Результат сессии">
             Что вы получите на консультации
           </SectionTitle>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {[
               "Адресное предложение, дающее поток на дорогие услуги",
-              "Как привлекать от 5 пациентов в день через СПК",
+              "Как ежедневно получать 5+ пациентов на дорогостоящие услуги",
               "Предложение, которое снимает возражения до контакта",
-              "85% загрузки кабинетов благодаря СПК",
+              "85% загрузки кабинетов каждый день недели",
               "Стабильные 30 млн ₸ без акций и скидок",
               "20% пациентов, приносящих 80% выручки",
             ].map((t) => (
@@ -632,7 +754,7 @@ function Landing() {
       {/* ===== PRICING ===== */}
       <section id="cta" className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5">
-          <Chapter n="09" label="Стоимость" align="center" />
+          <Chapter n="07" label="Стоимость" align="center" />
           <SectionTitle align="center" eyebrow="Стоимость">
             Сколько это стоит?
           </SectionTitle>
@@ -670,7 +792,7 @@ function Landing() {
       {/* ===== BONUSES ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
-          <Chapter n="10" label="Бонусы" />
+          <Chapter n="08" label="Бонусы" />
           <SectionTitle eyebrow="Бонусы">
             Первым 10 владельцам - 3 бонуса на 110 000 ₸
           </SectionTitle>
@@ -735,7 +857,7 @@ function Landing() {
       {/* ===== HONEST TALK ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="11" label="Честный разговор" />
+          <Chapter n="09" label="Честный разговор" />
           <SectionTitle>А теперь честно</SectionTitle>
           <ul className="mt-8 space-y-3">
             {[
@@ -775,7 +897,7 @@ function Landing() {
       {/* ===== GUARANTEE ===== */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="12" label="Гарантия" align="center" />
+          <Chapter n="10" label="Гарантия" align="center" />
           <div className="text-center">
           <div
             className="reveal relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-[var(--primary-soft)]"
@@ -814,7 +936,7 @@ function Landing() {
       {/* ===== FAQ ===== */}
       <section className="bg-[var(--secondary)] py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
-          <Chapter n="13" label="Вопросы и ответы" />
+          <Chapter n="11" label="Вопросы и ответы" />
           <SectionTitle eyebrow="FAQ">Частые вопросы</SectionTitle>
           <div className="mt-8 space-y-3">
             {[
