@@ -165,31 +165,18 @@ function Bullet({ children }: { children: React.ReactNode }) {
 function StickyHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)]/60 bg-white/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-5 py-3 sm:py-3.5">
-        <a href="#" className="flex items-center gap-2.5" aria-label="MarkVision AI — на главную">
-          <span
-            className="flex h-8 w-8 items-center justify-center rounded-xl bg-[var(--primary)] text-white shadow-sm"
-            aria-hidden
-          >
-            <Activity className="h-4 w-4" strokeWidth={2.5} />
-          </span>
-          <span className="font-display text-base font-extrabold tracking-tight text-[var(--foreground)] sm:text-lg">
-            MarkVision <span className="text-[var(--primary)]">AI</span>
-          </span>
-        </a>
-
-        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--muted-foreground)] md:flex" />
-
+      <div className="mx-auto flex max-w-7xl items-center justify-center gap-3 px-5 py-3 sm:py-3.5">
         <a
-          href={WA_URL}
+          href="https://astanahub.com"
           target="_blank"
           rel="noopener noreferrer"
-          data-event="cta_sticky_whatsapp"
-          className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#1ebe5b] active:scale-[0.98] sm:gap-2 sm:px-4 sm:py-2.5 sm:text-sm"
+          className="inline-flex items-center gap-3 rounded-2xl px-3 py-1.5 transition hover:opacity-80"
+          aria-label="Резидент Astana Hub"
         >
-          <MessageCircle className="h-4 w-4" />
-          <span className="hidden sm:inline">Написать</span>
-          <span className="sm:hidden">WhatsApp</span>
+          <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)] sm:text-[11px]">
+            ОФИЦИАЛЬНЫЙ УЧАСТНИК
+          </span>
         </a>
       </div>
     </header>
@@ -239,25 +226,16 @@ function Landing() {
                 и увеличить выручку в 2–3 раза
               </p>
 
-              {/* KPI row — 3 cards */}
-              <div className="grid w-full max-w-xl grid-cols-3 gap-2.5 sm:gap-3">
-                {[
-                  { value: "70%", label: "доходимости на платный приём" },
-                  { value: "+13 млн ₸", label: "выручки в месяц" },
-                  { value: "20+", label: "клиник в РК внедрили" },
-                ].map((s) => (
-                  <div
-                    key={s.label}
-                    className="rounded-2xl border border-[var(--border)] bg-white p-3.5 shadow-sm shadow-slate-900/[0.03] transition hover:border-[var(--primary)]/30 hover:shadow-md sm:p-4"
-                  >
-                    <div className="whitespace-nowrap font-display text-[18px] font-extrabold leading-none tracking-tight text-[var(--primary)] sm:text-[24px] md:text-[28px]">
-                      {s.value}
-                    </div>
-                    <div className="mt-2 text-[11px] leading-tight text-slate-600 sm:text-[12.5px]">
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
+              {/* Hero video */}
+              <div className="w-full max-w-2xl overflow-hidden rounded-3xl border border-[var(--border)] bg-black shadow-xl shadow-slate-900/10">
+                <video
+                  src="/hero-video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-auto w-full"
+                />
               </div>
 
               {/* CTA */}
@@ -274,19 +252,6 @@ function Landing() {
                   </p>
                 </div>
               </div>
-
-              <a
-                href="https://astanahub.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-2.5 backdrop-blur transition hover:border-[var(--primary)] hover:shadow-sm"
-                aria-label="Резидент Astana Hub"
-              >
-                <img src={astanaHubImg} alt="Astana Hub" width={120} height={32} className="h-7 w-auto" />
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted-foreground)]">
-                  ОФИЦИАЛЬНЫЙ УЧАСТНИК
-                </span>
-              </a>
             </div>
 
           </div>
