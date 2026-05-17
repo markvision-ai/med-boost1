@@ -209,7 +209,7 @@ function Landing() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--primary)]" />
               </span>
               <HeartPulse className="h-3.5 w-3.5 text-[var(--primary)]" />
-              Для владельцев медицинских центров
+              Проверенная методика для медицинских центров
             </div>
             <h1 className="font-display text-[34px] leading-[1.05] tracking-[-0.025em] text-[var(--foreground)] sm:text-5xl md:text-[56px]">
               Как мед центру получить 100+ пациентов на платную диагностику
